@@ -3,7 +3,7 @@ export const HOME = {
 
   HOME: { name: '', path: '/home' },
 
-  ACCOUNT: { name: '', path: '/home/account' },
+  ACCOUNT: { name: 'Account', path: '/home/account' },
 
   AIRCRAFT: { name: 'Aircraft', path: '/home/aircraft' },
 

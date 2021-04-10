@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  background: #fff;
+  min-height: 5vh;
+  &__left {
+      margin: .5rem
+  }
+  &__right {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+      padding: .3rem;
+  }
+}

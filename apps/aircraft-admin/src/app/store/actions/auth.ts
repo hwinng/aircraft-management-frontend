@@ -6,14 +6,13 @@ const { LOGIN_SUCCESS, LOGOUT, AUTH_ERROR, GET_AUTH} = AUTH
 export const login = ({ usernameOrEmail, password }) => async dispatch => {
   return loginService({ usernameOrEmail, password }).then(
     (res: any) => {
-      console.log(res);
       if (res.data.accessToken) {
         const userInfo = res.data;
         dispatch({
           type: LOGIN_SUCCESS,
           userInfo,
         });
-        //dispatch(loginByToken())
+        dispatch(loginByToken())
       }
     },
     (error: any) => {
@@ -27,12 +26,10 @@ export const login = ({ usernameOrEmail, password }) => async dispatch => {
 export const loginByToken = () => async dispatch => {
   return getAuthService().then(
     (res: any) => {
-      console.log(res);
-      if (res.data.code === '200') {
-        dispatch({
-          type: GET_AUTH
-        })
-      }
+      dispatch({
+        type: GET_AUTH,
+        userInfo: res.data
+      })
     },
     (err: any) => {
       console.log(err)

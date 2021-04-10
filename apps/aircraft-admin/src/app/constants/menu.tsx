@@ -10,27 +10,27 @@ import {
 export const HOME_SIDER_MENU_LIST = [
   {
     path: HOME.ACCOUNT.path,
-    icon: typeof HomeOutlined,
+    icon: <HomeOutlined />,
     name: HOME.ACCOUNT.name
   },
   {
     path: HOME.AIRCRAFT.path,
-    icon: typeof ClockCircleOutlined,
+    icon: <ClockCircleOutlined />,
     name: HOME.AIRCRAFT.name
   },
   {
     path: HOME.AIRCRAFT_TYPE.path,
-    icon: typeof FileDoneOutlined,
+    icon: <FileDoneOutlined/>,
     name: HOME.AIRCRAFT_TYPE.name
   },
   {
     path: HOME.AIRPORT.path,
-    icon: typeof ScheduleOutlined,
+    icon: <ScheduleOutlined/>,
     name: HOME.AIRPORT.name
   },
   {
     path: HOME.AIRWAY.path,
-    icon: typeof ScheduleOutlined,
+    icon: <ScheduleOutlined/>,
     name: HOME.AIRWAY.name
   }
 ]

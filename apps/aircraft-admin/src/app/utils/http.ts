@@ -52,7 +52,7 @@ httpInstance.interceptors.response.use(function (res) {
     })
   }
 
-  if (res.statusText === "OK") {
+  if (res.statusText === "OK" && res.data.createdAt) {
     message.success(res.data.msg ?? 'Success')
   }
 

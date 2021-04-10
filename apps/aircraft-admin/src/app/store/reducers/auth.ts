@@ -56,7 +56,7 @@ function auth(state = initialState, action: any): UserState {
         ...state,
         isLogin: true,
         isLoading: false,
-        userInfo: action.UserInfo
+        userInfo: action.userInfo
       }
     case LOGIN_SUCCESS:
       const { accessToken, user } = action.userInfo;

@@ -5,16 +5,12 @@ import routesMap from './routes'
 import { BrowserRouter as Router, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { loginByToken } from '../store/actions/auth'
-import { login } from '../store/actions/auth';
 import { AnyAction } from 'redux'
 
 const Routes: React.FC<AnyAction> = function ({ dispatch }) {
 
   useEffect(() => {
-    dispatch(login({
-      usernameOrEmail: 'user',
-      password: '123456789'
-    }))
+    dispatch(loginByToken());
   }, [])
 
   return (
