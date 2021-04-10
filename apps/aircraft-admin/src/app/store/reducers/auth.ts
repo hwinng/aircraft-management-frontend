@@ -1,55 +1,64 @@
-import { LOCAL_STORAGE } from './../../constants/storage';
-import * as types from '../types';
-import { type } from 'node:os';
+import { AUTH } from '../types'
+import { LOCAL_STORAGE } from '../../constants'
 
-interface IRole {
-  id: number,
-  name: string
+const { LOGIN_SUCCESS, LOGOUT, AUTH_ERROR } = AUTH
+
+export interface UserInfoProps {
+  provider: string
+  uid: number | undefined
+  username: string
+  password: string
+  loginName: string
+  avatarUrl: string
+  email: string
+  role: string
+  token: string | undefined
+  bio: string
+  location: string
+  createdAt: string
 }
 
-interface IUserState {
-  username: string,
-  email: string,
-  role: IRole,
-  access_token: string
+export interface UserState {
+  isLogin: boolean
+  isLockScreen: boolean
+  userInfo: UserInfoProps
 }
-interface IAuthState {
-  user: IUserState,
-  token: string,
-  isLogin: boolean,
-  isLoading: boolean
-}
-const initialState: IAuthState = {
-  user: null,
-  token: localStorage.getItem('token'),
+
+const initialState: UserState = {
   isLogin: false,
-  isLoading: true
-}
-
-function auth(state = initialState, action: any): IAuthState {
-  switch (action.type) {
-    case types.LOGIN_SUCCESS:
-          localStorage.setItem("token", action.payload);
-          return {
-            ...state,
-            token: action.payload,
-            user: action.payload,
-            isLogin: true,
-            isLoading: false,
-          };
-        case types.AUTH_ERROR:
-        case types.LOGOUT:
-          localStorage.removeItem("token");
-          return {
-            ...state,
-            user: null,
-            token: null,
-            isLogin: false,
-            isLoading: false,
-          };
-        default:
-          return state;
+  isLockScreen: false,
+  userInfo: {
+    provider: '', // github ?
+    uid: undefined, // 用户ID
+    createdAt: '', // 注册时间
+    bio: '', // 简介
+    username: '', // 昵称
+    password: '', // 经过MD5加密后的密码
+    loginName: '', // 登录名
+    avatarUrl: '', // 头像
+    email: '',
+    role: '',
+    token: undefined, // 登录凭证
+    location: ''
   }
 }
 
-export default auth
+function auth(state = initialState, action: any): UserState {
+  switch (action.type) {
+    case LOGIN_SUCCESS:
+      const userInfo = action.userInfo
+      if (userInfo?.token) {
+        state.isLogin = true
+        window.localStorage.setItem(LOCAL_STORAGE.USER, JSON.stringify(userInfo))
+        window.localStorage.setItem(LOCAL_STORAGE.LOGIN_NAME, userInfo.loginName)
+      }
+      return {
+        ...state,
+        userInfo: action.userInfo
+      }
+    default:
+      return state
+  }
+}
+
+export default auth;
