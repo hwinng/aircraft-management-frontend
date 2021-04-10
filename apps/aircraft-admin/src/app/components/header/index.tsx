@@ -12,19 +12,25 @@ import {
   UserOutlined,
   LogoutOutlined
 } from '@ant-design/icons';
+import { ThunkDispatch } from 'redux-thunk';
+import { AnyAction } from 'redux';
 
-type Props = ReturnType<typeof mapStateToProps> & HomeMainState & RouteComponentProps
+type Props = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps> & HomeMainState & RouteComponentProps
 
 const HomeHeader: React.FC<Props> = function ({
   collapsed,
   setCollapsed,
-  auth
+  auth,
+  logout
 }) {
 
+  const handleClick = () => {
+    logout();
+  }
   const menu = (
     <Menu>
         <Menu.Item key="0">
-            <a onClick={logout} href='#!'>
+            <a onClick={handleClick} href='#!'>
                 <LogoutOutlined />
                 <span className='hide-sm'>Logout</span>
             </a>
@@ -68,7 +74,14 @@ const HomeHeader: React.FC<Props> = function ({
 }
 
 const mapStateToProps = ({ auth }: StoreState) => {
-  return { auth }
+  return { auth };
 }
 
-export default connect(mapStateToProps)(withRouter(HomeHeader))
+const mapDispatchToProps = (dispatch: ThunkDispatch<any, any, AnyAction>) => {
+  return {
+    logout: () => dispatch(logout()),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(HomeHeader))
+//TODO: xủe lí lại phần private route, auth action

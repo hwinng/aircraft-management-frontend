@@ -25,9 +25,6 @@ const Sidebar: React.FC<Props> = function ({ location, collapsed }) {
     const pathname = location.pathname;
     const fragment = pathname.split('/').slice(0, 3);
     const prefixPath = fragment.join('/');
-    console.log('prefix path', prefixPath);
-    console.log('fragment', fragment);
-
     if (fragment.length === 3) {
       for (let i = 0; i < HOME_SIDER_MENU_LIST.length; i++) {
         const menu = HOME_SIDER_MENU_LIST[i]

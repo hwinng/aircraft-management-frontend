@@ -16,8 +16,6 @@ const PrivateRoute: React.FC<Props> = function ({
   location,
   ...rest
 }) {
-  console.log('chilren', childrenRoutes);
-
   const { meta } = rest
   if (meta) {
     if (meta.title) {

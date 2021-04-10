@@ -19,7 +19,6 @@ export interface HomeMainState {
 const storageCollapsed = Number(window.localStorage.getItem(SIDEBAR_COLLAPSED) || true)
 
 const HomeMain: React.FC = function (props) {
-  console.log('children', props.children)
   const [collapsed, setCollapsed] = useState(!storageCollapsed)
 
   function handleToggleCollapsed() {

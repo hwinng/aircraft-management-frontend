@@ -45,6 +45,7 @@ httpInstance.interceptors.request.use(async (config) => {
 
 
 httpInstance.interceptors.response.use(function (res) {
+
   if (res.statusText !== "OK") {
     notification.error({
       message: `Code: ${res.data.errorCode ?? -1}`,
