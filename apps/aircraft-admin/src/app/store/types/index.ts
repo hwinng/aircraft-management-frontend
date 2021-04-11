@@ -1,0 +1,10 @@
+export const AUTH = {
+  LOGIN_SUCCESS: 'LOGIN_SUCCESS',
+  LOGOUT: 'LOGOUT',
+  AUTH_ERROR: 'AUTH_ERROR',
+  GET_AUTH: 'GET_AUTH'
+}
+
+export const SYSTEM = {
+  INFO: 'INFO'
+}
