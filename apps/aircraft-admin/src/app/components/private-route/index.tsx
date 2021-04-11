@@ -16,6 +16,7 @@ const PrivateRoute: React.FC<Props> = function ({
   location,
   ...rest
 }) {
+
   const { meta } = rest
   if (meta) {
     if (meta.title) {

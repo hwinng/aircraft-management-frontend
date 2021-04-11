@@ -1,7 +1,7 @@
-import { AUTH } from '../types'
-import { loginService, getAuthService } from '../../services'
-import { ActionCreator, Dispatch } from 'redux'
-import { ThunkAction } from 'redux-thunk'
+import { AUTH } from '../types';
+import { loginService, getAuthService } from '../../services';
+import { ActionCreator, Dispatch } from 'redux';
+import { ThunkAction } from 'redux-thunk';
 
 const { LOGIN_SUCCESS, LOGOUT, AUTH_ERROR, GET_AUTH} = AUTH
 
@@ -33,7 +33,6 @@ export const loginByToken = () => async dispatch => {
       })
     },
     (err: any) => {
-      console.log(err)
       dispatch({
         type: AUTH_ERROR
       })
@@ -65,6 +64,7 @@ export const logout: ActionCreator<ThunkAction<
     return dispatch(_logout);
   };
 };
+
 // export const postPersonActionCreator: ActionCreator<ThunkAction<
 //   // The type of the last action to be dispatched - will always be promise<T> for async actions
 //   Promise<IPostedPersonAction>,

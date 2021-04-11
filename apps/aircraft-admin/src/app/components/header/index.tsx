@@ -3,7 +3,7 @@ import './styles.scss'
 import { Avatar, Dropdown, Menu } from 'antd'
 import { withRouter, RouteComponentProps, Link } from 'react-router-dom'
 import { HomeMainState } from '../../pages/home/main'
-import { connect } from 'react-redux'
+import { connect, DispatchProp } from 'react-redux'
 import { StoreState } from '../../store'
 import { logout } from '../../store/actions/auth'
 import {
@@ -15,17 +15,22 @@ import {
 import { ThunkDispatch } from 'redux-thunk';
 import { AnyAction } from 'redux';
 
-type Props = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps> & HomeMainState & RouteComponentProps
+type ThunkDispatchProps = ThunkDispatch<{}, {}, AnyAction>
+type DispatchProps = {
+  dispatch: ThunkDispatchProps
+} & DispatchProp & RouteComponentProps
+
+type Props = ReturnType<typeof mapStateToProps> & DispatchProps & HomeMainState & RouteComponentProps
 
 const HomeHeader: React.FC<Props> = function ({
   collapsed,
   setCollapsed,
   auth,
-  logout
+  dispatch
 }) {
 
   const handleClick = () => {
-    logout();
+    dispatch(logout());
   }
   const menu = (
     <Menu>
@@ -77,11 +82,4 @@ const mapStateToProps = ({ auth }: StoreState) => {
   return { auth };
 }
 
-const mapDispatchToProps = (dispatch: ThunkDispatch<any, any, AnyAction>) => {
-  return {
-    logout: () => dispatch(logout()),
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(HomeHeader))
-//TODO: xủe lí lại phần private route, auth action
+export default connect(mapStateToProps)(withRouter(HomeHeader))
