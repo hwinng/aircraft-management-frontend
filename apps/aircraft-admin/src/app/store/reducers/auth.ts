@@ -76,7 +76,7 @@ function auth(state = initialState, action: any): UserState {
     case LOGOUT:
     case AUTH_ERROR:
       window.localStorage.removeItem(LOCAL_STORAGE.USER);
-      window.localStorage.removeItem(LOCAL_STORAGE.USER);
+      window.localStorage.removeItem(LOCAL_STORAGE.TOKEN);
       return {
         ...state,
         isLogin: false,

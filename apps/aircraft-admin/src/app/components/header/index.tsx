@@ -30,7 +30,7 @@ const HomeHeader: React.FC<Props> = function ({
   const menu = (
     <Menu>
         <Menu.Item key="0">
-            <a onClick={handleClick} href='#!'>
+            <a onClick={handleClick}>
                 <LogoutOutlined />
                 <span className='hide-sm'>Logout</span>
             </a>
