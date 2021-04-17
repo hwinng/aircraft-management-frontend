@@ -1,11 +1,17 @@
 import { IUserInfo } from './auth';
 import { ACCOUNT } from '../types';
 import { LOCAL_STORAGE } from '../../constants';
-const { GET_ALL_ACCOUNTS, GET_DETAIL_ACCOUNT, EDIT_ACCOUNT, ACCOUNT_ERROR} = ACCOUNT;
+const { GET_ALL_ACCOUNTS, GET_ACCOUNT_PROFILE, EDIT_ACCOUNT, ACCOUNT_ERROR} = ACCOUNT;
 
+export interface IProfile {
+  userInfo: IUserInfo,
+  id_card_number: string,
+  credit_card_number: string,
+  phone_number: string
+}
 export interface IAccountState {
   accounts: Array<IUserInfo>,
-  accountDetail: IUserInfo,
+  account_profile: IProfile,
   pagination: IPagination,
   isLoading: boolean,
   error: any
@@ -19,13 +25,8 @@ export interface IPagination {
 
 const initialState: IAccountState = {
   accounts: [],
-  accountDetail: null,
-  pagination: {
-    pageNumber: 0,
-    pageSize: 0,
-    totalPages: 0,
-    totalElements: 0
-  },
+  account_profile: null,
+  pagination: null,
   isLoading: true,
   error: {}
 }
@@ -44,12 +45,21 @@ function account (state = initialState, action) {
         },
         isLoadLing: false,
       }
-    case GET_DETAIL_ACCOUNT:
-      return 'get detail account'
-    case EDIT_ACCOUNT:
-      return 'edit account'
-    case ACCOUNT_ERROR:
-      return 'account error'
+    case GET_ACCOUNT_PROFILE:
+      return {
+        ...state,
+        account_profile: {
+          userInfo: payload.user,
+          id_card_number: payload.id_card_number,
+          credit_card_number: payload.credit_card_number,
+          phone_number: payload.phone_number
+        },
+        isLoading: false,
+      }
+    // case EDIT_ACCOUNT:
+    //   return 'edit account'
+    // case ACCOUNT_ERROR:
+    //   return 'account error'
     default:
       return state;
   }

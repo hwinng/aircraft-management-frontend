@@ -21,8 +21,8 @@ export function getAllAccount(params: string): Promise<unknown> {
   return http.get(api.getAllAccount + `?${params}`);
 }
 
-export function getAccountByID(id: number): Promise<unknown> {
-  return http.get(api.getAccountByID + `/${id}`);
+export function getProfile(id: number): Promise<unknown> {
+  return http.get(api.getAccountProfile + `/${id}`);
 }
 
 export function updateAccountByID(id: number, data: updateAccountDTO): Promise<unknown> {

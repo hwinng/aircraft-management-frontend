@@ -4,7 +4,7 @@ const API = Object.freeze({
   getMe: '/auth/getMe',
   createAccount: '/account/create',
   getAllAccount: '/account/admin/getAll',
-  getAccountByID: '/account/admin/getById',
+  getAccountProfile: '/profile/admin/get-one',
   updateAccountByID: '/account/admin/update'
 })
 
