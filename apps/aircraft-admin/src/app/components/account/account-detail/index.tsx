@@ -104,6 +104,7 @@ const AccountDetail = ({ account }) => {
                       Edit
                     </Button>
                     <EditAccount
+                      profileDTO={account_profile}
                       visible={visible}
                       onEdit={onEdit}
                       onCancel={() => {

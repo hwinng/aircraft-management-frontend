@@ -1,16 +1,16 @@
 import http from '../utils/http'
 import api from '../api'
-
-enum EnumRole {
-  user = 'ROLE_USER',
-  admin = 'ROLE_ADMIN'
-}
-interface updateAccountDTO {
+export interface IUpdateAccountDTO {
   name: string,
   username: string,
   email: string,
-  imageUrl: string,
-  role: EnumRole
+  role: string
+}
+export interface IUpdateProfileDTO {
+  user_id: number,
+  id_card_number: string,
+  credit_card_number: string,
+  phoneNumber: string
 }
 
 export function createAccount(data: object): Promise<unknown> {
@@ -25,6 +25,10 @@ export function getProfile(id: number): Promise<unknown> {
   return http.get(api.getAccountProfile + `/${id}`);
 }
 
-export function updateAccountByID(id: number, data: updateAccountDTO): Promise<unknown> {
-  return http.put(api.updateAccountByID + `/${id}`);
+export function updateAccount(id: number, data: IUpdateAccountDTO): Promise<unknown> {
+  return http.put(api.updateAccount + `/${id}`, data);
+}
+
+export function updateProfile(userId: number, data: IUpdateProfileDTO): Promise<unknown> {
+  return http.put(api.updateAccount + `/${userId}`, data);
 }

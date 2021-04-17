@@ -1,5 +1,6 @@
 import { ACCOUNT } from './../types/index';
-import { getProfile, getAllAccount } from "../../services"
+import { getProfile, getAllAccount, updateAccount, updateProfile } from "../../services"
+import { IUpdateAccountDTO, IUpdateProfileDTO} from '../../services/account'
 
 export const getAllAccounts = (params: string) => async dispatch => {
   return getAllAccount(params).then(
@@ -38,4 +39,25 @@ export const getAccountById = (id: number) => async dispatch => {
       })
     }
   )
+}
+
+export const updateAccountProfile = (id: number, accountDTO: IUpdateAccountDTO, profileDTO: IUpdateProfileDTO) => async dispatch => {
+  return Promise.all([
+    updateAccount(id, accountDTO).then(
+      (res: any) => {
+        console.log(res)
+      },
+      (err: any) => {
+        console.log('account err', err)
+      }
+    ),
+    updateProfile(id, profileDTO).then(
+      (res: any) => {
+        console.log(res);
+      },
+      (err: any) => {
+        console.log('profile err', err)
+      }
+    )
+  ]).then(values => console.log(values))
 }

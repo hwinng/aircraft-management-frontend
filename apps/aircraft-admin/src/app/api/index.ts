@@ -5,7 +5,8 @@ const API = Object.freeze({
   createAccount: '/account/create',
   getAllAccount: '/account/admin/getAll',
   getAccountProfile: '/profile/admin/get-one',
-  updateAccountByID: '/account/admin/update'
+  updateAccount: '/account/admin/update',
+  updateProfile: '/profile/admin/update-one'
 })
 
 export default API
