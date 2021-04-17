@@ -1,9 +1,8 @@
 import { AUTH } from '../types';
 import { LOCAL_STORAGE } from '../../constants';
-import { pick } from 'lodash';
 
 const { LOGIN_SUCCESS, LOGOUT, AUTH_ERROR, GET_AUTH } = AUTH;
-export interface UserInfoProps {
+export interface IUserInfo {
   createdAt: string,
   updatedAt: string,
   id: string,
@@ -21,15 +20,15 @@ export interface IRole {
   id: number,
   name: string
 }
-export interface UserState {
+export interface IUserState {
   isLogin: boolean,
   isLoading: boolean,
   error: any,
   token: string,
-  userInfo: UserInfoProps
+  userInfo: IUserInfo
 }
 
-const initialState: UserState = {
+const initialState: IUserState = {
   isLogin: false,
   isLoading: true,
   error: null,
@@ -49,7 +48,7 @@ const initialState: UserState = {
   }
 }
 
-function auth(state = initialState, action: any): UserState {
+function auth(state = initialState, action: any): IUserState {
   switch (action.type) {
     case GET_AUTH:
       return {

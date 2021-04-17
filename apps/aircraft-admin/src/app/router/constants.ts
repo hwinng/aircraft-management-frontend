@@ -5,6 +5,8 @@ export const HOME = {
 
   ACCOUNT: { name: 'Account', path: '/home/account' },
 
+  ACCOUNT_DETAIL: { name: 'Account Detail', path: '/home/account/detail/:id'},
+
   AIRCRAFT: { name: 'Aircraft', path: '/home/aircraft' },
 
   AIRCRAFT_TYPE: { name: 'Aircraft Type', path: '/home/aircraft-type' },

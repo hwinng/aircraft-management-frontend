@@ -2,7 +2,8 @@ import { IRouteProps } from './types';
 import { HOME } from './constants';
 import Login from '../pages/login';
 import Main from '../pages/home/main';
-import Account from '../pages/home/account';
+import Account from '../pages/home/account/index';
+import AccountDetail from '../pages/home/account/account-detail';
 import NotFound from '../pages/exception/404';
 
 const routesMap: IRouteProps[] = [
@@ -29,6 +30,15 @@ const routesMap: IRouteProps[] = [
         exact: true,
         meta: {
           title: HOME.ACCOUNT.name,
+          requiresAuth: true,
+        }
+      },
+      {
+        path: HOME.ACCOUNT_DETAIL.path,
+        component: AccountDetail,
+        exact: true,
+        meta: {
+          title: HOME.ACCOUNT_DETAIL.name,
           requiresAuth: true,
         }
       },
