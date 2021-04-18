@@ -1,16 +1,42 @@
 import React, { Fragment, useState, useCallback } from 'react';
 import './style.scss';
+import { connect, DispatchProp } from 'react-redux';
 import { Row, Col, Card, Avatar, Button, Breadcrumb } from 'antd';
 import { Link } from 'react-router-dom'
 import EditAccount from '../account-form/EditAccount'
 import { getNameLetter } from '../../../utils/getNameLetter';
+import { ThunkDispatch } from 'redux-thunk';
+import { AnyAction } from 'redux';
+import { IUpdateProfileDTO, IUpdateAccountDTO } from '../../../services/account';
+import { getAccountById, updateAccountProfile } from '../../../store/actions/account';
 
-const AccountDetail = ({ account }) => {
+type ThunkDispatchProps = ThunkDispatch<{}, {}, AnyAction>
+type DispatchProps = {
+  account: any,
+  dispatch: ThunkDispatchProps
+} & DispatchProp
+
+const AccountDetail: React.FC<DispatchProps> = ({ account, dispatch }) => {
   const [visible, setVisible] = useState(false);
   const { account_profile, isLoading } = account;
 
   const onEdit = (values: any) => {
-    console.log('Received values of form: ', values);
+    const profileDTO: IUpdateProfileDTO = {
+      id: account_profile.userInfo.id,
+      user_id: account_profile.userInfo.id,
+      id_card_number: values.id_card_number,
+      credit_card_number: values.credit_card_number,
+      phoneNumber: values.phone_number,
+    };
+    const accountDTO: IUpdateAccountDTO = {
+      name: values.name,
+      username: values.username,
+      imageUrl: account_profile.userInfo.imageUrl,
+      email: values.email,
+      role: values.role
+    };
+    dispatch(updateAccountProfile(account_profile.userInfo.id, accountDTO, profileDTO));
+    dispatch(getAccountById(account_profile.userInfo.id));
     setVisible(false);
   };
 
@@ -118,4 +144,4 @@ const AccountDetail = ({ account }) => {
   )
 }
 
-export default AccountDetail
+export default connect()(AccountDetail)

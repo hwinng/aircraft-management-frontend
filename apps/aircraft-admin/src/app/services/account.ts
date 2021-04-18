@@ -3,10 +3,12 @@ import api from '../api'
 export interface IUpdateAccountDTO {
   name: string,
   username: string,
+  imageUrl: string,
   email: string,
   role: string
 }
 export interface IUpdateProfileDTO {
+  id: number,
   user_id: number,
   id_card_number: string,
   credit_card_number: string,
@@ -30,5 +32,5 @@ export function updateAccount(id: number, data: IUpdateAccountDTO): Promise<unkn
 }
 
 export function updateProfile(userId: number, data: IUpdateProfileDTO): Promise<unknown> {
-  return http.put(api.updateAccount + `/${userId}`, data);
+  return http.put(api.updateProfile + `/${userId}`, data);
 }

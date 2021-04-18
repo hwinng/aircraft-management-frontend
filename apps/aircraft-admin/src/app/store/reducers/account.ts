@@ -1,7 +1,7 @@
 import { IUserInfo } from './auth';
 import { ACCOUNT } from '../types';
 import { LOCAL_STORAGE } from '../../constants';
-const { GET_ALL_ACCOUNTS, GET_ACCOUNT_PROFILE, EDIT_ACCOUNT, ACCOUNT_ERROR} = ACCOUNT;
+const { GET_ALL_ACCOUNTS, GET_ACCOUNT_PROFILE, UPDATE_PROFILE_ACCOUNT, ACCOUNT_ERROR} = ACCOUNT;
 
 export interface IProfile {
   userInfo: IUserInfo,
@@ -56,10 +56,19 @@ function account (state = initialState, action) {
         },
         isLoading: false,
       }
-    // case EDIT_ACCOUNT:
-    //   return 'edit account'
-    // case ACCOUNT_ERROR:
-    //   return 'account error'
+    case UPDATE_PROFILE_ACCOUNT:
+      return {
+        ...state,
+        account_profile: {
+          userInfo: payload.user,
+          id_card_number: payload.id_card_number,
+          credit_card_number: payload.credit_card_number,
+          phone_number: payload.phone_number
+        },
+        isLoading: false,
+      }
+    case ACCOUNT_ERROR:
+      return 'account error'
     default:
       return state;
   }

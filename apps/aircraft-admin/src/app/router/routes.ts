@@ -4,6 +4,8 @@ import Login from '../pages/login';
 import Main from '../pages/home/main';
 import Account from '../pages/home/account/index';
 import AccountDetail from '../pages/home/account/account-detail';
+import AirCraft from '../pages/home/aircraft/index';
+import AirCraftDetail from '../pages/home/aircraft/aircraft-detail';
 import NotFound from '../pages/exception/404';
 
 const routesMap: IRouteProps[] = [
@@ -44,10 +46,19 @@ const routesMap: IRouteProps[] = [
       },
       {
         path: HOME.AIRCRAFT.path,
-        component: 'Aircraft',
+        component: AirCraft,
         exact: true,
         meta: {
           title: HOME.AIRCRAFT.name,
+          requiresAuth: true,
+        }
+      },
+      {
+        path: HOME.AIRCRAFT_DETAIL.path,
+        component: AirCraftDetail,
+        exact: true,
+        meta: {
+          title: HOME.AIRCRAFT_DETAIL.name,
           requiresAuth: true,
         }
       },

@@ -44,20 +44,26 @@ export const getAccountById = (id: number) => async dispatch => {
 export const updateAccountProfile = (id: number, accountDTO: IUpdateAccountDTO, profileDTO: IUpdateProfileDTO) => async dispatch => {
   return Promise.all([
     updateAccount(id, accountDTO).then(
-      (res: any) => {
-        console.log(res)
-      },
+      (res: any) => res,
       (err: any) => {
-        console.log('account err', err)
+        console.log('update account err', err)
       }
     ),
     updateProfile(id, profileDTO).then(
       (res: any) => {
-        console.log(res);
+        if (res.status === 200) {
+          dispatch({
+            type: ACCOUNT.UPDATE_PROFILE_ACCOUNT,
+            payload: res.data
+          });
+        };
       },
       (err: any) => {
-        console.log('profile err', err)
+        console.log('update profile err', err)
       }
     )
-  ]).then(values => console.log(values))
+  ])
+  .then(values => {console.log('values', values)})
+  .catch(err => console.log('catch',err))
+  .finally(() => console.log('DONE'))
 }
