@@ -8,7 +8,12 @@ const API = Object.freeze({
   updateAccount: '/account/admin/update',
   updateProfile: '/profile/admin/update-one',
 
+  //CRAFT
   getAllCrafts: '/aircraft/getAll',
+  adminCreateAircraft: '/aircraft/admin/create',
+
+  //CRAFT TYPE
+  adminGetAllCraftType: '/aircraftType/getAll'
 })
 
 export default API

@@ -1,33 +1,47 @@
 import React from 'react';
 import { Modal, Form, Input, Select } from 'antd';
+import aircraft from 'apps/aircraft-admin/src/app/store/reducers/aircraft';
+import { getType } from '@reduxjs/toolkit';
 
 interface ICreateAirCraftDTO {
-  name: string,
-  aircraft_type_id: number,
-  status: string
+  name: string;
+  aircraft_type_id: number;
+  status: string;
 }
 interface ICreateAirCraftProps {
-  aircraftDTO: any,
+  types: any;
   visible: boolean;
   onCreate: (Value: ICreateAirCraftDTO) => void;
   onCancel: () => void;
 }
 
 const CreateAirCraftForm: React.FC<ICreateAirCraftProps> = ({
-  aircraftDTO,
+  types,
   visible,
   onCreate,
-  onCancel
+  onCancel,
 }) => {
 
-  const [form] = Form.useForm();
+  //transform types
+  types = types.map((ele, _) => {
+    return {
+      id: ele.id,
+      name: ele.name
+    }
+  })
 
+  const [form] = Form.useForm();
   const initialFormValues = {
-    name: 'name',
-    aircraft_type_id: 0,
-    status: 'ACTIVATED'
+    name: '',
+    aircraft_type_id: 'BOEING 787',
+    status: 'ACTIVATED',
+  };
+
+  function handleSelectStatus(values) {
+    //TODO: handle select value here
   }
-  const handleSelectStatus = (values) => {
+
+  function handleSelectType(values) {
     //TODO: handle select value here
   }
 
@@ -64,12 +78,25 @@ const CreateAirCraftForm: React.FC<ICreateAirCraftProps> = ({
           >
             <Input />
           </Form.Item>
+
           <Form.Item
             name="aircraft_type_id"
             label="Aircraft Type ID"
-            rules={[{ required: true, message: 'Please input aircraft type id' }]}
+            rules={[
+              { required: true, message: 'Please input aircraft type id' },
+            ]}
           >
-            <Input />
+            <Select
+              placeholder="Select craft type"
+              onChange={handleSelectType}
+              allowClear
+            >
+            {
+              types.map((type, index) => (
+                <Select.Option key={index} value={type.id}>{type.name}</Select.Option>
+              ))
+            }
+            </Select>
           </Form.Item>
 
           <Form.Item
@@ -91,7 +118,6 @@ const CreateAirCraftForm: React.FC<ICreateAirCraftProps> = ({
               <Select.Option value="DEACTIVATED">DEACTIVATED</Select.Option>
             </Select>
           </Form.Item>
-
         </Form>
       </Modal>
     </div>

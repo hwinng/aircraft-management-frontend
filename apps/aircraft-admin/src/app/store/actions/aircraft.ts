@@ -1,4 +1,4 @@
-import { getAirCraftList } from '../../services/aircraft';
+import { getAirCraftList, adminCreateAircraft } from '../../services/aircraft';
 import { AIR_CRAFT } from '../types';
 
 export const getAllAirCrafts = (params: string) => async dispatch => {
@@ -18,5 +18,22 @@ export const getAllAirCrafts = (params: string) => async dispatch => {
       })
     }
 
+  )
+}
+
+export const createAircraft = (body: any) => async dispatch => {
+  return adminCreateAircraft(body).then(
+    (res: any) => {
+      dispatch({
+        type: AIR_CRAFT.CREATE_AIR_CRAFT,
+        payload: res.data
+      });
+    },
+    (err: any) => {
+      dispatch({
+        type: AIR_CRAFT.AIR_CRAFT_ERROR,
+        payload: err
+      })
+    }
   )
 }

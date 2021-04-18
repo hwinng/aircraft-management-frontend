@@ -6,10 +6,10 @@ const initialState = {
   air_craft_detail: null,
   pagination: null,
   loading: true,
-  error: null
-}
+  error: null,
+};
 
-function aircraft (state = initialState, action) {
+function aircraft(state = initialState, action) {
   const { type, payload } = action;
   switch (type) {
     case AIR_CRAFT.GET_ALL_AIR_CRAFT:
@@ -17,11 +17,16 @@ function aircraft (state = initialState, action) {
         ...state,
         aircrafts: payload.content,
         loading: false,
-      }
+      };
     case AIR_CRAFT.GET_AIR_CRAFT_DETAIL:
       return {
-        ...state
-      }
+        ...state,
+      };
+    // case AIR_CRAFT.CREATE_AIR_CRAFT:
+    //   return {
+    //     ...state,
+    //     // aircrafts: [...state.aircrafts, payload],
+    //   };
     default:
       return state;
   }

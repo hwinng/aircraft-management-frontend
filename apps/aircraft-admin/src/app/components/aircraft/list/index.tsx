@@ -1,15 +1,28 @@
 import React from 'react'
-import{ useLocation } from 'react-router';
-import { Table, Button,  Tag } from 'antd'
+import { useLocation } from 'react-router';
+import { connect, DispatchProp } from 'react-redux';
+import { Table, Button,  Tag, Spin } from 'antd';
 import { v4 as uuidv4 } from "uuid";
-import { Link } from 'react-router-dom'
+import { Link, RouteComponentProps } from 'react-router-dom'
 import NoData from '../../table-no-data';
 import Search from '../../search-bar';
 import CreateAircraft from '../form/create';
+import { ThunkDispatch } from 'redux-thunk';
+import { AnyAction } from 'redux';
+import { getAllCraftTypes } from '../../../store/actions/craft-type';
+import { StoreState } from '../../../store';
+import { createAircraft, getAllAirCrafts } from '../../../store/actions/aircraft';
 
-const AirCraftList = ({ craft }) => {
+type DispatchProps = {
+  dispatch: ThunkDispatch<{}, {}, AnyAction>
+} & DispatchProp & RouteComponentProps;
+type Props = ReturnType<typeof mapStateToProps> & DispatchProps;
+
+const AirCraftList: React.FC<Props> = ({ craft, craftTypes, dispatch }) => {
   const location = useLocation();
   const [ visible, setVisible ] = React.useState(false);
+  const { types, loading } = craftTypes;
+
 
   const handleSearch = (values) => {
     //TODO: handle search here
@@ -18,18 +31,23 @@ const AirCraftList = ({ craft }) => {
 
   const onCreate = (values: any) => {
     //TODO: handle api create here
-    console.log(values)
+    dispatch(createAircraft(values));
+    dispatch(getAllAirCrafts('page=0&size=10'));
     setVisible(false);
   }
 
-  return (
+  React.useEffect(() => {
+    dispatch(getAllCraftTypes());
+  }, [])
+
+  return loading ? (<Spin tip="Loading..."></Spin>) : (
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <Button type='primary' onClick={() => setVisible(true)}>
           Create
         </Button>
         <CreateAircraft
-          aircraftDTO={craft.air_craft_detail}
+          types={types}
           visible={visible}
           onCreate={onCreate}
           onCancel={() => {
@@ -99,4 +117,7 @@ const AirCraftList = ({ craft }) => {
   )
 }
 
-export default AirCraftList
+const mapStateToProps = ({ craftTypes }: StoreState ) => {
+  return { craftTypes }
+}
+export default connect(mapStateToProps)(AirCraftList)
