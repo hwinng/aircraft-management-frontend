@@ -1,14 +1,13 @@
 import React from 'react'
-import './style.scss'
 import { connect, DispatchProp } from 'react-redux';
 import { RouteComponentProps } from 'react-router-dom';
 import queryString from 'query-string';
-import { IUserInfo } from '../../../../store/reducers/auth';
-import AccountList from '../../../../components/account/account-list';
 import { ThunkDispatch } from 'redux-thunk';
 import { AnyAction } from 'redux';
-import { getAllAccounts } from 'apps/aircraft-admin/src/app/store/actions/account';
+import { getAllAirCrafts } from '../../../../store/actions/aircraft';
 import { StoreState } from 'apps/aircraft-admin/src/app/store';
+import AirCraftList from '../../../../components/aircraft/list';
+
 
 type ThunkDispatchProps = ThunkDispatch<{}, {}, AnyAction>
 type DispatchProps = {
@@ -19,7 +18,7 @@ type Props = ReturnType<typeof mapStateToProps> & DispatchProps & RouteComponent
 
 const AirCraft: React.FC<Props> = function({
   dispatch,
-  account
+  aircraft
 }) {
 
   const [ params, setParams ] = React.useState({
@@ -31,20 +30,22 @@ const AirCraft: React.FC<Props> = function({
 
   React.useEffect(() => {
     async function initilizeData() {
-      await dispatch(getAllAccounts(queryString.stringify(params)));
+      await dispatch(getAllAirCrafts(queryString.stringify(params)));
     };
     initilizeData();
-  }, [ getAllAccounts, params ]);
+  }, [ getAllAirCrafts, params ]);
 
-  return (
-    <div>
-      <AccountList accounts={account.accounts} />
-    </div>
-  )
+  return aircraft.loading
+    ?(<div>Loading...</div>)
+    :(
+      <div>
+        <AirCraftList craft={aircraft} />
+      </div>
+    )
 }
 
-const mapStateToProps = ({ account }: StoreState ) => {
-  return { account }
+const mapStateToProps = ({ aircraft }: StoreState ) => {
+  return { aircraft }
 }
 
 export default connect(mapStateToProps)(AirCraft)

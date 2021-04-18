@@ -1,6 +1,5 @@
 import { IUserInfo } from './auth';
 import { ACCOUNT } from '../types';
-import { LOCAL_STORAGE } from '../../constants';
 const { GET_ALL_ACCOUNTS, GET_ACCOUNT_PROFILE, UPDATE_PROFILE_ACCOUNT, ACCOUNT_ERROR} = ACCOUNT;
 
 export interface IProfile {
