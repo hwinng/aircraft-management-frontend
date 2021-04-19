@@ -15,7 +15,6 @@ const AirCraftList = ({
   const location = useLocation();
   return (
     <React.Fragment>
-      <h2 style={{ marginBottom: 0, marginTop: '2rem' }}>Information</h2>
       <Table
         key={uuidv4()}
         columns={[

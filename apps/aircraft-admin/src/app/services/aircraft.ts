@@ -9,3 +9,7 @@ export function adminCreateAircraft(body: any) {
   return http.post(api.adminCreateAircraft, body);
 }
 
+export function adminGetDetailAircraft(id: number) {
+  return http.get(api.adminGetDetailAircraft + `/${id}`);
+}
+

@@ -26,6 +26,7 @@ function aircraft(state = initialState, action) {
     case AIR_CRAFT.GET_AIR_CRAFT_DETAIL:
       return {
         ...state,
+        air_craft_detail: payload,
         loading: false
       };
     case AIR_CRAFT.CREATE_AIR_CRAFT:
