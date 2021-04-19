@@ -1,11 +1,16 @@
 import React from 'react'
 import { Input } from 'antd';
 
-const Search = ({ handleSearch }) => {
+const Search = ({ placeholder, allowClear, handleSearch }) => {
 
   return (
     <div>
-      <Input.Search placeholder="Search by email" onSearch={handleSearch} enterButton />
+      <Input.Search
+        placeholder={placeholder}
+        allowClear={allowClear}
+        onSearch={handleSearch}
+        enterButton
+      />
     </div>
   )
 }

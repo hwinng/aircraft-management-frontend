@@ -1,7 +1,5 @@
 import React from 'react';
-import { Modal, Form, Input, Select } from 'antd';
-import aircraft from 'apps/aircraft-admin/src/app/store/reducers/aircraft';
-import { getType } from '@reduxjs/toolkit';
+import { Modal, Form, Input, Select, Spin } from 'antd';
 
 interface ICreateAirCraftDTO {
   name: string;
@@ -21,14 +19,13 @@ const CreateAirCraftForm: React.FC<ICreateAirCraftProps> = ({
   onCreate,
   onCancel,
 }) => {
-
   //transform types
   types = types.map((ele, _) => {
     return {
       id: ele.id,
-      name: ele.name
-    }
-  })
+      name: ele.name,
+    };
+  });
 
   const [form] = Form.useForm();
   const initialFormValues = {
@@ -91,11 +88,11 @@ const CreateAirCraftForm: React.FC<ICreateAirCraftProps> = ({
               onChange={handleSelectType}
               allowClear
             >
-            {
-              types.map((type, index) => (
-                <Select.Option key={index} value={type.id}>{type.name}</Select.Option>
-              ))
-            }
+              {types.map((type, index) => (
+                <Select.Option key={index} value={type.id}>
+                  {type.name}
+                </Select.Option>
+              ))}
             </Select>
           </Form.Item>
 

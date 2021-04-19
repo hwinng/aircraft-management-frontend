@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 
 const AccountList = ({
   accounts,
+  loading
 }) => {
 
   const location = useLocation();
@@ -36,6 +37,7 @@ const AccountList = ({
       rowKey={(record) => record.key}
       dataSource={accounts}
       style={{ marginTop: "1rem" }}
+      loading={loading}
     />
   )
 }
