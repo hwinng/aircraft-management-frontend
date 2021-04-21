@@ -46,7 +46,7 @@ httpInstance.interceptors.request.use(async (config) => {
 
 httpInstance.interceptors.response.use(function (res) {
 
-  if (res.statusText !== "OK") {
+  if (res.status !== 200 && res.status !== 201 ) {
     notification.error({
       message: `Code: ${res.data.errorCode ?? -1}`,
       description: res.data.msg ?? 'Unexpected error'

@@ -1,6 +1,5 @@
 import { IUserInfo } from './auth';
 import { ACCOUNT } from '../types';
-import { LOCAL_STORAGE } from '../../constants';
 const { GET_ALL_ACCOUNTS, GET_ACCOUNT_PROFILE, UPDATE_PROFILE_ACCOUNT, ACCOUNT_ERROR} = ACCOUNT;
 
 export interface IProfile {
@@ -43,19 +42,9 @@ function account (state = initialState, action) {
           totalPages: payload.totalPages,
           totalElements: payload.totalElements
         },
-        isLoadLing: false,
-      }
-    case GET_ACCOUNT_PROFILE:
-      return {
-        ...state,
-        account_profile: {
-          userInfo: payload.user,
-          id_card_number: payload.id_card_number,
-          credit_card_number: payload.credit_card_number,
-          phone_number: payload.phone_number
-        },
         isLoading: false,
       }
+    case GET_ACCOUNT_PROFILE:
     case UPDATE_PROFILE_ACCOUNT:
       return {
         ...state,
@@ -68,7 +57,11 @@ function account (state = initialState, action) {
         isLoading: false,
       }
     case ACCOUNT_ERROR:
-      return 'account error'
+      return {
+        ...state,
+        isLoading: false,
+        err: {msg: 'error'}
+      }
     default:
       return state;
   }
