@@ -38,7 +38,7 @@ const Account: React.FC<Props> = function({
 
   return (
     <div>
-      <AccountList accounts={account.accounts} />
+      <AccountList loading={account.isLoading} accounts={account.accounts} />
     </div>
   )
 }
