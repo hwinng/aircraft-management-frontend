@@ -9,9 +9,11 @@ const AirCraftList = ({
   craft,
   pagination,
   loading,
-  onDeleteRow,
   onTableChange,
+  onDeleteRow,
+  onEditRow
 }) => {
+
   const location = useLocation();
   return (
     <React.Fragment>
@@ -67,10 +69,11 @@ const AirCraftList = ({
                     borderColor: 'yellow',
                   }}
                   type="primary"
+                  onClick={() => {
+                    onEditRow(record, record.id)
+                  }}
                 >
-                  <Link to={`${location.pathname}/detail/${record.id}`}>
-                    Edit
-                  </Link>
+                  Edit
                 </Button>
               </div>
             ),
@@ -84,7 +87,9 @@ const AirCraftList = ({
                   style={{ display: 'flex', flexDirection: 'column' }}
                   type="primary"
                   danger
-                  onClick={onDeleteRow}
+                  onClick={() => {
+                    onDeleteRow(record, record.id)
+                  }}
                 >
                   Delete
                 </Button>

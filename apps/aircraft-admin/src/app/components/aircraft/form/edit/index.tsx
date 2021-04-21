@@ -1,39 +1,24 @@
 import React from 'react';
-import { Modal, Form, Input, Select, Spin } from 'antd';
-import { ICreateAirCraftDTO } from '../../../../services/aircraft';
+import { Modal, Form, Input, Select } from 'antd';
 
-interface ICreateAirCraftProps {
-  types: any;
-  visible: boolean;
-  onCreate: (Value: ICreateAirCraftDTO) => void;
-  onCancel: () => void;
-}
-
-const CreateAirCraftForm: React.FC<ICreateAirCraftProps> = ({
+const EditAircraftForm = ({
   types,
-  visible,
-  onCreate,
+  data,
+  openEditForm,
   onCancel,
+  onOk
 }) => {
-  //transform types
-  types = types.map((ele, _) => {
-    return {
-      id: ele.id,
-      name: ele.name,
-    };
-  });
-
   const [form] = Form.useForm();
-  const initialFormValues: ICreateAirCraftDTO = {
-    name: '',
-    aircraft_type_id: 1,
-    status: 'ACTIVATED',
+  const initialFormValues = {
+    name: data.name,
+    aircraft_type_id: data.aircraftType.id,
+    status: data.status,
   };
 
   return (
     <div>
       <Modal
-        visible={visible}
+        visible={openEditForm}
         title="Create Aircraft"
         okText="Save"
         cancelText="Cancel"
@@ -43,7 +28,7 @@ const CreateAirCraftForm: React.FC<ICreateAirCraftProps> = ({
             .validateFields()
             .then((values) => {
               form.resetFields();
-              onCreate(values);
+              onOk(values, data.id);
             })
             .catch((info) => {
               console.log('Validate Failed:', info);
@@ -99,4 +84,4 @@ const CreateAirCraftForm: React.FC<ICreateAirCraftProps> = ({
   );
 };
 
-export default CreateAirCraftForm;
+export default EditAircraftForm;

@@ -4,6 +4,7 @@ const initialState = {
   aircrafts: [],
   air_craft_detail: null,
   pagination: null,
+  isDeleted: false,
   loading: true,
   error: null,
 };
@@ -30,12 +31,28 @@ function aircraft(state = initialState, action) {
         loading: false
       };
     case AIR_CRAFT.CREATE_AIR_CRAFT:
-      console.log('create payload', payload);
       return {
         ...state,
         aircrafts: [...state.aircrafts, payload],
         loading: false,
       };
+    case AIR_CRAFT.DELETE_AIR_CRAFT:
+      return {
+        ...state,
+        isDeleted: true,
+        loading: false
+      }
+    case AIR_CRAFT.UPDATE_CRAFT:
+      console.log(payload)
+      return {
+        ...state
+      }
+    case AIR_CRAFT.AIR_CRAFT_ERROR:
+      return {
+        ...state,
+        error: payload,
+        loading: false,
+      }
     default:
       return state;
   }

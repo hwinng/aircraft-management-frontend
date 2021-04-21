@@ -1,58 +1,123 @@
 import React from 'react';
-import { connect, DispatchProp } from 'react-redux';
-import { RouteComponentProps } from 'react-router-dom';
+import { connect, useDispatch } from 'react-redux';
 import queryString from 'query-string';
-import { ThunkDispatch } from 'redux-thunk';
-import { AnyAction } from 'redux';
-import { Button, Spin } from 'antd';
+import { Button, Spin, Modal, message } from 'antd';
 import {
   createAircraft,
+  deleteAircraftById,
   getAllAirCrafts,
+  updateAircraftById,
 } from '../../../../store/actions/aircraft';
 import { getAllCraftTypes } from 'apps/aircraft-admin/src/app/store/actions/craft-type';
 import { StoreState } from 'apps/aircraft-admin/src/app/store';
 import AirCraftList from '../../../../components/aircraft/list';
 import CreateAirCraftForm from '../../../../components/aircraft/form/create';
 import Search from 'apps/aircraft-admin/src/app/components/search-bar';
+import EditAircraftForm from '../../../../components/aircraft/form/edit';
+import { ExclamationCircleOutlined } from '@ant-design/icons';
 
-type ThunkDispatchProps = ThunkDispatch<{}, {}, AnyAction>;
-type DispatchProps = {
-  dispatch: ThunkDispatchProps;
-} & DispatchProp &
-  RouteComponentProps;
-
-type Props = ReturnType<typeof mapStateToProps> &
-  DispatchProps &
-  RouteComponentProps;
-
-const AirCraft: React.FC<Props> = function ({
-  dispatch,
-  aircraft,
-  craftTypes,
-}) {
+type Props = ReturnType<typeof mapStateToProps>;
+const AirCraft: React.FC<Props> = function ({ aircraft, craftTypes }) {
   const [visible, setVisible] = React.useState(false);
+  const [openEditForm, setOpenEditForm] = React.useState(false);
   const [params, setParams] = React.useState({
     page: 0,
     size: 5,
     name: '',
     sort: ['id', 'asc'],
   });
+  const [editData, setEditData] = React.useState(null);
+
+  const dispatch = useDispatch();
 
   function handleSearch(values) {
     setParams({
       ...params,
-      name: values
+      name: values,
     });
   }
 
-  function onCreate(values: any) {
-    dispatch(createAircraft(values));
-    dispatch(getAllAirCrafts(queryString.stringify(params)));
+  function onCreateClick() {
+    getAllCraftTypes().then(
+      (res) => dispatch(res),
+      (err) => dispatch(err)
+    );
+    setVisible(true);
+  }
+
+  function onEditClicked(record, index) {
+    getAllCraftTypes().then(
+      (res) => dispatch(res),
+      (err) => dispatch(err)
+    );
+    setOpenEditForm(true);
+    setEditData(record);
+  }
+
+  function handleCreate(values: any) {
+    createAircraft(values).then(
+      (res) => {
+        dispatch(res);
+        message.success('Successfully created!');
+      },
+      (err) => {
+        dispatch(err);
+        message.error('Fail to create! Try again...');
+      }
+    );
+    setParams({
+      ...params,
+    });
     setVisible(false);
   }
 
-  function handleDeleteRow(id: number) {
-    console.log('delete clicked')
+  function handleEdit(values, index) {
+    updateAircraftById(index, values)
+      .then(
+        (res) => {
+          dispatch(res);
+          message.success('Successfully edited!');
+        },
+        (err) => {
+          dispatch(err);
+          message.error('Fail to edit! Try again...');
+        }
+      )
+      .finally(() => {
+        setParams({ ...params });
+        setEditData(null);
+        setOpenEditForm(false);
+      });
+  }
+
+  function handleDeleteRow(record, index) {
+    Modal.confirm({
+      title: 'Are you sure delete?',
+      icon: <ExclamationCircleOutlined />,
+      content: `Aircraft name: ${record.name}`,
+      okText: 'Confirm',
+      okType: 'danger',
+      cancelText: 'Back',
+      onOk() {
+        deleteAircraftById(index)
+          .then(
+            (res) => {
+              if (res) {
+                dispatch(res);
+              }
+            },
+            (err) => dispatch(err)
+          )
+          .finally(() => {
+            setParams({
+              ...params,
+            });
+          });
+      },
+      onCancel() {
+        console.log('Cancel');
+      },
+    });
   }
 
   function handleTableChange(pagination: any) {
@@ -64,34 +129,47 @@ const AirCraft: React.FC<Props> = function ({
   }
 
   React.useEffect(() => {
-    async function initilizeData() {
-      await dispatch(getAllAirCrafts(queryString.stringify(params)));
-      await dispatch(getAllCraftTypes());
-    }
-    initilizeData();
+    getAllAirCrafts(queryString.stringify(params)).then(
+      (res) => dispatch(res),
+      (err) => dispatch(err)
+    );
   }, [getAllAirCrafts, params]);
 
-  return aircraft.loading || craftTypes.loading ? (
-    <div style={{display: 'flex', justifyContent: 'center' }}>
+  return aircraft.loading ? (
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
       <Spin tip="loading..."></Spin>
     </div>
   ) : (
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Button type="primary" onClick={() => setVisible(true)}>
+        <Button type="primary" onClick={onCreateClick}>
           Create
         </Button>
+
         <CreateAirCraftForm
           types={craftTypes.types}
           visible={visible}
-          onCreate={onCreate}
+          onCreate={handleCreate}
           onCancel={() => {
             setVisible(false);
           }}
         />
+        {editData !== null && (
+          <EditAircraftForm
+            types={craftTypes.types}
+            data={editData}
+            openEditForm={openEditForm}
+            onOk={handleEdit}
+            onCancel={() => {
+              setOpenEditForm(false);
+              setEditData(null);
+            }}
+          />
+        )}
+
         <Search
           allowClear={true}
-          placeholder='Search by name'
+          placeholder="Search by name"
           handleSearch={handleSearch}
         />
       </div>
@@ -100,7 +178,12 @@ const AirCraft: React.FC<Props> = function ({
         pagination={aircraft.pagination}
         craft={aircraft}
         loading={aircraft.loading}
-        onDeleteRow={handleDeleteRow}
+        onDeleteRow={(record, index) => {
+          handleDeleteRow(record, index);
+        }}
+        onEditRow={(record, index) => {
+          onEditClicked(record, index);
+        }}
       />
     </div>
   );
