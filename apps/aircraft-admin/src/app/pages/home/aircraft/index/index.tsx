@@ -22,7 +22,7 @@ const AirCraft: React.FC<Props> = function ({ aircraft, craftTypes }) {
   const [openEditForm, setOpenEditForm] = React.useState(false);
   const [params, setParams] = React.useState({
     page: 0,
-    size: 5,
+    size: 10,
     name: '',
     sort: ['id', 'asc'],
   });

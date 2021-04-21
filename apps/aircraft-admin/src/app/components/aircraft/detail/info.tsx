@@ -19,16 +19,14 @@ const InforComponent = ({ detailInfo }) => {
       </Row>
     );
   }
-
-  console.log(detailInfo);
   return (
     <React.Fragment>
       <h2>Information</h2>
-      <Card>
+      <Card style={{ marginBottom: '2rem' }}>
         {detailInfo && (
           <>
             {buildInfoRow('Aircraft Name:', detailInfo.name)}
-            {buildInfoRow('Aircraft Type ID:', detailInfo.aircraftType.id)}
+            {buildInfoRow('Aircraft Type:', detailInfo.aircraftType.name)}
             {buildInfoRow('Email:', detailInfo.status)}
           </>
         )}

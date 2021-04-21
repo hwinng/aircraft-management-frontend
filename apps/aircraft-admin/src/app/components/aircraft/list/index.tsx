@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router';
-import { Table, Button, Tag, Pagination, PageHeader } from 'antd';
+import { Table, Button, Tag } from 'antd';
 import { v4 as uuidv4 } from 'uuid';
 import { Link } from 'react-router-dom';
 import NoData from '../../table-no-data';
@@ -100,7 +100,7 @@ const AirCraftList = ({
         locale={{
           emptyText: <NoData text="Empty" />,
         }}
-        rowKey={(record) => record.key}
+        rowKey={(record) => record.id}
         dataSource={craft.aircrafts}
         style={{ marginTop: '1rem' }}
         loading={loading}

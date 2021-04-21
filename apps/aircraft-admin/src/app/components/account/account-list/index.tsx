@@ -34,7 +34,7 @@ const AccountList = ({
       locale={{
         emptyText: <NoData text='Empty' />
       }}
-      rowKey={(record) => record.key}
+      rowKey={(record) => record.id}
       dataSource={accounts}
       style={{ marginTop: "1rem" }}
       loading={loading}
