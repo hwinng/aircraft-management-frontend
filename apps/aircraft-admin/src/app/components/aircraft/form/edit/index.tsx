@@ -54,7 +54,7 @@ const EditAircraftForm = ({
             label="Aircraft Type ID"
             rules={[{ required: true, message: 'Please select aircraft type' }]}
           >
-            <Select placeholder="Select craft type">
+            <Select placeholder="Select craft type" disabled={data.status === 'ACTIVATED'}>
               {types.map((type, index) => (
                 <Select.Option key={index} value={type.id}>
                   {type.name}
