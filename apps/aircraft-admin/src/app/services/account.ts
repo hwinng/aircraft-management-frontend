@@ -27,10 +27,10 @@ export function getProfile(id: number): Promise<unknown> {
   return http.get(api.getAccountProfile + `/${id}`);
 }
 
-export function updateAccount(id: number, data: IUpdateAccountDTO): Promise<unknown> {
+export function adminUpdateAccount(id: number, data: IUpdateAccountDTO): Promise<unknown> {
   return http.put(api.updateAccount + `/${id}`, data);
 }
 
-export function updateProfile(userId: number, data: IUpdateProfileDTO): Promise<unknown> {
+export function adminUpdateProfile(userId: number, data: IUpdateProfileDTO): Promise<unknown> {
   return http.put(api.updateProfile + `/${userId}`, data);
 }

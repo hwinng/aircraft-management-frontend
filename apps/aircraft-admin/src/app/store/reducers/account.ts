@@ -45,7 +45,6 @@ function account (state = initialState, action) {
         isLoading: false,
       }
     case GET_ACCOUNT_PROFILE:
-    case UPDATE_PROFILE_ACCOUNT:
       return {
         ...state,
         account_profile: {
@@ -55,6 +54,17 @@ function account (state = initialState, action) {
           phone_number: payload.phone_number
         },
         isLoading: false,
+      }
+    case UPDATE_PROFILE_ACCOUNT:
+      return {
+        ...state,
+        account_profile: {
+          userInfo: payload.user,
+          id_card_number: payload.id_card_number,
+          credit_card_number: payload.credit_card_number,
+          phone_number: payload.phone_number
+        },
+        isLoading: false
       }
     case ACCOUNT_ERROR:
       return {
