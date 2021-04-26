@@ -16,8 +16,6 @@ const CraftTypeList: React.FC<Props> = ({ craftTypes }) => {
     size: 10,
     sort: ['id', 'asc'],
   });
-  const [visible, setVisible] = React.useState(false);
-
   React.useEffect(() => {
     getAllCraftTypes().then(
       (res: any) => dispatch(res),
@@ -52,21 +50,9 @@ const CraftTypeList: React.FC<Props> = ({ craftTypes }) => {
         </Breadcrumb>
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '1rem'}}>
-        <Button type="primary" onClick={() => {
-          setVisible(true);
-        }}>
-          Create
+        <Button type="primary">
+          <Link to='/home/aircraft-type/create'>Create</Link>
         </Button>
-
-        {/* <CreateAirCraftForm
-          types={craftTypes.types}
-          visible={visible}
-          onCreate={handleCreate}
-          onCancel={() => {
-            setVisible(false);
-          }}
-        /> */}
-
         <Search
           allowClear={true}
           placeholder="Search by name"

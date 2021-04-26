@@ -13,6 +13,8 @@ export const HOME = {
 
   AIRCRAFT_TYPE: { name: 'Aircraft Type', path: '/home/aircraft-type' },
 
+  AIRCRAFT_CREATE: { name: 'Create Craft Type', path: '/home/aircraft-type/create' },
+
   AIRPORT: { name: 'Airport', path: '/home/airport' },
 
   AIRWAY: { name: 'Airway', path: '/home/airway' },
