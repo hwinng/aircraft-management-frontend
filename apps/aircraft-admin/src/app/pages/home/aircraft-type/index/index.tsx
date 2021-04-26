@@ -51,7 +51,7 @@ const CraftTypeList: React.FC<Props> = ({ craftTypes }) => {
       </div>
       <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '1rem'}}>
         <Button type="primary">
-          <Link to='/home/aircraft-type/create'>Create</Link>
+          <Link to="/home/aircraft-type/create">Create</Link>
         </Button>
         <Search
           allowClear={true}

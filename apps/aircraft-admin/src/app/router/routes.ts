@@ -7,7 +7,7 @@ import AccountDetail from '../pages/home/account/account-detail';
 import AirCraft from '../pages/home/aircraft/index';
 import AirCraftDetail from '../pages/home/aircraft/aircraft-detail';
 import CraftType from '../pages/home/aircraft-type/index';
-import CreateCraftType from '../pages/home/aircraft-type/create';
+import CreateCraftType from '../pages/home/aircraft-type/create/index';
 import NotFound from '../pages/exception/404';
 
 const routesMap: IRouteProps[] = [
@@ -67,6 +67,7 @@ const routesMap: IRouteProps[] = [
       {
         path: HOME.AIRCRAFT_TYPE.path,
         component: CraftType,
+        exact: true,
         meta: {
           title: HOME.AIRCRAFT_TYPE.name,
           requiresAuth: true,
@@ -75,6 +76,7 @@ const routesMap: IRouteProps[] = [
       {
         path: HOME.AIRCRAFT_CREATE.path,
         component: CreateCraftType,
+        exact: true,
         meta: {
           title: HOME.AIRCRAFT_CREATE.name,
           requiresAuth: true,
