@@ -1,6 +1,5 @@
 import React from 'react'
 import { Modal, Form, Input, Select } from 'antd';
-import { updateAccountProfile } from '../../../store/actions/account';
 
 interface IEditAccountDTO {
   id: string,

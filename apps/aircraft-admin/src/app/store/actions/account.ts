@@ -1,69 +1,80 @@
 import { ACCOUNT } from './../types/index';
-import { getProfile, getAllAccount, updateAccount, updateProfile } from "../../services"
-import { IUpdateAccountDTO, IUpdateProfileDTO} from '../../services/account'
+import {
+  getProfile,
+  getAllAccount,
+  adminUpdateAccount,
+  adminUpdateProfile,
+} from '../../services';
+import { IUpdateAccountDTO, IUpdateProfileDTO } from '../../services/account';
 
-export const getAllAccounts = (params: string) => async dispatch => {
+export const getAllAccounts = (params: string) => {
   return getAllAccount(params).then(
     (res: any) => {
       if (res.status === 200) {
-        dispatch({
+        return {
           type: ACCOUNT.GET_ALL_ACCOUNTS,
-          payload: res.data
-        })
+          payload: res.data,
+        };
       }
     },
     (err: any) => {
-      dispatch({
+      return {
         type: ACCOUNT.ACCOUNT_ERROR,
-        payload: err
-      })
+        payload: err,
+      };
     }
+  );
+};
 
-  )
-}
-
-export const getAccountById = (id: number) => async dispatch => {
+export const getAccountById = (id: number) => {
   return getProfile(id).then(
     (res: any) => {
-      if ( res.status === 200) {
-        dispatch({
+      if (res.status === 200) {
+        return {
           type: ACCOUNT.GET_ACCOUNT_PROFILE,
-          payload: res.data
-        })
+          payload: res.data,
+        };
       }
     },
     (err: any) => {
-      dispatch({
+      return {
         type: ACCOUNT.ACCOUNT_ERROR,
-        payload: err
-      })
+        payload: err,
+      };
     }
-  )
-}
+  );
+};
 
-export const updateAccountProfile = (id: number, accountDTO: IUpdateAccountDTO, profileDTO: IUpdateProfileDTO) => async dispatch => {
-  return Promise.all([
-    updateAccount(id, accountDTO).then(
-      (res: any) => res,
-      (err: any) => {
-        console.log('update account err', err)
-      }
-    ),
-    updateProfile(id, profileDTO).then(
-      (res: any) => {
-        if (res.status === 200) {
-          dispatch({
-            type: ACCOUNT.UPDATE_PROFILE_ACCOUNT,
-            payload: res.data
-          });
-        };
-      },
-      (err: any) => {
-        console.log('update profile err', err)
-      }
-    )
-  ])
-  .then(values => {console.log('values', values)})
-  .catch(err => console.log('catch',err))
-  .finally(() => console.log('DONE'))
-}
+export const updateAccount = (id: number, accountDTO: IUpdateAccountDTO) => {
+  return adminUpdateAccount(id, accountDTO).then(
+    (res: any) => {
+      return {
+        type: ACCOUNT.UDATE_ACCOUNT,
+        payload: res.data,
+      };
+    },
+    (err: any) => {
+      return {
+        type: ACCOUNT.ACCOUNT_ERROR,
+        payload: err,
+      };
+    }
+  );
+};
+
+export const updateProfile = (id: number, profileDTO: IUpdateProfileDTO) => {
+  return adminUpdateProfile(id, profileDTO).then(
+    (res: any) => {
+      return {
+        type: ACCOUNT.UPDATE_PROFILE_ACCOUNT,
+        payload: res.data,
+      };
+    },
+    (err: any) => {
+      return {
+        type: ACCOUNT.ACCOUNT_ERROR,
+        payload: err,
+      };
+    }
+  );
+};

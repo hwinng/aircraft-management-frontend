@@ -15,6 +15,12 @@ function craftType(state = initialState, action) {
       return {
         ...state,
         types: payload.content,
+        pagination: {
+          current: payload.pageable.pageNumber + 1,
+          pageSize: payload.pageable.pageSize,
+          totalPages: payload.totalPages,
+          total: payload.totalElements,
+        },
         loading: false,
       };
     case CRAFT_TYPE.GET_TYPE_DETAIL:

@@ -1,35 +1,29 @@
 import React, { Fragment, useState, useCallback } from 'react';
 import './style.scss';
-import { connect, DispatchProp } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Row, Col, Card, Avatar, Button, Breadcrumb } from 'antd';
 import { Link } from 'react-router-dom';
 import EditAccount from '../account-form/EditAccount';
 import { getNameLetter } from '../../../utils/getNameLetter';
-import { ThunkDispatch } from 'redux-thunk';
-import { AnyAction } from 'redux';
 import {
   IUpdateProfileDTO,
   IUpdateAccountDTO,
 } from '../../../services/account';
 import {
   getAccountById,
-  updateAccountProfile,
+  updateAccount,
+  updateProfile,
 } from '../../../store/actions/account';
 
-type ThunkDispatchProps = ThunkDispatch<{}, {}, AnyAction>;
-type DispatchProps = {
-  account: any;
-  dispatch: ThunkDispatchProps;
-} & DispatchProp;
-
-const AccountDetail: React.FC<DispatchProps> = ({ account, dispatch }) => {
+const AccountDetail = ({ profile }) => {
   const [visible, setVisible] = useState(false);
-  const { account_profile, isLoading } = account;
+  const dispatch = useDispatch();
 
   const onEdit = (values: any) => {
+    setVisible(true);
     const profileDTO: IUpdateProfileDTO = {
-      id: account_profile.userInfo.id,
-      user_id: account_profile.userInfo.id,
+      id: profile.userInfo.id,
+      user_id: profile.userInfo.id,
       id_card_number: values.id_card_number,
       credit_card_number: values.credit_card_number,
       phoneNumber: values.phone_number,
@@ -37,15 +31,23 @@ const AccountDetail: React.FC<DispatchProps> = ({ account, dispatch }) => {
     const accountDTO: IUpdateAccountDTO = {
       name: values.name,
       username: values.username,
-      imageUrl: account_profile.userInfo.imageUrl,
+      imageUrl: profile.userInfo.imageUrl,
       email: values.email,
       role: values.role,
     };
-    dispatch(
-      updateAccountProfile(account_profile.userInfo.id, accountDTO, profileDTO)
-    );
-    dispatch(getAccountById(account_profile.userInfo.id));
-    setVisible(false);
+    Promise.all([
+      updateAccount(profileDTO.id, accountDTO),
+      updateProfile(profileDTO.id, profileDTO),
+    ])
+      .then((values: any) => {
+        values.forEach((action: any) => {
+          dispatch(action);
+        });
+      })
+      .finally(() =>
+        getAccountById(profile.userInfo.id).then((res) => dispatch(res))
+      );
+    // dispatch(getAccountById(profile.userInfo.id));
   };
 
   const buildInfoRow = (title, value) => (
@@ -64,9 +66,7 @@ const AccountDetail: React.FC<DispatchProps> = ({ account, dispatch }) => {
     </Row>
   );
 
-  return isLoading ? (
-    <div>Loading...</div>
-  ) : (
+  return (
     <Fragment>
       <Row style={{ marginBottom: '1rem' }}>
         <Breadcrumb>
@@ -104,7 +104,7 @@ const AccountDetail: React.FC<DispatchProps> = ({ account, dispatch }) => {
                     },
                   },
                   getNameLetter(
-                    account_profile.userInfo.name
+                    profile.userInfo.name
                       .split(' ')
                       .slice(-1)
                       .toString()
@@ -115,7 +115,7 @@ const AccountDetail: React.FC<DispatchProps> = ({ account, dispatch }) => {
             }
           >
             <Card.Meta
-              title={`${account_profile.userInfo.name}`}
+              title={`${profile.userInfo.name}`}
               style={{ textAlign: 'center' }}
             />
           </Card>
@@ -124,31 +124,27 @@ const AccountDetail: React.FC<DispatchProps> = ({ account, dispatch }) => {
           <Card title={`Detail information of account`}>
             {true && (
               <>
-                {buildInfoRow('Username:', account_profile.userInfo.username)}
-                {buildInfoRow('Name:', account_profile.userInfo.name)}
-                {buildInfoRow('Email:', account_profile.userInfo.email)}
-                {buildInfoRow('Image Link:', account_profile.userInfo.imageUrl)}
+                {buildInfoRow('Username:', profile.userInfo.username)}
+                {buildInfoRow('Name:', profile.userInfo.name)}
+                {buildInfoRow('Email:', profile.userInfo.email)}
+                {buildInfoRow('Image Link:', profile.userInfo.imageUrl)}
                 {buildInfoRow(
                   'Role:',
-                  account_profile.userInfo.roles.map((x) => x.name).toString()
+                  profile.userInfo.roles.map((x) => x.name).toString()
                 )}
                 {buildInfoRow(
                   'Phone Number:',
-                  account_profile.phone_number
-                    ? account_profile.phone_number
-                    : 'Empty'
+                  profile.phone_number ? profile.phone_number : 'Empty'
                 )}
                 {buildInfoRow(
                   'Credit Card No:',
-                  account_profile.credit_card_number
-                    ? account_profile.credit_card_number
+                  profile.credit_card_number
+                    ? profile.credit_card_number
                     : 'Empty'
                 )}
                 {buildInfoRow(
                   'ID Card No:',
-                  account_profile.id_card_number
-                    ? account_profile.id_card_number
-                    : 'Empty'
+                  profile.id_card_number ? profile.id_card_number : 'Empty'
                 )}
               </>
             )}
@@ -156,9 +152,11 @@ const AccountDetail: React.FC<DispatchProps> = ({ account, dispatch }) => {
               Edit
             </Button>
             <EditAccount
-              profileDTO={account_profile}
+              profileDTO={profile}
               visible={visible}
-              onEdit={onEdit}
+              onEdit={() => {
+
+              }}
               onCancel={() => {
                 setVisible(false);
               }}
@@ -170,4 +168,4 @@ const AccountDetail: React.FC<DispatchProps> = ({ account, dispatch }) => {
   );
 };
 
-export default connect()(AccountDetail);
+export default AccountDetail;
