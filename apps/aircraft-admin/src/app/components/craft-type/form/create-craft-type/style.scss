@@ -1,0 +1,19 @@
+.form-antd {
+  position: relative;
+  width: 50%;
+  margin: auto;
+  margin-top: 5rem;
+  border: 1px solid #ddd;
+  padding: 3rem;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 5px 5px 5px 5px rgb(0 0 0 / 10%);
+  .input-number-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .submit-form-btn {
+    position: absolute;
+    right: 0;
+  }
+}
