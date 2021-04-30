@@ -6,6 +6,7 @@ const initialState = {
   pagination: null,
   loading: true,
   error: null,
+  create_step: 0,
 };
 
 function craftType(state = initialState, action) {
@@ -26,7 +27,15 @@ function craftType(state = initialState, action) {
     case CRAFT_TYPE.GET_TYPE_DETAIL:
       return {
         ...state,
+        loading: false
       };
+    case CRAFT_TYPE.CREATE_CRAFT_TYPE:
+      return {
+        ...state,
+        types: [...state.types, payload],
+        create_step: 1,
+        loading: false
+      }
     case CRAFT_TYPE.CRAFT_TYPE_ERROR:
       return {
         ...state,

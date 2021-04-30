@@ -67,6 +67,7 @@ const routesMap: IRouteProps[] = [
       {
         path: HOME.AIRCRAFT_TYPE.path,
         component: CraftType,
+        exact: true,
         meta: {
           title: HOME.AIRCRAFT_TYPE.name,
           requiresAuth: true,
@@ -75,6 +76,7 @@ const routesMap: IRouteProps[] = [
       {
         path: HOME.AIRCRAFT_CREATE.path,
         component: CreateCraftType,
+        exact: true,
         meta: {
           title: HOME.AIRCRAFT_CREATE.name,
           requiresAuth: true,

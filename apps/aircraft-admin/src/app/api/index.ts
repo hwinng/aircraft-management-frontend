@@ -16,6 +16,8 @@ const API = Object.freeze({
   adminUpdateAircraft: '/aircraft/admin/updateById',
   //CRAFT TYPE
   adminGetAllCraftType: '/aircraftType/getAll',
+  adminCreateCraftType: '/aircraftType/admin/create',
+  adminCreateCraftSeatByClass: '/seatsByClass/admin/create',
   //FLIGHT
   adminGetAllFlight: '/flight/getAll',
 })
