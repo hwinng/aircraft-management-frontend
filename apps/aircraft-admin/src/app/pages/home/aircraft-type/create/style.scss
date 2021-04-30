@@ -1,0 +1,12 @@
+.create-container {
+  .step-wrapper {
+    width: 50%;
+    flex-direction: row;
+    gap: 30px;
+    padding-left: 2rem;
+  }
+  .ant-steps-navigation .ant-steps-item::after {
+    top: calc(50% + 3px);
+    margin-left: 2px;
+  }
+}

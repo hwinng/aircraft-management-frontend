@@ -11,8 +11,9 @@
   .input-number-wrapper {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
   }
-  .submit-form-btn {
+  .--step_1 {
     position: absolute;
     right: 0;
   }

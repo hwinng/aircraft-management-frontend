@@ -2,15 +2,11 @@ import React from 'react';
 import './style.scss';
 import { Button, Form, Input, InputNumber } from 'antd';
 import { ICreateCraftTypeDTO } from 'apps/aircraft-admin/src/app/services';
+import { Link } from 'react-router-dom';
 
-const CreateCraftTypeForm = ({ handleCreateCraftTypeForm }) => {
+const CreateCraftTypeForm = ({ formData, handleCreateCraftTypeForm }) => {
+  const formItemValues = JSON.parse(formData);
   const [form] = Form.useForm();
-  const initialFormValues: ICreateCraftTypeDTO = {
-    name: '',
-    seat_capacity: 0,
-    lugage_capacity_kg: 0,
-    average_velocity: 0,
-  };
 
   function handleSubmitForm() {
     form
@@ -30,7 +26,22 @@ const CreateCraftTypeForm = ({ handleCreateCraftTypeForm }) => {
       form={form}
       layout="vertical"
       name="create_aircraft_form"
-      initialValues={initialFormValues}
+      initialValues={
+        formItemValues
+          ? {
+              name: formItemValues.name ? formItemValues.name : '',
+              seat_capacity: formItemValues.seat_capacity
+                ? formItemValues.seat_capacity
+                : 100,
+              lugage_capacity_kg: formItemValues.lugage_capacity_kg
+                ? formItemValues.lugage_capacity_kg
+                : 100,
+              average_velocity: formItemValues.average_velocity
+                ? formItemValues.average_velocity
+                : 100,
+            }
+          : {}
+      }
       onFinish={handleSubmitForm}
     >
       <Form.Item
@@ -50,50 +61,48 @@ const CreateCraftTypeForm = ({ handleCreateCraftTypeForm }) => {
       </Form.Item>
 
       <div className="input-number-wrapper">
-      <Form.Item
-        name="seat_capacity"
-        label="Seat Capacity"
-        rules={[
-          {
-            required: true,
-            message: 'Wrong format, at least 100',
-          },
-        ]}
-      >
-        <InputNumber min={100} max={99999} />
-      </Form.Item>
+        <Form.Item
+          name="seat_capacity"
+          label="Seat Capacity"
+          rules={[
+            {
+              required: true,
+              message: 'Wrong format, at least 100',
+            },
+          ]}
+        >
+          <Input min={100} max={99999} />
+        </Form.Item>
 
-      <Form.Item
-        name="lugage_capacity_kg"
-        label="Cargo"
-        rules={[
-          {
-            required: true,
-            message: 'Wrong format, at least 100',
-          },
-        ]}
-      >
-        <InputNumber min={100} max={99999} />
-      </Form.Item>
+        <Form.Item
+          name="lugage_capacity_kg"
+          label="Cargo"
+          rules={[
+            {
+              required: true,
+              message: 'Wrong format, at least 100',
+            },
+          ]}
+        >
+          <Input min={100} max={99999} />
+        </Form.Item>
 
-      <Form.Item
-        name="average_velocity"
-        label="Velocity"
-        rules={[
-          {
-            required: true,
-            message: 'Wrong format, at least 100',
-          },
-        ]}
-      >
-        <InputNumber min={100} max={99999} />
-      </Form.Item>
+        <Form.Item
+          name="average_velocity"
+          label="Velocity"
+          rules={[
+            {
+              required: true,
+              message: 'Wrong format, at least 100',
+            },
+          ]}
+        >
+          <Input min={100} max={99999} />
+        </Form.Item>
       </div>
 
       <Form.Item>
-        <Button type="primary" htmlType="submit" className="submit-form-btn">
-          Next
-        </Button>
+        <Button className="btn-next --step_1" type='primary' htmlType="submit">Next</Button>
       </Form.Item>
     </Form>
   );

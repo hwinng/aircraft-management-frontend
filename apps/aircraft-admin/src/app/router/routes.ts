@@ -7,7 +7,7 @@ import AccountDetail from '../pages/home/account/account-detail';
 import AirCraft from '../pages/home/aircraft/index';
 import AirCraftDetail from '../pages/home/aircraft/aircraft-detail';
 import CraftType from '../pages/home/aircraft-type/index';
-import CreateCraftType from '../pages/home/aircraft-type/create/index';
+import CreateCraftType from '../pages/home/aircraft-type/create';
 import NotFound from '../pages/exception/404';
 
 const routesMap: IRouteProps[] = [
