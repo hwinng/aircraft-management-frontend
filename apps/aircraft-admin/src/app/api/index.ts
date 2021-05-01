@@ -17,9 +17,10 @@ const API = Object.freeze({
   //CRAFT TYPE
   adminGetAllCraftType: '/aircraftType/getAll',
   adminCreateCraftType: '/aircraftType/admin/create',
-  adminCreateCraftSeatByClass: '/seatsByClass/admin/create',
+  adminCreateSeatByClass: '/seatsByClass/admin/create',
   //FLIGHT
   adminGetAllFlight: '/flight/getAll',
+
 })
 
 export default API
