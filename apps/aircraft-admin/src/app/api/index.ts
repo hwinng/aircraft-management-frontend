@@ -20,7 +20,8 @@ const API = Object.freeze({
   adminCreateSeatByClass: '/seatsByClass/admin/create',
   //FLIGHT
   adminGetAllFlight: '/flight/getAll',
-
+  adminUpdateFlight: '/flight/admin/updateTime',
+  adminCreateFlight: '/flight/admin/create'
 })
 
 export default API

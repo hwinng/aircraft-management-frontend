@@ -19,5 +19,9 @@ export const HOME = {
 
   AIRWAY: { name: 'Airway', path: '/home/airway' },
 
+  FLIGHT: { name: 'Flight', path: '/home/flight' },
+
+  TICKET: { name: 'Ticket', path: '/home/ticket' },
+
   NOMATCH: { name: '404 Not Found', path: '*' },
 }
