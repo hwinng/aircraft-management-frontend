@@ -7,9 +7,14 @@ import { getAllFlights } from 'apps/aircraft-admin/src/app/store/actions/flight'
 import FlightTable from 'apps/aircraft-admin/src/app/components/flight/list/index';
 import Search from 'apps/aircraft-admin/src/app/components/search-bar';
 import CreateFlightForm from 'apps/aircraft-admin/src/app/components/flight/form/CreateForm';
+import { getAllAirCrafts } from 'apps/aircraft-admin/src/app/store/actions/aircraft';
+import { getAllAirways } from 'apps/aircraft-admin/src/app/store/actions/airway';
 
 const FlightPage = () => {
   const flight = useSelector((state: StoreState) => state.flight);
+  const aircraft = useSelector((state: StoreState) => state.aircraft);
+  const airway = useSelector((state: StoreState) => state.airway);
+
   const dispatch = useDispatch();
 
   const [visible, setVisible] = React.useState(false);
@@ -35,7 +40,7 @@ const FlightPage = () => {
   }
 
   function handleSubmitForm(values) {
-    console.log('form values',values);
+    console.log('form values', values);
     // getAllCraftTypes().then(
     //   (res) => dispatch(res),
     //   (err) => dispatch(err)
@@ -90,19 +95,38 @@ const FlightPage = () => {
     // });
   }
 
+  function handleCreateClick() {
+
+    getAllAirCrafts(queryString.stringify(params)).then(
+      res => dispatch(res),
+      err => dispatch(err)
+    );
+
+    getAllAirways(queryString.stringify(params)).then(
+      res => dispatch(res),
+      err => dispatch(err)
+    )
+
+    setVisible(true);
+  }
   return flight.loading ? (
     <Spin tip="Loading"></Spin>
   ) : (
     <div>
-      <CreateFlightForm
-        visible={visible}
-        onCreate={handleSubmitForm}
-        onCancel={() => setVisible(false)}
-      />
+      {aircraft.loading === false && airway.loading === false && (
+        <CreateFlightForm
+          aircrafts={aircraft.aircrafts}
+          airways={airway.airways}
+          visible={visible}
+          onCreate={handleSubmitForm}
+          onCancel={() => setVisible(false)}
+        />
+      )}
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Button type="primary" onClick={() => {
-          setVisible(true);
-        }}>
+        <Button
+          type="primary"
+          onClick={handleCreateClick}
+        >
           Create
         </Button>
         <Search
