@@ -8,6 +8,7 @@ import AirCraft from '../pages/home/aircraft/index';
 import AirCraftDetail from '../pages/home/aircraft/aircraft-detail';
 import CraftType from '../pages/home/aircraft-type/index';
 import CreateCraftType from '../pages/home/aircraft-type/create';
+import Flight from '../pages/home/flight/index';
 import NotFound from '../pages/exception/404';
 
 const routesMap: IRouteProps[] = [
@@ -96,6 +97,15 @@ const routesMap: IRouteProps[] = [
         exact: true,
         meta: {
           title: HOME.AIRWAY.name,
+          requiresAuth: true,
+        }
+      },
+      {
+        path: HOME.FLIGHT.path,
+        component: Flight,
+        exact: true,
+        meta: {
+          title: HOME.FLIGHT.name,
           requiresAuth: true,
         }
       },

@@ -1,7 +1,7 @@
 import React from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import { Link } from 'react-router-dom';
-import { Button, Table } from 'antd'
+import { Button, Table, Tag } from 'antd'
 import NoData from '../../table-no-data';
 import Moment from 'react-moment';
 
@@ -9,7 +9,9 @@ const FlightTable = ({
   flights,
   pagination,
   loading,
-  onTableChange
+  onTableChange,
+  onEditRow,
+  onDeleteRow
 }) => {
   return (
     <React.Fragment>
@@ -36,16 +38,49 @@ const FlightTable = ({
             )
           },
           {
+            title: 'Status',
+            render: (_, record) =>
+                {
+                  let isOke = record.status === 'OK' ? 'OK' : 'NOT OK';
+                  let color = isOke === 'OK' ? 'green' : 'volcano';
+                  return (
+                    <>
+                      <Tag color={color}>
+                        {isOke}
+                      </Tag>
+                    </>
+                  )
+                }
+          },
+          {
             title: '',
             render: (_, record) => (
               <div>
                 <Button
                   style={{ display: 'flex', flexDirection: 'column' }}
                   type="primary"
+                  onClick={() => {
+                    onEditRow(record, record.id)
+                  }}
                 >
-                  <Link to={`${location.pathname}/detail/${record.id}`}>
-                    View
-                  </Link>
+                  Edit
+                </Button>
+              </div>
+            ),
+          },
+          {
+            title: '',
+            render: (_, record) => (
+              <div>
+                <Button
+                  style={{ display: 'flex', flexDirection: 'column' }}
+                  type="primary"
+                  danger
+                  onClick={() => {
+                    onDeleteRow(record, record.id)
+                  }}
+                >
+                  Delete
                 </Button>
               </div>
             ),
