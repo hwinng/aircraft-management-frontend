@@ -1,15 +1,6 @@
 import React from 'react';
-import { Modal, Form, Input, Select, Tag, Row, Col, DatePicker } from 'antd';
+import { Modal, Form, Input, Select, Row, Col, DatePicker } from 'antd';
 
-// "id": 0,
-//   "aircraft_id": 0,
-//   "airway_id": 0,
-//   "departure_time": "2021-05-03T07:40:45.208Z",
-//   "departure_gate_id": 0,
-//   "arrival_time": "2021-05-03T07:40:45.208Z",
-//   "arrival_gate_id": 0,
-//   "status": "string",
-//   "discount_id": 0
 const CreateFlightForm = ({
   aircrafts,
   airways,
@@ -23,6 +14,17 @@ const CreateFlightForm = ({
     endValue: null,
     endOpen: false,
   });
+  const [depatureGate, setDepartureGate] = React.useState<
+    { id: number; name: string }[]
+  >([]);
+  const [arrivalGate, setArrivalGate] = React.useState<
+    { id: number; name: string }[]
+  >([]);
+
+  const [startDate, setStartDate] = React.useState('');
+  const [endDate, setEndDate] = React.useState('');
+
+
   const onChange = (field, value) => {
     setCustomDate((prev) => ({
       ...prev,
@@ -44,12 +46,14 @@ const CreateFlightForm = ({
     return endValue.valueOf() <= customDate.startValue.valueOf();
   };
 
-  const onStartChange = (value) => {
+  const onStartChange = (value, _dateString) => {
     onChange('startValue', value);
+    setStartDate(_dateString)
   };
 
-  const onEndChange = (value) => {
+  const onEndChange = (value, _dateString) => {
     onChange('endValue', value);
+    setEndDate(_dateString);
   };
 
   const handleStartOpenChange = (open) => {
@@ -68,6 +72,15 @@ const CreateFlightForm = ({
     }));
   };
 
+  function onSelectAirwayChange(airwayID) {
+    airways.filter((ele) => {
+      if (ele.id === airwayID) {
+        setDepartureGate(ele.departureAirport.gates);
+        setArrivalGate(ele.arrivalAirport.gates);
+      }
+    });
+  }
+
   return (
     <div>
       <Modal
@@ -84,8 +97,8 @@ const CreateFlightForm = ({
               onCreate({
                 ...values,
                 discount_id: 0,
-                departure_gate_id: 0,
-                arrival_gate_id: 0,
+                departure_time: startDate,
+                arrival_time: endDate
               });
             })
             .catch((info) => {
@@ -103,7 +116,7 @@ const CreateFlightForm = ({
             <Col span={12}>
               <Form.Item
                 name="aircraft_id"
-                label="Select Aircraft"
+                label="Aircraft"
                 rules={[
                   {
                     required: true,
@@ -134,7 +147,7 @@ const CreateFlightForm = ({
             <Col span={12}>
               <Form.Item
                 name="airway_id"
-                label="Select Airway"
+                label="Airway"
                 rules={[
                   {
                     required: true,
@@ -142,7 +155,10 @@ const CreateFlightForm = ({
                   },
                 ]}
               >
-                <Select placeholder="Select aircraft">
+                <Select
+                  placeholder="Select airway"
+                  onChange={onSelectAirwayChange}
+                >
                   {airways.map((ele) => (
                     <Select.Option key={ele.id} value={ele.id}>
                       {ele.departureAirport.city} - {ele.arrivalAirport.city}
@@ -158,8 +174,8 @@ const CreateFlightForm = ({
             </Col>
           </Row>
 
-          <Row>
-            <Col>
+          <Row gutter={4}>
+            <Col span={12}>
               <Form.Item name="departure_time" label="Departure Time">
                 <DatePicker
                   disabledDate={disabledStartDate}
@@ -172,10 +188,30 @@ const CreateFlightForm = ({
                 />
               </Form.Item>
             </Col>
+            <Col span={12}>
+              <Form.Item
+                name="departure_gate_id"
+                label="Depature Gate"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Select one',
+                  },
+                ]}
+              >
+                <Select placeholder="Select gate">
+                  {depatureGate.map((ele) => (
+                    <Select.Option key={ele.id} value={ele.id}>
+                      {ele.name}
+                    </Select.Option>
+                  ))}
+                </Select>
+              </Form.Item>
+            </Col>
           </Row>
 
-          <Row>
-            <Col>
+          <Row gutter={4}>
+            <Col span={12}>
               <Form.Item name="arrival_time" label="Arrival Time">
                 <DatePicker
                   disabledDate={disabledEndDate}
@@ -187,6 +223,26 @@ const CreateFlightForm = ({
                   open={customDate.endOpen}
                   onOpenChange={handleEndOpenChange}
                 />
+              </Form.Item>
+            </Col>
+            <Col span={12}>
+              <Form.Item
+                name="arrival_gate_id"
+                label="Arrival Gate"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Select one',
+                  },
+                ]}
+              >
+                <Select placeholder="Select gate">
+                  {arrivalGate.map((ele) => (
+                    <Select.Option key={ele.id} value={ele.id}>
+                      {ele.name}
+                    </Select.Option>
+                  ))}
+                </Select>
               </Form.Item>
             </Col>
           </Row>

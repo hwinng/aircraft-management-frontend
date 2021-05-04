@@ -21,4 +21,6 @@ export function adminUpdateFlight(body: IUpdateFlight ) {
   return http.put(api.adminUpdateFlight, body)
 }
 
-// export function adminCreateFlight(body:)
+export function adminCreateFlight(body: any) {
+  return http.post(api.adminCreateFlight, body);
+}

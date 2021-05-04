@@ -1,14 +1,17 @@
 import React from 'react';
 import { StoreState } from 'apps/aircraft-admin/src/app/store';
 import queryString from 'query-string';
+import { v4 as uuidv4 } from "uuid";
 import { useDispatch, useSelector } from 'react-redux';
-import { Button, Spin } from 'antd';
-import { getAllFlights } from 'apps/aircraft-admin/src/app/store/actions/flight';
+import { Button, message, Spin } from 'antd';
+import { createFlight, getAllFlights } from 'apps/aircraft-admin/src/app/store/actions/flight';
 import FlightTable from 'apps/aircraft-admin/src/app/components/flight/list/index';
 import Search from 'apps/aircraft-admin/src/app/components/search-bar';
 import CreateFlightForm from 'apps/aircraft-admin/src/app/components/flight/form/CreateForm';
 import { getAllAirCrafts } from 'apps/aircraft-admin/src/app/store/actions/aircraft';
 import { getAllAirways } from 'apps/aircraft-admin/src/app/store/actions/airway';
+import { momentToDate } from 'apps/aircraft-admin/src/app/utils/momentToDate';
+
 
 const FlightPage = () => {
   const flight = useSelector((state: StoreState) => state.flight);
@@ -39,12 +42,41 @@ const FlightPage = () => {
     });
   }
 
+  function handleCreateClick() {
+    getAllAirCrafts(queryString.stringify(params)).then(
+      res => dispatch(res),
+      err => dispatch(err)
+    );
+    getAllAirways(queryString.stringify(params)).then(
+      res => dispatch(res),
+      err => dispatch(err)
+    )
+    setVisible(true);
+  }
+
   function handleSubmitForm(values) {
-    console.log('form values', values);
-    // getAllCraftTypes().then(
-    //   (res) => dispatch(res),
-    //   (err) => dispatch(err)
-    // );
+    //TODO: format moment to date here
+    const createFlightDTO = {
+      ...values,
+      id: Number(Math.random()),
+      departure_time: momentToDate(values.departure_time),
+      arrival_time: momentToDate(values.arrival_time),
+    }
+
+    createFlight(createFlightDTO).then(
+      (res) => {
+        dispatch(res);
+        message.success('Successfully created!');
+      },
+      (err) => {
+        dispatch(err);
+        message.error('Fail to create! Try again...');
+      }
+    );
+
+    setParams({
+      ...params,
+    });
     setVisible(false);
   }
 
@@ -93,21 +125,6 @@ const FlightPage = () => {
     //   ...params,
     //   name: values,
     // });
-  }
-
-  function handleCreateClick() {
-
-    getAllAirCrafts(queryString.stringify(params)).then(
-      res => dispatch(res),
-      err => dispatch(err)
-    );
-
-    getAllAirways(queryString.stringify(params)).then(
-      res => dispatch(res),
-      err => dispatch(err)
-    )
-
-    setVisible(true);
   }
   return flight.loading ? (
     <Spin tip="Loading"></Spin>

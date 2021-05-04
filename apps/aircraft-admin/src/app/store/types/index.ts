@@ -36,6 +36,7 @@ export const CRAFT_TYPE = {
 
 export const FLIGHT = {
   GET_ALL_FLIGHT: 'GET_ALL_FLIGHT',
+  CREATE_FLIGHT: 'CREATE_FLIGHT',
   FLIGHT_ERROR: 'FLIGHT_ERROR'
 }
 
