@@ -1,17 +1,20 @@
 import React from 'react';
 import { StoreState } from 'apps/aircraft-admin/src/app/store';
 import queryString from 'query-string';
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from 'uuid';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button, message, Spin } from 'antd';
-import { createFlight, getAllFlights } from 'apps/aircraft-admin/src/app/store/actions/flight';
+import {
+  createFlight,
+  getAllFlights,
+} from 'apps/aircraft-admin/src/app/store/actions/flight';
 import FlightTable from 'apps/aircraft-admin/src/app/components/flight/list/index';
 import Search from 'apps/aircraft-admin/src/app/components/search-bar';
 import CreateFlightForm from 'apps/aircraft-admin/src/app/components/flight/form/CreateForm';
+import EditFlight from 'apps/aircraft-admin/src/app/components/flight/form/EditForm';
 import { getAllAirCrafts } from 'apps/aircraft-admin/src/app/store/actions/aircraft';
 import { getAllAirways } from 'apps/aircraft-admin/src/app/store/actions/airway';
 import { momentToDate } from 'apps/aircraft-admin/src/app/utils/momentToDate';
-
 
 const FlightPage = () => {
   const flight = useSelector((state: StoreState) => state.flight);
@@ -21,6 +24,9 @@ const FlightPage = () => {
   const dispatch = useDispatch();
 
   const [visible, setVisible] = React.useState(false);
+  const [editVisible, setEditVisible] = React.useState(false);
+  const [editRecord, setEditRecord] = React.useState(null);
+
   const [params, setParams] = React.useState({
     page: 0,
     size: 10,
@@ -43,25 +49,25 @@ const FlightPage = () => {
   }
 
   function handleCreateClick() {
+    setVisible(true);
     getAllAirCrafts(queryString.stringify(params)).then(
-      res => dispatch(res),
-      err => dispatch(err)
+      (res) => dispatch(res),
+      (err) => dispatch(err)
     );
     getAllAirways(queryString.stringify(params)).then(
-      res => dispatch(res),
-      err => dispatch(err)
-    )
-    setVisible(true);
+      (res) => dispatch(res),
+      (err) => dispatch(err)
+    );
   }
 
   function handleSubmitForm(values) {
     //TODO: format moment to date here
     const createFlightDTO = {
       ...values,
-      id: Number(Math.random()),
+      id: 0,
       departure_time: momentToDate(values.departure_time),
       arrival_time: momentToDate(values.arrival_time),
-    }
+    };
 
     createFlight(createFlightDTO).then(
       (res) => {
@@ -110,14 +116,21 @@ const FlightPage = () => {
     // });
   }
 
-  function handleEditRow(record, index) {
+  function onEdit(record, index) {
+    setEditVisible(true);
+    setEditRecord(record);
     // getAllCraftTypes().then(
     //   (res) => dispatch(res),
     //   (err) => dispatch(err)
     // );
     // setOpenEditForm(true);
     // setEditData(record);
+
     console.log(record);
+  }
+
+  function handleEdit(values) {
+    console.log('edit', values);
   }
 
   function handleSearch(values) {
@@ -131,21 +144,35 @@ const FlightPage = () => {
   ) : (
     <div>
       {aircraft.loading === false && airway.loading === false && (
-        <CreateFlightForm
-          aircrafts={aircraft.aircrafts}
-          airways={airway.airways}
-          visible={visible}
-          onCreate={handleSubmitForm}
-          onCancel={() => setVisible(false)}
-        />
+        <>
+          <CreateFlightForm
+            aircrafts={aircraft.aircrafts}
+            airways={airway.airways}
+            visible={visible}
+            onCreate={handleSubmitForm}
+            onCancel={() => setVisible(false)}
+          />
+        </>
       )}
+
+      {editRecord !== null && (
+        <>
+          <EditFlight
+            record={editRecord}
+            aircrafts={aircraft.aircrafts}
+            airways={airway.airways}
+            visible={editVisible}
+            onEdit={handleEdit}
+            onCancel={() => setEditVisible(false)}
+          />
+        </>
+      )}
+
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Button
-          type="primary"
-          onClick={handleCreateClick}
-        >
+        <Button type="primary" onClick={handleCreateClick}>
           Create
         </Button>
+
         <Search
           allowClear={true}
           placeholder="Search by name"
@@ -162,7 +189,7 @@ const FlightPage = () => {
           handleDeleteRow(record, index);
         }}
         onEditRow={(record, index) => {
-          handleEditRow(record, index);
+          onEdit(record, index);
         }}
       />
     </div>

@@ -1,13 +1,15 @@
 import React from 'react';
 import { Modal, Form, Input, Select, Row, Col, DatePicker } from 'antd';
 
-const CreateFlightForm = ({
+const EditFlight = ({
+  record,
   aircrafts,
   airways,
   visible,
-  onCreate,
+  onEdit,
   onCancel,
 }) => {
+  console.log(record)
   const [form] = Form.useForm();
   const [customDate, setCustomDate] = React.useState({
     startValue: null,
@@ -94,7 +96,7 @@ const CreateFlightForm = ({
             .validateFields()
             .then((values) => {
               form.resetFields();
-              onCreate({
+              onEdit({
                 ...values,
                 discount_id: null,
                 departure_time: startDate,
@@ -145,27 +147,6 @@ const CreateFlightForm = ({
 
           <Row gutter={4}>
             <Col span={12}>
-              <Form.Item
-                name="airway_id"
-                label="Airway"
-                rules={[
-                  {
-                    required: true,
-                    message: 'Select one',
-                  },
-                ]}
-              >
-                <Select
-                  placeholder="Select airway"
-                  onChange={onSelectAirwayChange}
-                >
-                  {airways.map((ele) => (
-                    <Select.Option key={ele.id} value={ele.id}>
-                      {ele.departureAirport.city} - {ele.arrivalAirport.city}
-                    </Select.Option>
-                  ))}
-                </Select>
-              </Form.Item>
             </Col>
             <Col span={12}>
               <Form.Item name="discount_id" label="Discount">
@@ -252,4 +233,4 @@ const CreateFlightForm = ({
   );
 };
 
-export default CreateFlightForm;
+export default EditFlight;

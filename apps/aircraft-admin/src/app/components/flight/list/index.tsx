@@ -41,8 +41,8 @@ const FlightTable = ({
             title: 'Status',
             render: (_, record) =>
                 {
-                  let isOke = record.status === 'OK' ? 'ACTIVE' : 'UNACTIVE';
-                  let color = isOke === 'ACTIVE' ? 'green' : 'volcano';
+                  let isOke = record.status === 'OK' ? 'OK' : 'NOT OK';
+                  let color = isOke === 'OK' ? 'green' : 'volcano';
                   return (
                     <>
                       <Tag color={color}>
