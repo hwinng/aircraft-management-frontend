@@ -1,9 +1,10 @@
 import React from 'react';
 import { Modal, Form, Input, Select, Row, Col, DatePicker } from 'antd';
+import { v4 as uuid } from 'uuid'
 
 const CreateFlightForm = ({
   aircrafts,
-  airways,
+  filteredAirways,
   visible,
   onCreate,
   onCancel,
@@ -73,7 +74,7 @@ const CreateFlightForm = ({
   };
 
   function onSelectAirwayChange(airwayID) {
-    airways.filter((ele) => {
+    filteredAirways.filter((ele) => {
       if (ele.id === airwayID) {
         setDepartureGate(ele.departureAirport.gates);
         setArrivalGate(ele.arrivalAirport.gates);
@@ -159,8 +160,8 @@ const CreateFlightForm = ({
                   placeholder="Select airway"
                   onChange={onSelectAirwayChange}
                 >
-                  {airways.map((ele) => (
-                    <Select.Option key={ele.id} value={ele.id}>
+                  {filteredAirways.map((ele) => (
+                    <Select.Option key={uuid()} value={ele.id}>
                       {ele.departureAirport.city} - {ele.arrivalAirport.city}
                     </Select.Option>
                   ))}

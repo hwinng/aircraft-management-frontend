@@ -1,31 +1,17 @@
 import React from 'react';
 import { Modal, Form, Input, Select, Row, Col, DatePicker } from 'antd';
+import moment from 'moment';
+import { dateToMoment } from '../../../utils/date2Moment';
 
-const EditFlight = ({
-  record,
-  aircrafts,
-  airways,
-  visible,
-  onEdit,
-  onCancel,
-}) => {
-  console.log(record)
+const EditFlight = ({ record, visible, onEdit, onCancel }) => {
   const [form] = Form.useForm();
   const [customDate, setCustomDate] = React.useState({
     startValue: null,
     endValue: null,
     endOpen: false,
   });
-  const [depatureGate, setDepartureGate] = React.useState<
-    { id: number; name: string }[]
-  >([]);
-  const [arrivalGate, setArrivalGate] = React.useState<
-    { id: number; name: string }[]
-  >([]);
-
   const [startDate, setStartDate] = React.useState('');
   const [endDate, setEndDate] = React.useState('');
-
 
   const onChange = (field, value) => {
     setCustomDate((prev) => ({
@@ -50,7 +36,7 @@ const EditFlight = ({
 
   const onStartChange = (value, _dateString) => {
     onChange('startValue', value);
-    setStartDate(_dateString)
+    setStartDate(_dateString);
   };
 
   const onEndChange = (value, _dateString) => {
@@ -74,20 +60,11 @@ const EditFlight = ({
     }));
   };
 
-  function onSelectAirwayChange(airwayID) {
-    airways.filter((ele) => {
-      if (ele.id === airwayID) {
-        setDepartureGate(ele.departureAirport.gates);
-        setArrivalGate(ele.arrivalAirport.gates);
-      }
-    });
-  }
-
   return (
     <div>
       <Modal
         visible={visible}
-        title="Create Flight"
+        title="Edit flight"
         okText="Save"
         cancelText="Cancel"
         onCancel={onCancel}
@@ -96,12 +73,15 @@ const EditFlight = ({
             .validateFields()
             .then((values) => {
               form.resetFields();
-              onEdit({
-                ...values,
-                discount_id: null,
-                departure_time: startDate,
-                arrival_time: endDate
-              });
+                onEdit(
+                  {
+                    ...values,
+                    discount_id: null,
+                    departure_time: startDate,
+                    arrival_time: endDate,
+                  },
+                  record.id
+                );
             })
             .catch((info) => {
               console.log('Validate Failed:', info);
@@ -112,7 +92,20 @@ const EditFlight = ({
           form={form}
           layout="vertical"
           name="create_aircraft_form"
-          initialValues={{}}
+          initialValues={{
+            aircraft_id: record.aircraft.id,
+            status: record.status,
+            departure_time: moment(
+              dateToMoment(record.departureTime),
+              'YYYY-MM-DD HH:mm:ss'
+            ),
+            arrival_time: moment(
+              dateToMoment(record.arrivalTime),
+              'YYYY-MM-DD HH:mm:ss'
+            ),
+            arrival_gate_id: record.arrivalGate.id,
+            departure_gate_id: record.departureGate.id,
+          }}
         >
           <Row gutter={4}>
             <Col span={12}>
@@ -126,12 +119,13 @@ const EditFlight = ({
                   },
                 ]}
               >
-                <Select placeholder="Select aircraft">
-                  {aircrafts.map((ele) => (
-                    <Select.Option key={ele.id} value={ele.id}>
-                      {ele.name}
-                    </Select.Option>
-                  ))}
+                <Select placeholder="Select aircraft" disabled>
+                  <Select.Option
+                    key={record.aircraft.id}
+                    value={record.aircraft.id}
+                  >
+                    {record.aircraft.name}
+                  </Select.Option>
                 </Select>
               </Form.Item>
             </Col>
@@ -146,8 +140,7 @@ const EditFlight = ({
           </Row>
 
           <Row gutter={4}>
-            <Col span={12}>
-            </Col>
+            <Col span={12}></Col>
             <Col span={12}>
               <Form.Item name="discount_id" label="Discount">
                 <Input value="0" placeholder="Not available" disabled />
@@ -157,7 +150,11 @@ const EditFlight = ({
 
           <Row gutter={4}>
             <Col span={12}>
-              <Form.Item name="departure_time" label="Departure Time">
+              <Form.Item
+                name="departure_time"
+                label="Departure Time"
+                rules={[{ required: true, message: 'msg'}]}
+              >
                 <DatePicker
                   disabledDate={disabledStartDate}
                   showTime
@@ -180,12 +177,10 @@ const EditFlight = ({
                   },
                 ]}
               >
-                <Select placeholder="Select gate">
-                  {depatureGate.map((ele) => (
-                    <Select.Option key={ele.id} value={ele.id}>
-                      {ele.name}
-                    </Select.Option>
-                  ))}
+                <Select placeholder="Select gate" disabled>
+                  <Select.Option value={record.departureGate.id}>
+                    {record.departureGate.name}
+                  </Select.Option>
                 </Select>
               </Form.Item>
             </Col>
@@ -193,7 +188,11 @@ const EditFlight = ({
 
           <Row gutter={4}>
             <Col span={12}>
-              <Form.Item name="arrival_time" label="Arrival Time">
+              <Form.Item
+                name="arrival_time"
+                label="Arrival Time"
+                rules={[{ required: true }]}
+              >
                 <DatePicker
                   disabledDate={disabledEndDate}
                   showTime
@@ -217,12 +216,10 @@ const EditFlight = ({
                   },
                 ]}
               >
-                <Select placeholder="Select gate">
-                  {arrivalGate.map((ele) => (
-                    <Select.Option key={ele.id} value={ele.id}>
-                      {ele.name}
-                    </Select.Option>
-                  ))}
+                <Select placeholder="Select gate" disabled>
+                  <Select.Option value={record.arrivalGate.id}>
+                    {record.arrivalGate.name}
+                  </Select.Option>
                 </Select>
               </Form.Item>
             </Col>

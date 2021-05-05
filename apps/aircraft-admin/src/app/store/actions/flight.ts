@@ -1,4 +1,4 @@
-import { adminCreateFlight, adminGetAllFlight } from '../../services';
+import { adminCreateFlight, adminDeleteFlight, adminGetAllFlight, adminUpdateFlight } from '../../services';
 import { FLIGHT } from '../types/index';
 
 export const getAllFlights = (params: string) => {
@@ -18,6 +18,32 @@ export const createFlight = (body: any) => {
   return adminCreateFlight(body).then(
     (res: any) => ({
       type: FLIGHT.CREATE_FLIGHT,
+      payload: res.data
+    }),
+    (err: any) => ({
+      type: FLIGHT.FLIGHT_ERROR,
+      payload: err
+    })
+  )
+}
+
+export const updateFlight = (id: number, body: any) => {
+  return adminUpdateFlight(id, body).then(
+    (res: any) => ({
+      type: FLIGHT.UPDATE_FLIGHT,
+      payload: res.data
+    }),
+    (err: any) => ({
+      type: FLIGHT.FLIGHT_ERROR,
+      payload: err
+    })
+  )
+}
+
+export const deleteFlight = (id: number) => {
+  return adminDeleteFlight(id).then(
+    (res: any) => ({
+      type: FLIGHT.DELETE_FLIGHT,
       payload: res.data
     }),
     (err: any) => ({

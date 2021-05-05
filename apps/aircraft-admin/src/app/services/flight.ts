@@ -2,7 +2,6 @@ import http from '../utils/http'
 import api from '../api'
 
 export interface IUpdateFlight {
-  id: number,
   aircraft_id: number,
   airway_id: number,
   departure_time: string,
@@ -17,10 +16,14 @@ export function adminGetAllFlight(params: string) {
   return http.get(api.adminGetAllFlight + `?${params}`)
 }
 
-export function adminUpdateFlight(body: IUpdateFlight ) {
-  return http.put(api.adminUpdateFlight, body)
+export function adminUpdateFlight(id: number, body: IUpdateFlight ) {
+  return http.put(`${api.adminUpdateFlight}/${id}`, body)
 }
 
 export function adminCreateFlight(body: any) {
   return http.post(api.adminCreateFlight, body);
+}
+
+export function adminDeleteFlight(id: number) {
+  return http.delete(`${api.adminDeleteFlight}/${id}`);
 }

@@ -3,6 +3,7 @@ import { AIRWAY } from './../types/index';
 const initialState = {
   airways: [],
   airway_detail: {},
+  pagination: null,
   loading: true,
   error: {},
 };
@@ -14,6 +15,12 @@ export default function airway(state = initialState, action) {
       return {
         ...state,
         airways: payload.content,
+        pagination: {
+          current: payload.pageable.pageNumber + 1,
+          pageSize: payload.pageable.pageSize,
+          totalPages: payload.totalPages,
+          total: payload.totalElements,
+        },
         loading: false,
       };
     case AIRWAY.AIRWAY_ERROR:

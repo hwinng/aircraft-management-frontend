@@ -45,7 +45,8 @@ function aircraft(state = initialState, action) {
     case AIR_CRAFT.UPDATE_CRAFT:
       console.log(payload)
       return {
-        ...state
+        ...state,
+        loading: false
       }
     case AIR_CRAFT.AIR_CRAFT_ERROR:
       return {

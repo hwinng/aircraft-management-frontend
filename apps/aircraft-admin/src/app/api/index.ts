@@ -25,7 +25,8 @@ const API = Object.freeze({
   //FLIGHT
   adminGetAllFlight: '/flight/getAll',
   adminUpdateFlight: '/flight/admin/updateTime',
-  adminCreateFlight: '/flight/admin/create'
+  adminCreateFlight: '/flight/admin/create',
+  adminDeleteFlight: '/flight/delete'
 })
 
 export default API
