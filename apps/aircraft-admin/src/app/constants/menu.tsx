@@ -32,6 +32,16 @@ export const HOME_SIDER_MENU_LIST = [
     path: HOME.AIRWAY.path,
     icon: <ScheduleOutlined/>,
     name: HOME.AIRWAY.name
-  }
+  },
+  {
+    path: HOME.FLIGHT.path,
+    icon: <ScheduleOutlined/>,
+    name: HOME.FLIGHT.name
+  },
+  {
+    path: HOME.TICKET.path,
+    icon: <ScheduleOutlined/>,
+    name: HOME.TICKET.name
+  },
 ]
 

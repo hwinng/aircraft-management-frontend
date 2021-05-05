@@ -19,7 +19,7 @@ const EditAircraftForm = ({
     <div>
       <Modal
         visible={openEditForm}
-        title="Create Aircraft"
+        title="Edit Aircraft"
         okText="Save"
         cancelText="Cancel"
         onCancel={onCancel}

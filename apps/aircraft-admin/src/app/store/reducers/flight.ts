@@ -23,6 +23,22 @@ function flight(state = initialState, action) {
         },
         loading: false,
       }
+    case FLIGHT.CREATE_FLIGHT:
+      console.log('payload', payload)
+      return {
+        ...state,
+      }
+    case FLIGHT.UPDATE_FLIGHT:
+      console.log(payload)
+      return {
+        ...state,
+        loading: false
+      }
+    case FLIGHT.DELETE_FLIGHT:
+      return {
+        ...state,
+        loading: false
+      }
     case FLIGHT.FLIGHT_ERROR:
       return {
         ...state,

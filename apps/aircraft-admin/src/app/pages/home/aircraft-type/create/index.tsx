@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.scss';
-import { Button, message, Steps } from 'antd';
-import { ICreateCraftTypeDTO } from 'apps/aircraft-admin/src/app/services';
-import { createCraftType } from 'apps/aircraft-admin/src/app/store/actions/craft-type';
-import { useDispatch } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import { message, Steps } from 'antd';
+import {
+  adminCreateCraftType,
+  ICreateCraftTypeDTO,
+} from 'apps/aircraft-admin/src/app/services';
+import {
+  createCraftType,
+  createSeatByClass,
+  getAllCraftTypes,
+} from 'apps/aircraft-admin/src/app/store/actions/craft-type';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import CreateCraftTypeForm from '../../../../components/craft-type/form/create-craft-type';
 import BusinessForm from '../../../../components/craft-type/form/create-seat-by-class/BusinessForm';
 import EconomyForm from 'apps/aircraft-admin/src/app/components/craft-type/form/create-seat-by-class/EconomyForm';
@@ -33,12 +40,11 @@ const steps = [
   },
 ];
 
-function useQuery() {
-  return new URLSearchParams(useLocation().search);
-}
-
 const CreateCraftType = () => {
   const [currentStep, setCurrentStep] = React.useState(0);
+  const craftTypes = useSelector((state: any) => state.craftTypes);
+  const dispatch = useDispatch();
+  const [_test, _setTest] = useState(null);
 
   function onFirstStepSubmit(values: ICreateCraftTypeDTO) {
     localStorage.setItem(LOCAL_STORAGE.STEP_1, JSON.stringify(values));
@@ -51,7 +57,41 @@ const CreateCraftType = () => {
    *  -> dispatch 3 actions for 2nd, 3rd, 4th form of each form
    *
    */
-  function handleSubmitAllForm() {
+  async function handleSubmitAllForm() {
+    const step_1_data = JSON.parse(localStorage.getItem(LOCAL_STORAGE.STEP_1));
+    const step_2_data = JSON.parse(localStorage.getItem(LOCAL_STORAGE.STEP_2));
+    const step_3_data = JSON.parse(localStorage.getItem(LOCAL_STORAGE.STEP_3));
+    const step_4_data = JSON.parse(localStorage.getItem(LOCAL_STORAGE.STEP_4));
+
+    //TODO: call action for step 1, then promise all for 3 last actions
+    const payload: any = await adminCreateCraftType(step_1_data);
+
+    [step_2_data, step_3_data, step_4_data].forEach((ele) => {
+      ele['aircraftType_id'] = payload.data.id;
+      ele.quantity = Number(ele.quantity);
+      ele.rows_quantity = Number(ele.rows_quantity);
+    });
+
+    Promise.all([
+      createSeatByClass(step_2_data),
+      createSeatByClass(step_3_data),
+      createSeatByClass(step_4_data),
+    ])
+      .then((values: { type: string; payload: any }[]) => {
+        values.forEach((value) => {
+          dispatch(value);
+        });
+        message.success('Success');
+      })
+      .catch((err) => message.error('Failure for some reasons.'))
+      .finally(() => {
+        localStorage.removeItem(LOCAL_STORAGE.STEP_1);
+        localStorage.removeItem(LOCAL_STORAGE.STEP_2);
+        localStorage.removeItem(LOCAL_STORAGE.STEP_3);
+        localStorage.removeItem(LOCAL_STORAGE.STEP_4);
+        // getAllCraftTypes().then((res) => dispatch(res));
+      });
+    //TODO: redirect routing
   }
 
   return (
@@ -80,7 +120,10 @@ const CreateCraftType = () => {
           <BusinessForm
             formData={localStorage.getItem(LOCAL_STORAGE.STEP_2)}
             onNext={(values) => {
-              localStorage.setItem(LOCAL_STORAGE.STEP_2, JSON.stringify(values))
+              localStorage.setItem(
+                LOCAL_STORAGE.STEP_2,
+                JSON.stringify(values)
+              );
               setCurrentStep((prev) => prev + 1);
             }}
             onPrev={() => {
@@ -92,7 +135,10 @@ const CreateCraftType = () => {
           <EconomyForm
             formData={localStorage.getItem(LOCAL_STORAGE.STEP_3)}
             onNext={(values) => {
-              localStorage.setItem(LOCAL_STORAGE.STEP_3, JSON.stringify(values))
+              localStorage.setItem(
+                LOCAL_STORAGE.STEP_3,
+                JSON.stringify(values)
+              );
               setCurrentStep((prev) => prev + 1);
             }}
             onPrev={() => {
@@ -104,7 +150,10 @@ const CreateCraftType = () => {
           <EconomyFlexForm
             formData={localStorage.getItem(LOCAL_STORAGE.STEP_4)}
             onNext={(values) => {
-              localStorage.setItem(LOCAL_STORAGE.STEP_4, JSON.stringify(values))
+              localStorage.setItem(
+                LOCAL_STORAGE.STEP_4,
+                JSON.stringify(values)
+              );
               setCurrentStep((prev) => prev + 1);
               handleSubmitAllForm();
             }}

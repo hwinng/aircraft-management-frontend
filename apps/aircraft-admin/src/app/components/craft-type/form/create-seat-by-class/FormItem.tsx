@@ -20,7 +20,6 @@ const FormItem: React.FC<ISeatByClassForm> = ({
   onSubmitForm,
   onPrev,
 }) => {
-  console.log(formType);
   const [form] = Form.useForm();
 
   function handleSubmitForm() {
@@ -84,7 +83,7 @@ const FormItem: React.FC<ISeatByClassForm> = ({
             },
           ]}
         >
-          <Input />
+          <Input type='number' />
         </Form.Item>
 
         <Form.Item
@@ -97,7 +96,7 @@ const FormItem: React.FC<ISeatByClassForm> = ({
             },
           ]}
         >
-          <Input />
+          <Input type='number' />
         </Form.Item>
       </div>
 

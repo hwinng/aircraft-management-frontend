@@ -8,6 +8,10 @@ import AirCraft from '../pages/home/aircraft/index';
 import AirCraftDetail from '../pages/home/aircraft/aircraft-detail';
 import CraftType from '../pages/home/aircraft-type/index';
 import CreateCraftType from '../pages/home/aircraft-type/create';
+import Flight from '../pages/home/flight/index';
+import Airport from '../pages/home/airport/index';
+import Airway from '../pages/home/airway/index';
+import Ticket from '../pages/home/ticket/index';
 import NotFound from '../pages/exception/404';
 
 const routesMap: IRouteProps[] = [
@@ -84,7 +88,7 @@ const routesMap: IRouteProps[] = [
       },
       {
         path: HOME.AIRPORT.path,
-        component: 'AIRPORT',
+        component: Airport,
         meta: {
           title: HOME.AIRPORT.name,
           requiresAuth: true,
@@ -92,10 +96,28 @@ const routesMap: IRouteProps[] = [
       },
       {
         path: HOME.AIRWAY.path,
-        component: 'airway',
+        component: Airway,
         exact: true,
         meta: {
           title: HOME.AIRWAY.name,
+          requiresAuth: true,
+        }
+      },
+      {
+        path: HOME.FLIGHT.path,
+        component: Flight,
+        exact: true,
+        meta: {
+          title: HOME.FLIGHT.name,
+          requiresAuth: true,
+        }
+      },
+      {
+        path: HOME.TICKET.path,
+        component: Ticket,
+        exact: true,
+        meta: {
+          title: HOME.TICKET.name,
           requiresAuth: true,
         }
       },

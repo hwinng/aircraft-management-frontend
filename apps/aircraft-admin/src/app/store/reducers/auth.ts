@@ -13,7 +13,7 @@ export interface IUserInfo {
   provider:string,
   providerId: any,
   status: string,
-  role: Array<IRole>
+  roles: Array<IRole>
 }
 
 export interface IRole {
@@ -44,7 +44,7 @@ const initialState: IUserState = {
     provider:'',
     providerId: null,
     status: '',
-    role: []
+    roles: []
   }
 }
 

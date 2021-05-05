@@ -33,6 +33,7 @@ function craftType(state = initialState, action) {
       return {
         ...state,
         types: [...state.types, payload],
+        type_detail: payload,
         create_step: 1,
         loading: false
       }
@@ -41,6 +42,11 @@ function craftType(state = initialState, action) {
         ...state,
         error: payload,
       };
+    case CRAFT_TYPE.CREATE_SEAT_BY_CLASS:
+      console.log('seat', payload);
+      return {
+        ...state
+      }
     default:
       return state;
   }

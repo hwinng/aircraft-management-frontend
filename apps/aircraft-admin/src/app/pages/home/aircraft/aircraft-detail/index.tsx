@@ -66,6 +66,8 @@ const AircarftDetail: React.FC<Props> = ({ aircraft, flight }) => {
             pagination={flight.pagination}
             flights={flight.flights}
             loading={flight.loading}
+            onEditRow={() => console.log('')}
+            onDeleteRow={() => console.log('')}
           />
         )}
       </div>

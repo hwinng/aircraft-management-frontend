@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-import { connect, useDispatch } from 'react-redux';
+import React from 'react';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import './style.scss';
 
 import { useLocation } from 'react-router';
@@ -18,14 +18,13 @@ import {
   IUpdateAccountDTO,
 } from 'apps/aircraft-admin/src/app/services';
 
-type Props = ReturnType<typeof mapStateToProps>;
-
-const AccountDetailContainer: React.FC<Props> = function ({ account }) {
-  const [visible, setVisible] = React.useState(false);
-
+const AccountDetailContainer = function () {
+  const dispatch = useDispatch();
+  const account = useSelector((state: StoreState) => state.account);
   const profile = account.account_profile;
   const location = useLocation();
-  const dispatch = useDispatch();
+  const [visible, setVisible] = React.useState(false);
+
   const paramId = Number(
     location.pathname.slice('/home/account/detail/'.length)
   );
@@ -34,7 +33,8 @@ const AccountDetailContainer: React.FC<Props> = function ({ account }) {
     getAccountById(paramId).then(
       (res) => dispatch(res),
       (err) => dispatch(err)
-    );
+    ).finally(() => {
+    });
   }, [getAccountById, paramId]);
 
   function buildInfoRow(title, value) {
@@ -81,13 +81,12 @@ const AccountDetailContainer: React.FC<Props> = function ({ account }) {
         });
       })
       .finally(() => {
-        getAccountById(profile.userInfo.id).then((res) => dispatch(res))
+        getAccountById(profile.userInfo.id).then((res) => dispatch(res));
         setVisible(false);
-      }
-      );
+      });
   }
 
-  return account.isLoading ? (
+  return (account.isLoading && !profile ) ? (
     <div>loading....</div>
   ) : (
     <div>
@@ -119,26 +118,26 @@ const AccountDetailContainer: React.FC<Props> = function ({ account }) {
                 }}
                 size="large"
               >
-                {React.createElement(
-                  'span',
-                  {
-                    style: {
-                      fontSize: '5rem',
-                    },
-                  },
-                  getNameLetter(
-                    profile?.userInfo.name
-                      .split(' ')
-                      .slice(-1)
-                      .toString()
-                      .slice(0, 1)
-                  )
+                {profile ? (
+                  <>
+                    <span style={{ fontSize: '5rem' }}>
+                      {getNameLetter(
+                        profile.userInfo.name
+                          .split(' ')
+                          .slice(-1)
+                          .toString()
+                          .slice(0, 1)
+                      )}
+                    </span>{' '}
+                  </>
+                ) : (
+                  'A'
                 )}
               </Avatar>
             }
           >
             <Card.Meta
-              title={`${profile.userInfo.name}`}
+              title={profile && `${profile.userInfo.name}`}
               style={{ textAlign: 'center' }}
             />
           </Card>
@@ -147,27 +146,27 @@ const AccountDetailContainer: React.FC<Props> = function ({ account }) {
           <Card title={`Detail information of account`}>
             {true && (
               <>
-                {buildInfoRow('Username:', profile.userInfo.username)}
-                {buildInfoRow('Name:', profile.userInfo.name)}
-                {buildInfoRow('Email:', profile.userInfo.email)}
-                {buildInfoRow('Image Link:', profile.userInfo.imageUrl)}
+                {buildInfoRow('Username:',profile && profile.userInfo.username)}
+                {buildInfoRow('Name:',profile && profile.userInfo.name)}
+                {buildInfoRow('Email:',profile && profile.userInfo.email)}
+                {buildInfoRow('Image Link:',profile && profile.userInfo.imageUrl)}
                 {buildInfoRow(
                   'Role:',
-                  profile.userInfo.roles.map((x) => x.name).toString()
+                  profile && profile.userInfo.roles.map((x) => x.name).toString()
                 )}
                 {buildInfoRow(
                   'Phone Number:',
-                  profile.phone_number ? profile.phone_number : 'Empty'
+                  (profile && profile.phone_number) ? profile.phone_number : 'Empty'
                 )}
                 {buildInfoRow(
                   'Credit Card No:',
-                  profile.credit_card_number
+                  (profile && profile.credit_card_number)
                     ? profile.credit_card_number
                     : 'Empty'
                 )}
                 {buildInfoRow(
                   'ID Card No:',
-                  profile.id_card_number ? profile.id_card_number : 'Empty'
+                  (profile && profile.id_card_number) ? profile.id_card_number : 'Empty'
                 )}
               </>
             )}
@@ -189,7 +188,4 @@ const AccountDetailContainer: React.FC<Props> = function ({ account }) {
   );
 };
 
-const mapStateToProps = ({ account }: StoreState) => ({
-  account,
-});
-export default connect(mapStateToProps)(AccountDetailContainer);
+export default AccountDetailContainer;
