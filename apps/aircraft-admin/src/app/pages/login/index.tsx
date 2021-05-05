@@ -37,7 +37,6 @@ const Login: React.FC<LoginProps> = function ({
   const handleSubmit = async () => {
     try {
       const values = await form.validateFields();
-      console.log(values)
       setLoading(true);
       dispatch(login({
         usernameOrEmail: values.usernameOrEmail.trim(),

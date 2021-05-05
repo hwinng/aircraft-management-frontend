@@ -10,11 +10,13 @@ export const login = ({ usernameOrEmail, password }) => async dispatch => {
     (res: any) => {
       if (res.data.accessToken) {
         const userInfo = res.data;
-        dispatch({
-          type: LOGIN_SUCCESS,
-          userInfo,
-        });
+        if (userInfo.user.roles.some(ele => ele.name==='ROLE_ADMIN')) {
+          dispatch({
+            type: LOGIN_SUCCESS,
+            userInfo,
+          });
         dispatch(loginByToken())
+        }
       }
     },
     (error: any) => {
