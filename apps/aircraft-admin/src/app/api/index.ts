@@ -18,6 +18,8 @@ const API = Object.freeze({
   adminGetAllCraftType: '/aircraftType/getAll',
   adminCreateCraftType: '/aircraftType/admin/create',
   adminCreateSeatByClass: '/seatsByClass/admin/create',
+  //AIRPORT
+  adminGetAllAirports: '/airport/getAll',
   //AIRWAY
   adminGetAllAirways: '/airway/getAll',
   //FLIGHT

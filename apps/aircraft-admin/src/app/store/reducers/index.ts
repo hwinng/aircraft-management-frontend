@@ -4,7 +4,8 @@ import aircraft from './aircraft';
 import craftTypes from './craft-type';
 import flight from './flight';
 import airway from './airway';
-import { combineReducers } from 'redux'
+import airport from './airport';
+import { combineReducers } from 'redux';
 
 export default combineReducers({
   auth,
@@ -12,5 +13,6 @@ export default combineReducers({
   aircraft,
   craftTypes,
   flight,
-  airway
+  airway,
+  airport
 })
