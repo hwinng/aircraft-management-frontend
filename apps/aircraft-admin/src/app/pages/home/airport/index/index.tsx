@@ -33,7 +33,7 @@ const AircraftPage = () => {
   }
 
   return airport.loading ? (
-    <Spin></Spin>
+    <Spin style={{margin: 'auto'}}></Spin>
   ) : (
     <AirportTable
       onTableChange={handleTableChange}

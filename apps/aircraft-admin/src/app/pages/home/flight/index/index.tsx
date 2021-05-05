@@ -183,7 +183,7 @@ const FlightPage = () => {
   }
 
   return flight.loading ? (
-    <Spin tip="Loading"></Spin>
+    <Spin style={{margin: 'auto'}}></Spin>
   ) : (
     <div>
       {!aircraft.loading && (

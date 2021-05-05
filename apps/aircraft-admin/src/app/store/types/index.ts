@@ -52,3 +52,8 @@ export const AIRWAY = {
   AIRWAY_ERROR: 'AIRWAY_ERROR'
 }
 
+export const TICKET = {
+  GET_ALL_TICKET: 'GET_ALL_TICKET',
+  TICKET_ERROR: 'TICKET_ERROR'
+}
+

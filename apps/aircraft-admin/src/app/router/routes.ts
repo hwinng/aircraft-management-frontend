@@ -11,6 +11,7 @@ import CreateCraftType from '../pages/home/aircraft-type/create';
 import Flight from '../pages/home/flight/index';
 import Airport from '../pages/home/airport/index';
 import Airway from '../pages/home/airway/index';
+import Ticket from '../pages/home/ticket/index';
 import NotFound from '../pages/exception/404';
 
 const routesMap: IRouteProps[] = [
@@ -108,6 +109,15 @@ const routesMap: IRouteProps[] = [
         exact: true,
         meta: {
           title: HOME.FLIGHT.name,
+          requiresAuth: true,
+        }
+      },
+      {
+        path: HOME.TICKET.path,
+        component: Ticket,
+        exact: true,
+        meta: {
+          title: HOME.TICKET.name,
           requiresAuth: true,
         }
       },

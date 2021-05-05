@@ -41,7 +41,7 @@ const Airway = () => {
   }
 
   return airway.loading ? (
-    <Spin></Spin>
+    <Spin style={{margin: 'auto'}}></Spin>
   ) : (
     <div>
       <Search
