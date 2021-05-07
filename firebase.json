@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/apps/aircraft-admin/",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
