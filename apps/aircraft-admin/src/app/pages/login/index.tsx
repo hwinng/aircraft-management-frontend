@@ -124,7 +124,7 @@ const Login: React.FC<LoginProps> = function ({
             {loading ? 'Logging..' : 'Log in'}
           </Button>
           <div className="register">
-            <Link to='/register'>Register</Link>
+            <Link to='/register'>REGISTER NE`</Link>
           </div>
         </div>
       </div>
