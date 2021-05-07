@@ -1,69 +1,65 @@
-import React, { useState, useEffect } from 'react'
-import './style.scss'
-import qs from 'query-string'
-import config from '../../config'
-import { Button, Input, Form } from 'antd'
-import { RouteComponentProps } from 'react-router-dom'
-import { DispatchProp, connect } from 'react-redux'
-import { ThunkDispatch } from 'redux-thunk'
-import { AnyAction } from 'redux'
-import { HOME } from '../../router/constants'
-import { LOCAL_STORAGE } from '../../constants/'
+import React, { useState, useEffect } from 'react';
+import './style.scss';
+import qs from 'query-string';
+import config from '../../config';
+import { Button, Input, Form, message } from 'antd';
+import { RouteComponentProps } from 'react-router-dom';
+import { DispatchProp, connect, useSelector } from 'react-redux';
+import { ThunkDispatch } from 'redux-thunk';
+import { AnyAction } from 'redux';
+import { HOME } from '../../router/constants';
+import { LOCAL_STORAGE } from '../../constants/';
 import { login } from '../../store/actions/auth';
-import { Link, Redirect} from 'react-router-dom'
-import HanuLogo from '../../../assets/images/hanu-logo.png'
-import {
-  LockOutlined,
-  UserOutlined,
-} from '@ant-design/icons'
+import { Redirect } from 'react-router-dom';
+import HanuLogo from '../../../assets/images/hanu-logo.png';
+import { LockOutlined, UserOutlined } from '@ant-design/icons';
+import { StoreState } from '../../store';
 
-type ThunkDispatchProps = ThunkDispatch<{}, {}, AnyAction>
+type ThunkDispatchProps = ThunkDispatch<{}, {}, AnyAction>;
 type LoginProps = {
-  dispatch: ThunkDispatchProps
-} & DispatchProp & RouteComponentProps
+  dispatch: ThunkDispatchProps;
+} & DispatchProp &
+  RouteComponentProps;
 
-const Login: React.FC<LoginProps> = function ({
-  dispatch,
-  history,
-  location
-}) {
-  const [form] = Form.useForm()
-  const [loading, setLoading] = useState(false)
+const Login: React.FC<LoginProps> = function ({ dispatch, history, location }) {
+  const auth = useSelector((state: StoreState) => state.auth);
+  const [form] = Form.useForm();
   const [redirectUrl] = useState(() => {
-    const url = qs.parse(location.search).redirectUrl as string
-    return url || HOME.ACCOUNT.path
-  })
+    const url = qs.parse(location.search).redirectUrl as string;
+    return url || HOME.ACCOUNT.path;
+  });
 
   const handleSubmit = async () => {
     try {
       const values = await form.validateFields();
-      setLoading(true);
-      dispatch(login({
-        usernameOrEmail: values.usernameOrEmail.trim(),
-        password: values.password.trim()
-      }))
+      dispatch(
+        login({
+          usernameOrEmail: values.usernameOrEmail.trim(),
+          password: values.password.trim(),
+        })
+      );
     } catch (err) {
-      console.log(err)
+      console.log(err);
     }
-  }
+  };
 
   useEffect(() => {
     function validateLocalStatus() {
       if (window.localStorage.getItem(LOCAL_STORAGE.TOKEN)) {
-        return <Redirect to={redirectUrl} />
+        return <Redirect to={redirectUrl} />;
       }
     }
     validateLocalStatus();
-  }, [history, location.search, dispatch, redirectUrl])
+  }, [history, location.search, dispatch, redirectUrl]);
 
   useEffect(() => {
     if (config.isDevelopment) {
       form.setFieldsValue({
         usernameOrEmail: '',
-        password: ''
-      })
+        password: '',
+      });
     }
-  }, [])
+  }, []);
 
   return (
     <section className="login-page">
@@ -81,8 +77,8 @@ const Login: React.FC<LoginProps> = function ({
               rules={[
                 {
                   required: true,
-                  message: "Please your enter username"
-                }
+                  message: 'Please your enter username',
+                },
               ]}
             >
               <Input
@@ -98,8 +94,8 @@ const Login: React.FC<LoginProps> = function ({
               rules={[
                 {
                   required: true,
-                  message: "Please enter your password"
-                }
+                  message: 'Please enter your password',
+                },
               ]}
             >
               <Input
@@ -120,11 +116,14 @@ const Login: React.FC<LoginProps> = function ({
             block
             onClick={handleSubmit}
           >
-            {loading ? 'Logging..' : 'Log in'}
+            Login
           </Button>
+          {!auth.userGuard.isAdmin && (
+            <>{message.error('Login information is incorrect.')}</>
+          )}
         </div>
       </div>
     </section>
-  )
-}
-export default connect()(Login)
+  );
+};
+export default connect()(Login);

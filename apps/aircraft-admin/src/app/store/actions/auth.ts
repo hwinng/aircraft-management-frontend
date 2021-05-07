@@ -3,61 +3,71 @@ import { loginService, getAuthService } from '../../services';
 import { ActionCreator, Dispatch } from 'redux';
 import { ThunkAction } from 'redux-thunk';
 
-const { LOGIN_SUCCESS, LOGOUT, AUTH_ERROR, GET_AUTH} = AUTH
+const { LOGIN_SUCCESS, LOGOUT, AUTH_ERROR, GET_AUTH, USER_GUARD } = AUTH;
 
-export const login = ({ usernameOrEmail, password }) => async dispatch => {
+export const login = ({ usernameOrEmail, password }) => async (dispatch) => {
   return loginService({ usernameOrEmail, password }).then(
     (res: any) => {
       if (res.data.accessToken) {
         const userInfo = res.data;
-        if (userInfo.user.roles.some(ele => ele.name==='ROLE_ADMIN')) {
+        if (userInfo.user.roles.some((ele) => ele.name === 'ROLE_USER')) {
+          dispatch({
+            type: USER_GUARD,
+            payload: {
+              isAdmin: false
+            }
+          });
+          return;
+        } else {
           dispatch({
             type: LOGIN_SUCCESS,
             userInfo,
           });
-        dispatch(loginByToken())
+          dispatch(loginByToken());
         }
       }
     },
     (error: any) => {
       dispatch({
-        type: AUTH_ERROR
-      })
-    })
-}
+        type: AUTH_ERROR,
+      });
+    }
+  );
+};
 
-export const loginByToken = () => async dispatch => {
+export const loginByToken = () => async (dispatch) => {
   return getAuthService().then(
     (res: any) => {
       dispatch({
         type: GET_AUTH,
-        userInfo: res.data
-      })
+        userInfo: res.data,
+      });
     },
     (err: any) => {
       dispatch({
-        type: AUTH_ERROR
-      })
+        type: AUTH_ERROR,
+      });
     }
-  )
-}
-
+  );
+};
 
 // LOG OUT
 // export const logout = () => (dispatch) => {
 //   dispatch({ type: LOGOUT });
 // };
 
-export const logout: ActionCreator<ThunkAction<
-  // The type of the last action to be dispatched - will always be promise<T> for async actions
-  Promise<any>,
-  // The type for the data within the last action
-  any,
-  // The type of the parameter for the nested function
-  any,
-  // The type of the last action to be dispatched
-  any
->> = () => {
+export const logout: ActionCreator<
+  ThunkAction<
+    // The type of the last action to be dispatched - will always be promise<T> for async actions
+    Promise<any>,
+    // The type for the data within the last action
+    any,
+    // The type of the parameter for the nested function
+    any,
+    // The type of the last action to be dispatched
+    any
+  >
+> = () => {
   return async (dispatch: Dispatch) => {
     const _logout: any = {
       type: LOGOUT,
@@ -92,5 +102,3 @@ export const logout: ActionCreator<ThunkAction<
 //     return dispatch(postPersonAction);
 //   };
 // };
-
-
