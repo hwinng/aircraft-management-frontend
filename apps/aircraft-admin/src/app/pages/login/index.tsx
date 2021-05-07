@@ -59,8 +59,8 @@ const Login: React.FC<LoginProps> = function ({
   useEffect(() => {
     if (config.isDevelopment) {
       form.setFieldsValue({
-        usernameOrEmail: 'user',
-        password: '123456789'
+        usernameOrEmail: '',
+        password: ''
       })
     }
   }, [])
