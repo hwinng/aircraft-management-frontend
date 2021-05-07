@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect, useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import './style.scss';
 
 import { useLocation } from 'react-router';
@@ -30,11 +30,12 @@ const AccountDetailContainer = function () {
   );
 
   React.useEffect(() => {
-    getAccountById(paramId).then(
-      (res) => dispatch(res),
-      (err) => dispatch(err)
-    ).finally(() => {
-    });
+    getAccountById(paramId)
+      .then(
+        (res) => dispatch(res),
+        (err) => dispatch(err)
+      )
+      .finally(() => {});
   }, [getAccountById, paramId]);
 
   function buildInfoRow(title, value) {
@@ -86,7 +87,7 @@ const AccountDetailContainer = function () {
       });
   }
 
-  return (account.isLoading && !profile ) ? (
+  return account.isLoading && !profile ? (
     <div>loading....</div>
   ) : (
     <div>
@@ -146,41 +147,54 @@ const AccountDetailContainer = function () {
           <Card title={`Detail information of account`}>
             {true && (
               <>
-                {buildInfoRow('Username:',profile && profile.userInfo.username)}
-                {buildInfoRow('Name:',profile && profile.userInfo.name)}
-                {buildInfoRow('Email:',profile && profile.userInfo.email)}
-                {buildInfoRow('Image Link:',profile && profile.userInfo.imageUrl)}
+                {buildInfoRow(
+                  'Username:',
+                  profile && profile.userInfo.username
+                )}
+                {buildInfoRow('Name:', profile && profile.userInfo.name)}
+                {buildInfoRow('Email:', profile && profile.userInfo.email)}
+                {buildInfoRow(
+                  'Image Link:',
+                  profile && profile.userInfo.imageUrl
+                )}
                 {buildInfoRow(
                   'Role:',
-                  profile && profile.userInfo.roles.map((x) => x.name).toString()
+                  profile &&
+                    profile.userInfo.roles.map((x) => x.name).toString()
                 )}
                 {buildInfoRow(
                   'Phone Number:',
-                  (profile && profile.phone_number) ? profile.phone_number : 'Empty'
+                  profile && profile.phone_number
+                    ? profile.phone_number
+                    : 'Empty'
                 )}
                 {buildInfoRow(
                   'Credit Card No:',
-                  (profile && profile.credit_card_number)
+                  profile && profile.credit_card_number
                     ? profile.credit_card_number
                     : 'Empty'
                 )}
                 {buildInfoRow(
                   'ID Card No:',
-                  (profile && profile.id_card_number) ? profile.id_card_number : 'Empty'
+                  profile && profile.id_card_number
+                    ? profile.id_card_number
+                    : 'Empty'
                 )}
               </>
             )}
             <Button type="primary" onClick={() => setVisible(true)}>
               Edit
             </Button>
-            <EditAccount
-              profileDTO={profile}
-              visible={visible}
-              onEdit={handleEdit}
-              onCancel={() => {
-                setVisible(false);
-              }}
-            />
+            {profile && (
+              <EditAccount
+                profileDTO={profile}
+                visible={visible}
+                onEdit={handleEdit}
+                onCancel={() => {
+                  setVisible(false);
+                }}
+              />
+            )}
           </Card>
         </Col>
       </Row>

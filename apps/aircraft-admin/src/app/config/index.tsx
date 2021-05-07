@@ -8,7 +8,7 @@ const CONFIG = {
   baseURL: '/',
   title: 'Hanu Airline',
   http: {
-    baseURL: 'https://hanuairline.azurewebsites.net'
+    baseURL: 'https://hanuairline4c.azurewebsites.net'
   }
 }
 
