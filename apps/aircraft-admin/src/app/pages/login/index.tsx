@@ -117,15 +117,11 @@ const Login: React.FC<LoginProps> = function ({
             type="primary"
             style={{ marginTop: '20px' }}
             size="large"
-            loading={loading}
             block
             onClick={handleSubmit}
           >
             {loading ? 'Logging..' : 'Log in'}
           </Button>
-          <div className="register">
-            <Link to='/register'>REGISTER NE`</Link>
-          </div>
         </div>
       </div>
     </section>
