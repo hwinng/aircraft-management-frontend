@@ -1,12 +1,8 @@
 import React from 'react';
 import './style.scss';
-import { connect, DispatchProp, useDispatch } from 'react-redux';
-import { RouteComponentProps } from 'react-router-dom';
+import { connect, useDispatch } from 'react-redux';
 import queryString from 'query-string';
-import { IUserInfo } from '../../../../store/reducers/auth';
 import AccountList from '../../../../components/account/account-list';
-import { ThunkDispatch } from 'redux-thunk';
-import { AnyAction } from 'redux';
 import { getAllAccounts } from 'apps/aircraft-admin/src/app/store/actions/account';
 import { StoreState } from 'apps/aircraft-admin/src/app/store';
 import { Spin } from 'antd';
