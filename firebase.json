@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "dist/apps/aircraft-admin",
     "ignore": [
       "firebase.json",
       "**/.*",
