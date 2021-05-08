@@ -1,8 +1,10 @@
 import React from 'react';
 import { Modal, Form, Input, Select, Row, Col, DatePicker } from 'antd';
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
+import moment from 'moment';
 
 const CreateFlightForm = ({
+  discounts,
   aircrafts,
   filteredAirways,
   visible,
@@ -24,7 +26,6 @@ const CreateFlightForm = ({
 
   const [startDate, setStartDate] = React.useState('');
   const [endDate, setEndDate] = React.useState('');
-
 
   const onChange = (field, value) => {
     setCustomDate((prev) => ({
@@ -49,7 +50,7 @@ const CreateFlightForm = ({
 
   const onStartChange = (value, _dateString) => {
     onChange('startValue', value);
-    setStartDate(_dateString)
+    setStartDate(_dateString);
   };
 
   const onEndChange = (value, _dateString) => {
@@ -97,9 +98,9 @@ const CreateFlightForm = ({
               form.resetFields();
               onCreate({
                 ...values,
-                discount_id: null,
+                // discount_id: null,
                 departure_time: startDate,
-                arrival_time: endDate
+                arrival_time: endDate,
               });
             })
             .catch((info) => {
@@ -111,7 +112,9 @@ const CreateFlightForm = ({
           form={form}
           layout="vertical"
           name="create_aircraft_form"
-          initialValues={{}}
+          initialValues={{
+            discount_id: null,
+          }}
         >
           <Row gutter={4}>
             <Col span={12}>
@@ -135,7 +138,11 @@ const CreateFlightForm = ({
               </Form.Item>
             </Col>
             <Col span={12}>
-              <Form.Item name="status" label="Status">
+              <Form.Item
+                name="status"
+                label="Status"
+                rules={[{ required: true, message: 'Select one' }]}
+              >
                 <Select>
                   <Select.Option value="OK">OK</Select.Option>
                   <Select.Option value="NOT OK">NOT OK</Select.Option>
@@ -170,17 +177,32 @@ const CreateFlightForm = ({
             </Col>
             <Col span={12}>
               <Form.Item name="discount_id" label="Discount">
-                <Input value="0" placeholder="Not available" disabled />
+                <Select placeholder="Select available discount">
+                  {discounts.map((ele) => (
+                    <Select.Option key={uuid()} value={ele.id}>
+                      {ele.discountRate} %
+                    </Select.Option>
+                  ))}
+                </Select>
               </Form.Item>
             </Col>
           </Row>
 
           <Row gutter={4}>
             <Col span={12}>
-              <Form.Item name="departure_time" label="Departure Time">
+              <Form.Item
+                name="departure_time"
+                label="Departure Time"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Departure time is compulsory',
+                  },
+                ]}
+              >
                 <DatePicker
                   disabledDate={disabledStartDate}
-                  showTime
+                  showTime={{ defaultValue: moment('00:00:00', 'HH:mm:ss') }}
                   format="YYYY-MM-DD HH:mm:ss"
                   value={customDate.startValue}
                   placeholder="Departure Time"
@@ -213,10 +235,19 @@ const CreateFlightForm = ({
 
           <Row gutter={4}>
             <Col span={12}>
-              <Form.Item name="arrival_time" label="Arrival Time">
+              <Form.Item
+                name="arrival_time"
+                label="Arrival Time"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Arrival time is compulsory',
+                  },
+                ]}
+              >
                 <DatePicker
                   disabledDate={disabledEndDate}
-                  showTime
+                  showTime={{ defaultValue: moment('00:00:00', 'HH:mm:ss') }}
                   format="YYYY-MM-DD HH:mm:ss"
                   value={customDate.endValue}
                   placeholder="Arrival Time"
