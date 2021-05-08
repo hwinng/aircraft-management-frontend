@@ -1,42 +1,53 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
-/***/ "../../../node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!../../../node_modules/postcss-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js?!./app/components/craft-type/form/create-craft-type/style.scss":
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./app/components/craft-type/form/create-craft-type/style.scss ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "../../../node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!../../../node_modules/postcss-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js?!./app/components/aircraft/list/style.scss":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./app/components/aircraft/list/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, ".form-antd {\n  position: relative;\n  width: 50%;\n  margin: auto;\n  margin-top: 5rem;\n  border: 1px solid #ddd;\n  padding: 3rem;\n  border-radius: 1rem;\n  background: #fff;\n  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);\n}\n.form-antd .input-number-wrapper {\n  display: flex;\n  justify-content: space-between;\n  gap: 10px;\n}\n.form-antd .--step_1 {\n  position: absolute;\n  right: 0;\n}", '', {"version":3,"sources":["/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/craft-type/form/create-craft-type/style.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,UAAA;EACA,YAAA;EACA,gBAAA;EACA,sBAAA;EACA,aAAA;EACA,mBAAA;EACA,gBAAA;EACA,8CAAA;AACF;AAAE;EACE,aAAA;EACA,8BAAA;EACA,SAAA;AAEJ;AAAE;EACE,kBAAA;EACA,QAAA;AAEJ","sourcesContent":[".form-antd {\n  position: relative;\n  width: 50%;\n  margin: auto;\n  margin-top: 5rem;\n  border: 1px solid #ddd;\n  padding: 3rem;\n  border-radius: 1rem;\n  background: #fff;\n  box-shadow: 5px 5px 5px 5px rgb(0 0 0 / 10%);\n  .input-number-wrapper {\n    display: flex;\n    justify-content: space-between;\n    gap: 10px;\n  }\n  .--step_1 {\n    position: absolute;\n    right: 0;\n  }\n}\n"],"sourceRoot":""}]]
+module.exports = [[module.i, ".edit-btn .hidden {\n  display: none;\n}", '', {"version":3,"sources":["/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/aircraft/list/style.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;AACF","sourcesContent":[".edit-btn .hidden {\n  display: none;\n}\n"],"sourceRoot":""}]]
+
+/***/ }),
+
+/***/ "../../../node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!../../../node_modules/postcss-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js?!./app/components/craft-type/form/create-craft-type/style.scss":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./app/components/craft-type/form/create-craft-type/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = [[module.i, ".form-antd {\n  position: relative;\n  width: 50%;\n  margin: auto;\n  margin-top: 5rem;\n  border: 1px solid #ddd;\n  padding: 3rem;\n  border-radius: 1rem;\n  background: #fff;\n  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);\n}\n.form-antd .input-number-wrapper {\n  display: flex;\n  justify-content: space-between;\n  gap: 10px;\n}\n.form-antd .--step_1 {\n  position: absolute;\n  right: 0;\n}", '', {"version":3,"sources":["/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/craft-type/form/create-craft-type/style.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,UAAA;EACA,YAAA;EACA,gBAAA;EACA,sBAAA;EACA,aAAA;EACA,mBAAA;EACA,gBAAA;EACA,8CAAA;AACF;AAAE;EACE,aAAA;EACA,8BAAA;EACA,SAAA;AAEJ;AAAE;EACE,kBAAA;EACA,QAAA;AAEJ","sourcesContent":[".form-antd {\n  position: relative;\n  width: 50%;\n  margin: auto;\n  margin-top: 5rem;\n  border: 1px solid #ddd;\n  padding: 3rem;\n  border-radius: 1rem;\n  background: #fff;\n  box-shadow: 5px 5px 5px 5px rgb(0 0 0 / 10%);\n  .input-number-wrapper {\n    display: flex;\n    justify-content: space-between;\n    gap: 10px;\n  }\n  .--step_1 {\n    position: absolute;\n    right: 0;\n  }\n}\n"],"sourceRoot":""}]]
 
 /***/ }),
 
 /***/ "../../../node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!../../../node_modules/postcss-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js?!./app/components/header/styles.scss":
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./app/components/header/styles.scss ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./app/components/header/styles.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, ".header {\n  display: flex;\n  background: #fff;\n  min-height: 5vh;\n}\n.header__left {\n  margin: 0.5rem;\n}\n.header__right {\n  flex-grow: 1;\n  display: flex;\n  justify-content: flex-end;\n  padding: 0.3rem;\n}", '', {"version":3,"sources":["/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/header/styles.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,gBAAA;EACA,eAAA;AACF;AAAE;EACI,cAAA;AAEN;AAAE;EACI,YAAA;EACA,aAAA;EACA,yBAAA;EACA,eAAA;AAEN","sourcesContent":[".header {\n  display: flex;\n  background: #fff;\n  min-height: 5vh;\n  &__left {\n      margin: .5rem\n  }\n  &__right {\n      flex-grow: 1;\n      display: flex;\n      justify-content: flex-end;\n      padding: .3rem;\n  }\n}\n"],"sourceRoot":""}]]
+module.exports = [[module.i, ".header {\n  display: flex;\n  background: #fff;\n  min-height: 5vh;\n}\n.header__left {\n  margin: 0.5rem;\n}\n.header__right {\n  flex-grow: 1;\n  display: flex;\n  justify-content: flex-end;\n  padding: 0.3rem;\n}", '', {"version":3,"sources":["/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/header/styles.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,gBAAA;EACA,eAAA;AACF;AAAE;EACI,cAAA;AAEN;AAAE;EACI,YAAA;EACA,aAAA;EACA,yBAAA;EACA,eAAA;AAEN","sourcesContent":[".header {\n  display: flex;\n  background: #fff;\n  min-height: 5vh;\n  &__left {\n      margin: .5rem\n  }\n  &__right {\n      flex-grow: 1;\n      display: flex;\n      justify-content: flex-end;\n      padding: .3rem;\n  }\n}\n"],"sourceRoot":""}]]
 
 /***/ }),
 
 /***/ "../../../node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!../../../node_modules/postcss-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js?!./app/components/sidebar/styles.scss":
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./app/components/sidebar/styles.scss ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./app/components/sidebar/styles.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, ".sidebar {\n  background: #304156;\n  user-select: none;\n}\n.sidebar .ant-menu-dark {\n  background: #304156;\n}\n.sidebar .ant-menu-sub {\n  background: #304156 !important;\n  box-shadow: none !important;\n}\n.sidebar .sider-menu-logo {\n  overflow: hidden;\n  height: 64px;\n  line-height: 64px;\n  background: #2b2f3a;\n  color: #fff;\n  font-size: 20px;\n  font-weight: 600;\n  text-align: center;\n}\n.sidebar .sider-menu-logo img {\n  width: 30px;\n  height: 30px;\n}", '', {"version":3,"sources":["/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/sidebar/styles.scss"],"names":[],"mappings":"AACA;EACE,mBAFS;EAGT,iBAAA;AAAF;AAEE;EACE,mBANO;AAMX;AAGE;EACE,8BAAA;EACA,2BAAA;AADJ;AAIE;EACE,gBAAA;EACA,YAAA;EACA,iBAAA;EACA,mBAAA;EACA,WAAA;EACA,eAAA;EACA,gBAAA;EACA,kBAAA;AAFJ;AAII;EACE,WAAA;EACA,YAAA;AAFN","sourcesContent":["$bg-color: #304156;\n.sidebar {\n  background: $bg-color;\n  user-select: none;\n\n  .ant-menu-dark {\n    background: $bg-color;\n  }\n\n  .ant-menu-sub {\n    background: $bg-color !important;\n    box-shadow: none !important;\n  }\n\n  .sider-menu-logo {\n    overflow: hidden;\n    height: 64px;\n    line-height: 64px;\n    background: #2b2f3a;\n    color: #fff;\n    font-size: 20px;\n    font-weight: 600;\n    text-align: center;\n\n    img {\n      width: 30px;\n      height: 30px;\n    }\n  }\n}\n"],"sourceRoot":""}]]
+module.exports = [[module.i, ".sidebar {\n  background: #304156;\n  user-select: none;\n}\n.sidebar .ant-menu-dark {\n  background: #304156;\n}\n.sidebar .ant-menu-sub {\n  background: #304156 !important;\n  box-shadow: none !important;\n}\n.sidebar .sider-menu-logo {\n  overflow: hidden;\n  height: 64px;\n  line-height: 64px;\n  background: #2b2f3a;\n  color: #fff;\n  font-size: 20px;\n  font-weight: 600;\n  text-align: center;\n}\n.sidebar .sider-menu-logo img {\n  width: 30px;\n  height: 30px;\n}", '', {"version":3,"sources":["/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/sidebar/styles.scss"],"names":[],"mappings":"AACA;EACE,mBAFS;EAGT,iBAAA;AAAF;AAEE;EACE,mBANO;AAMX;AAGE;EACE,8BAAA;EACA,2BAAA;AADJ;AAIE;EACE,gBAAA;EACA,YAAA;EACA,iBAAA;EACA,mBAAA;EACA,WAAA;EACA,eAAA;EACA,gBAAA;EACA,kBAAA;AAFJ;AAII;EACE,WAAA;EACA,YAAA;AAFN","sourcesContent":["$bg-color: #304156;\n.sidebar {\n  background: $bg-color;\n  user-select: none;\n\n  .ant-menu-dark {\n    background: $bg-color;\n  }\n\n  .ant-menu-sub {\n    background: $bg-color !important;\n    box-shadow: none !important;\n  }\n\n  .sider-menu-logo {\n    overflow: hidden;\n    height: 64px;\n    line-height: 64px;\n    background: #2b2f3a;\n    color: #fff;\n    font-size: 20px;\n    font-weight: 600;\n    text-align: center;\n\n    img {\n      width: 30px;\n      height: 30px;\n    }\n  }\n}\n"],"sourceRoot":""}]]
 
 /***/ }),
 
 /***/ "../../../node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!../../../node_modules/postcss-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js?!./app/pages/exception/404/styles.scss":
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./app/pages/exception/404/styles.scss ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./app/pages/exception/404/styles.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -45,9 +56,9 @@ module.exports = [[module.i, "", '', {"version":3,"sources":[],"names":[],"mappi
 /***/ }),
 
 /***/ "../../../node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!../../../node_modules/postcss-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js?!./app/pages/home/account/account-detail/style.scss":
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./app/pages/home/account/account-detail/style.scss ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./app/pages/home/account/account-detail/style.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -56,9 +67,9 @@ module.exports = [[module.i, "", '', {"version":3,"sources":[],"names":[],"mappi
 /***/ }),
 
 /***/ "../../../node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!../../../node_modules/postcss-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js?!./app/pages/home/account/index/style.scss":
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./app/pages/home/account/index/style.scss ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./app/pages/home/account/index/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -67,42 +78,42 @@ module.exports = [[module.i, "", '', {"version":3,"sources":[],"names":[],"mappi
 /***/ }),
 
 /***/ "../../../node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!../../../node_modules/postcss-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js?!./app/pages/home/aircraft-type/create/style.scss":
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./app/pages/home/aircraft-type/create/style.scss ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./app/pages/home/aircraft-type/create/style.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, ".create-container .step-wrapper {\n  width: 50%;\n  flex-direction: row;\n  gap: 30px;\n  padding-left: 2rem;\n}\n.create-container .ant-steps-navigation .ant-steps-item::after {\n  top: calc(50% + 3px);\n  margin-left: 2px;\n}", '', {"version":3,"sources":["/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/pages/home/aircraft-type/create/style.scss"],"names":[],"mappings":"AACE;EACE,UAAA;EACA,mBAAA;EACA,SAAA;EACA,kBAAA;AAAJ;AAEE;EACE,oBAAA;EACA,gBAAA;AAAJ","sourcesContent":[".create-container {\n  .step-wrapper {\n    width: 50%;\n    flex-direction: row;\n    gap: 30px;\n    padding-left: 2rem;\n  }\n  .ant-steps-navigation .ant-steps-item::after {\n    top: calc(50% + 3px);\n    margin-left: 2px;\n  }\n}\n"],"sourceRoot":""}]]
+module.exports = [[module.i, ".create-container .step-wrapper {\n  width: 50%;\n  flex-direction: row;\n  gap: 30px;\n  padding-left: 2rem;\n}\n.create-container .ant-steps-navigation .ant-steps-item::after {\n  top: calc(50% + 3px);\n  margin-left: 2px;\n}", '', {"version":3,"sources":["/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/pages/home/aircraft-type/create/style.scss"],"names":[],"mappings":"AACE;EACE,UAAA;EACA,mBAAA;EACA,SAAA;EACA,kBAAA;AAAJ;AAEE;EACE,oBAAA;EACA,gBAAA;AAAJ","sourcesContent":[".create-container {\n  .step-wrapper {\n    width: 50%;\n    flex-direction: row;\n    gap: 30px;\n    padding-left: 2rem;\n  }\n  .ant-steps-navigation .ant-steps-item::after {\n    top: calc(50% + 3px);\n    margin-left: 2px;\n  }\n}\n"],"sourceRoot":""}]]
 
 /***/ }),
 
 /***/ "../../../node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!../../../node_modules/postcss-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js?!./app/pages/home/main/styles.scss":
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./app/pages/home/main/styles.scss ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./app/pages/home/main/styles.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, ".home-main {\n  height: 100vh;\n}\n.home-main .ant-layout {\n  min-height: 100vh;\n}\n.home-main .home-layout {\n  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);\n  border-radius: 5px;\n}\n.home-main .home-layout #container {\n  position: relative;\n  min-height: auto;\n  padding: 15px 15px;\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n}\n.home-main .home-layout #container > div {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n}\n.home-main .home-layout .ant-layout-footer {\n  padding: 0;\n}", '', {"version":3,"sources":["/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/pages/home/main/styles.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;AACF;AACE;EACE,iBAAA;AACJ;AAEE;EACE,2CAAA;EACA,kBAAA;AAAJ;AAEI;EACE,kBAAA;EACA,gBAAA;EACA,kBAAA;EACA,OAAA;EACA,aAAA;EACA,sBAAA;AAAN;AAEM;EACE,OAAA;EACA,aAAA;EACA,sBAAA;AAAR;AAGI;EACE,UAAA;AADN","sourcesContent":[".home-main {\n  height: 100vh;\n\n  .ant-layout {\n    min-height: 100vh;\n  }\n\n  .home-layout {\n    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);\n    border-radius: 5px;\n\n    #container {\n      position: relative;\n      min-height: auto;\n      padding: 15px 15px;\n      flex: 1;\n      display: flex;\n      flex-direction: column;\n\n      & > div {\n        flex: 1;\n        display: flex;\n        flex-direction: column;\n      }\n    }\n    .ant-layout-footer {\n      padding: 0;\n    }\n  }\n}\n"],"sourceRoot":""}]]
+module.exports = [[module.i, ".home-main {\n  height: 100vh;\n}\n.home-main .ant-layout {\n  min-height: 100vh;\n}\n.home-main .home-layout {\n  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);\n  border-radius: 5px;\n}\n.home-main .home-layout #container {\n  position: relative;\n  min-height: auto;\n  padding: 15px 15px;\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n}\n.home-main .home-layout #container > div {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n}\n.home-main .home-layout .ant-layout-footer {\n  padding: 0;\n}", '', {"version":3,"sources":["/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/pages/home/main/styles.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;AACF;AACE;EACE,iBAAA;AACJ;AAEE;EACE,2CAAA;EACA,kBAAA;AAAJ;AAEI;EACE,kBAAA;EACA,gBAAA;EACA,kBAAA;EACA,OAAA;EACA,aAAA;EACA,sBAAA;AAAN;AAEM;EACE,OAAA;EACA,aAAA;EACA,sBAAA;AAAR;AAGI;EACE,UAAA;AADN","sourcesContent":[".home-main {\n  height: 100vh;\n\n  .ant-layout {\n    min-height: 100vh;\n  }\n\n  .home-layout {\n    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);\n    border-radius: 5px;\n\n    #container {\n      position: relative;\n      min-height: auto;\n      padding: 15px 15px;\n      flex: 1;\n      display: flex;\n      flex-direction: column;\n\n      & > div {\n        flex: 1;\n        display: flex;\n        flex-direction: column;\n      }\n    }\n    .ant-layout-footer {\n      padding: 0;\n    }\n  }\n}\n"],"sourceRoot":""}]]
 
 /***/ }),
 
 /***/ "../../../node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!../../../node_modules/postcss-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js?!./app/pages/login/style.scss":
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./app/pages/login/style.scss ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./app/pages/login/style.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, "@keyframes octocat {\n  0%, 100% {\n    transform: rotate(0);\n  }\n  20%, 60% {\n    transform: rotate(-25deg);\n  }\n  40%, 80% {\n    transform: rotate(100deg);\n  }\n}\n.login-page {\n  display: flex;\n  min-height: 100vh;\n  background: #f0f2f5;\n  background-size: 100%;\n  flex-direction: column;\n}\n.login-page .octo-arm {\n  animation: octocat 1.1s linear infinite;\n}\n.login-page .svg-wrapper {\n  z-index: 10001;\n  fill: #20a0ff;\n  color: #fff;\n  position: fixed;\n  top: -6px;\n  border: 0;\n  right: -6px;\n}\n.login-page .svg-wrapper .octo-arm {\n  transform-origin: 130px 106px;\n}\n.login-page .wrap {\n  flex: 1;\n  margin-top: 90px;\n  width: 320px;\n  align-self: center;\n}\n.login-page .ant-input-affix-wrapper:not(:nth-child(1)) {\n  margin-top: 20px;\n}\n.login-page .anticon {\n  color: #0000004d;\n}\n.login-page .logo-wrap {\n  margin-bottom: 30px;\n  text-align: center;\n}\n.login-page .logo-wrap .logo {\n  width: 96px;\n  height: 96px;\n  -webkit-user-drag: none;\n}\n.login-page .logo-wrap em {\n  font-size: 24px;\n  font-weight: bold;\n  color: #000;\n  margin-left: 15px;\n  vertical-align: text-top;\n}\n.login-page .captcha {\n  display: block;\n  cursor: pointer;\n  height: 30px;\n  border-left: 1px solid #ccc;\n}\n.login-page .register {\n  margin-top: 15px;\n  text-align: right;\n  color: #20ABFE;\n}", '', {"version":3,"sources":["/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/pages/login/style.scss"],"names":[],"mappings":"AAEA;EACE;IACE,oBAAA;EADF;EAGA;IACE,yBAAA;EADF;EAGA;IACE,yBAAA;EADF;AACF;AAIA;EACE,aAAA;EACA,iBAAA;EACA,mBAAA;EACA,qBAAA;EACA,sBAAA;AAFF;AAIE;EACE,uCAAA;AAFJ;AAKE;EACE,cAAA;EACA,aAAA;EACA,WAAA;EACA,eAAA;EACA,SAAA;EACA,SAAA;EACA,WAAA;AAHJ;AAKI;EACE,6BAAA;AAHN;AAOE;EACE,OAAA;EACA,gBAAA;EACA,YAAA;EACA,kBAAA;AALJ;AAQE;EACE,gBAAA;AANJ;AASE;EACE,gBAAA;AAPJ;AAUE;EACE,mBAAA;EACA,kBAAA;AARJ;AAUI;EACE,WAAA;EACA,YAAA;EACA,uBAAA;AARN;AAWI;EACE,eAAA;EACA,iBAAA;EACA,WAAA;EACA,iBAAA;EACA,wBAAA;AATN;AAaE;EACE,cAAA;EACA,eAAA;EACA,YAAA;EACA,2BAAA;AAXJ;AAcE;EACE,gBAAA;EACA,iBAAA;EACA,cAAA;AAZJ","sourcesContent":["//@import \"@/assets/styles/variables.scss\";\n\n@keyframes octocat {\n  0%, 100% {\n    transform: rotate(0);\n  }\n  20%, 60% {\n    transform:rotate(-25deg);\n  }\n  40%, 80% {\n    transform: rotate(100deg);\n  }\n}\n\n.login-page {\n  display: flex;\n  min-height: 100vh;\n  background: #f0f2f5;\n  background-size: 100%;\n  flex-direction: column;\n\n  .octo-arm {\n    animation: octocat 1.1s linear infinite;\n  }\n\n  .svg-wrapper {\n    z-index: 10001;\n    fill: #20a0ff;\n    color: #fff;\n    position: fixed;\n    top: -6px;\n    border: 0;\n    right: -6px;\n\n    .octo-arm {\n      transform-origin: 130px 106px;\n    }\n  }\n\n  .wrap {\n    flex: 1;\n    margin-top: 90px;\n    width: 320px;\n    align-self: center;\n  }\n\n  .ant-input-affix-wrapper:not(:nth-child(1)) {\n    margin-top: 20px;\n  }\n\n  .anticon {\n    color: #0000004d;\n  }\n\n  .logo-wrap {\n    margin-bottom: 30px;\n    text-align: center;\n\n    .logo {\n      width: 96px;\n      height: 96px;\n      -webkit-user-drag: none;\n    }\n\n    em {\n      font-size: 24px;\n      font-weight: bold;\n      color: #000;\n      margin-left: 15px;\n      vertical-align: text-top;\n    }\n  }\n\n  .captcha {\n    display: block;\n    cursor: pointer;\n    height: 30px;\n    border-left: 1px solid #ccc;\n  }\n\n  .register {\n    margin-top: 15px;\n    text-align: right;\n    color: #20ABFE;\n  }\n}\n"],"sourceRoot":""}]]
+module.exports = [[module.i, "@keyframes octocat {\n  0%, 100% {\n    transform: rotate(0);\n  }\n  20%, 60% {\n    transform: rotate(-25deg);\n  }\n  40%, 80% {\n    transform: rotate(100deg);\n  }\n}\n.login-page {\n  display: flex;\n  min-height: 100vh;\n  background: #f0f2f5;\n  background-size: 100%;\n  flex-direction: column;\n}\n.login-page .octo-arm {\n  animation: octocat 1.1s linear infinite;\n}\n.login-page .svg-wrapper {\n  z-index: 10001;\n  fill: #20a0ff;\n  color: #fff;\n  position: fixed;\n  top: -6px;\n  border: 0;\n  right: -6px;\n}\n.login-page .svg-wrapper .octo-arm {\n  transform-origin: 130px 106px;\n}\n.login-page .wrap {\n  flex: 1;\n  margin-top: 90px;\n  width: 320px;\n  align-self: center;\n}\n.login-page .ant-input-affix-wrapper:not(:nth-child(1)) {\n  margin-top: 20px;\n}\n.login-page .anticon {\n  color: #0000004d;\n}\n.login-page .logo-wrap {\n  margin-bottom: 30px;\n  text-align: center;\n}\n.login-page .logo-wrap .logo {\n  width: 96px;\n  height: 96px;\n  -webkit-user-drag: none;\n}\n.login-page .logo-wrap em {\n  font-size: 24px;\n  font-weight: bold;\n  color: #000;\n  margin-left: 15px;\n  vertical-align: text-top;\n}\n.login-page .captcha {\n  display: block;\n  cursor: pointer;\n  height: 30px;\n  border-left: 1px solid #ccc;\n}\n.login-page .register {\n  margin-top: 15px;\n  text-align: right;\n  color: #20ABFE;\n}", '', {"version":3,"sources":["/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/pages/login/style.scss"],"names":[],"mappings":"AAEA;EACE;IACE,oBAAA;EADF;EAGA;IACE,yBAAA;EADF;EAGA;IACE,yBAAA;EADF;AACF;AAIA;EACE,aAAA;EACA,iBAAA;EACA,mBAAA;EACA,qBAAA;EACA,sBAAA;AAFF;AAIE;EACE,uCAAA;AAFJ;AAKE;EACE,cAAA;EACA,aAAA;EACA,WAAA;EACA,eAAA;EACA,SAAA;EACA,SAAA;EACA,WAAA;AAHJ;AAKI;EACE,6BAAA;AAHN;AAOE;EACE,OAAA;EACA,gBAAA;EACA,YAAA;EACA,kBAAA;AALJ;AAQE;EACE,gBAAA;AANJ;AASE;EACE,gBAAA;AAPJ;AAUE;EACE,mBAAA;EACA,kBAAA;AARJ;AAUI;EACE,WAAA;EACA,YAAA;EACA,uBAAA;AARN;AAWI;EACE,eAAA;EACA,iBAAA;EACA,WAAA;EACA,iBAAA;EACA,wBAAA;AATN;AAaE;EACE,cAAA;EACA,eAAA;EACA,YAAA;EACA,2BAAA;AAXJ;AAcE;EACE,gBAAA;EACA,iBAAA;EACA,cAAA;AAZJ","sourcesContent":["//@import \"@/assets/styles/variables.scss\";\n\n@keyframes octocat {\n  0%, 100% {\n    transform: rotate(0);\n  }\n  20%, 60% {\n    transform:rotate(-25deg);\n  }\n  40%, 80% {\n    transform: rotate(100deg);\n  }\n}\n\n.login-page {\n  display: flex;\n  min-height: 100vh;\n  background: #f0f2f5;\n  background-size: 100%;\n  flex-direction: column;\n\n  .octo-arm {\n    animation: octocat 1.1s linear infinite;\n  }\n\n  .svg-wrapper {\n    z-index: 10001;\n    fill: #20a0ff;\n    color: #fff;\n    position: fixed;\n    top: -6px;\n    border: 0;\n    right: -6px;\n\n    .octo-arm {\n      transform-origin: 130px 106px;\n    }\n  }\n\n  .wrap {\n    flex: 1;\n    margin-top: 90px;\n    width: 320px;\n    align-self: center;\n  }\n\n  .ant-input-affix-wrapper:not(:nth-child(1)) {\n    margin-top: 20px;\n  }\n\n  .anticon {\n    color: #0000004d;\n  }\n\n  .logo-wrap {\n    margin-bottom: 30px;\n    text-align: center;\n\n    .logo {\n      width: 96px;\n      height: 96px;\n      -webkit-user-drag: none;\n    }\n\n    em {\n      font-size: 24px;\n      font-weight: bold;\n      color: #000;\n      margin-left: 15px;\n      vertical-align: text-top;\n    }\n  }\n\n  .captcha {\n    display: block;\n    cursor: pointer;\n    height: 30px;\n    border-left: 1px solid #ccc;\n  }\n\n  .register {\n    margin-top: 15px;\n    text-align: right;\n    color: #20ABFE;\n  }\n}\n"],"sourceRoot":""}]]
 
 /***/ }),
 
 /***/ "../../../node_modules/moment/locale sync recursive ^\\.\\/.*$":
-/*!***************************************************************************************************!*\
-  !*** /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/moment/locale sync ^\.\/.*$ ***!
-  \***************************************************************************************************/
+/*!****************************************************************************************************************************!*\
+  !*** /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/moment/locale sync ^\.\/.*$ ***!
+  \****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -402,9 +413,9 @@ webpackContext.id = "../../../node_modules/moment/locale sync recursive ^\\.\\/.
 /***/ }),
 
 /***/ "../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
-/*!*****************************************************************************************************************************!*\
-  !*** /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
-  \*****************************************************************************************************************************/
+/*!******************************************************************************************************************************************************!*\
+  !*** /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \******************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -731,7 +742,11 @@ const API = Object.freeze({
   adminCreateFlight: '/flight/admin/create',
   adminDeleteFlight: '/flight/delete',
   //TICKET
-  adminGetAllTickets: '/ticket/getAll'
+  adminGetAllTickets: '/ticket/getAll',
+  //DISCOUNT
+  adminGetAllDiscounts: '/discountEvent/getAll',
+  //PROFILE
+  adminGetAllProfile: '/profile/admin/allRecords'
 });
 /* harmony default export */ __webpack_exports__["default"] = (API);
 
@@ -751,7 +766,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd */ "../../../node_modules/antd/es/index.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/account/account-form/EditAccount.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/account/account-form/EditAccount.tsx";
 
 
 
@@ -957,7 +972,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "../../../node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/account/account-list/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/account/account-list/index.tsx";
 
 
 
@@ -967,11 +982,12 @@ var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/airc
 
 
 const AccountList = ({
+  profileUserID,
   accounts,
   loading
 }) => {
   const location = Object(react_router__WEBPACK_IMPORTED_MODULE_1__["useLocation"])();
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Table"], {
+  return profileUserID.length && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Table"], {
     columns: [{
       title: 'ID',
       dataIndex: 'id'
@@ -993,12 +1009,13 @@ const AccountList = ({
             flexDirection: 'column'
           },
           type: "primary",
+          disabled: !profileUserID.includes(record.id),
           children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Link"], {
             to: `${location.pathname}/detail/${record.id}`,
             children: "View"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 29,
+            lineNumber: 30,
             columnNumber: 15
           }, undefined)
         }, void 0, false, {
@@ -1017,7 +1034,7 @@ const AccountList = ({
         text: "Empty"
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 35,
+        lineNumber: 36,
         columnNumber: 20
       }, undefined)
     },
@@ -1052,7 +1069,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd */ "../../../node_modules/antd/es/index.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/aircraft/detail/info.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/aircraft/detail/info.tsx";
 
 
 
@@ -1138,7 +1155,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd */ "../../../node_modules/antd/es/index.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/aircraft/form/create/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/aircraft/form/create/index.tsx";
 
 
 
@@ -1293,7 +1310,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd */ "../../../node_modules/antd/es/index.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/aircraft/form/edit/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/aircraft/form/edit/index.tsx";
 
 
 
@@ -1440,15 +1457,18 @@ const EditAircraftForm = ({
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router */ "../../../node_modules/react-router/esm/react-router.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd */ "../../../node_modules/antd/es/index.js");
-/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! uuid */ "../../../node_modules/uuid/index.js");
-/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(uuid__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "../../../node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _table_no_data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../table-no-data */ "./app/components/table-no-data/index.tsx");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/aircraft/list/index.tsx";
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./app/components/aircraft/list/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router */ "../../../node_modules/react-router/esm/react-router.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd */ "../../../node_modules/antd/es/index.js");
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! uuid */ "../../../node_modules/uuid/index.js");
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(uuid__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "../../../node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _table_no_data__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../table-no-data */ "./app/components/table-no-data/index.tsx");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__);
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/aircraft/list/index.tsx";
+
 
 
 
@@ -1465,9 +1485,9 @@ const AirCraftList = ({
   onDeleteRow,
   onEditRow
 }) => {
-  const location = Object(react_router__WEBPACK_IMPORTED_MODULE_1__["useLocation"])();
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
-    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Table"], {
+  const location = Object(react_router__WEBPACK_IMPORTED_MODULE_2__["useLocation"])();
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
+    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_3__["Table"], {
       columns: [{
         title: 'ID',
         dataIndex: 'id'
@@ -1477,11 +1497,11 @@ const AirCraftList = ({
       }, {
         title: 'Air Carft Type Name',
         dataIndex: 'aircraft_type_name',
-        render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
+        render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])("div", {
           children: record.aircraftType.name
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 28,
+          lineNumber: 29,
           columnNumber: 36
         }, undefined)
       }, {
@@ -1489,52 +1509,52 @@ const AirCraftList = ({
         dataIndex: 'status',
         render: (_, tags) => {
           let color = tags.status === 'ACTIVATED' ? 'green' : 'volcano';
-          return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("span", {
-            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Tag"], {
+          return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])("span", {
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_3__["Tag"], {
               color: color,
               children: tags.status
             }, tags.id, false, {
               fileName: _jsxFileName,
-              lineNumber: 37,
+              lineNumber: 38,
               columnNumber: 19
             }, undefined)
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 36,
+            lineNumber: 37,
             columnNumber: 17
           }, undefined);
         }
       }, {
         title: '',
-        render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
-          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])("div", {
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_3__["Button"], {
             style: {
               display: 'flex',
               flexDirection: 'column'
             },
             type: "primary",
-            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Link"], {
               to: `${location.pathname}/detail/${record.id}`,
               children: "View"
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 52,
+              lineNumber: 53,
               columnNumber: 19
             }, undefined)
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 48,
+            lineNumber: 49,
             columnNumber: 17
           }, undefined)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 47,
+          lineNumber: 48,
           columnNumber: 15
         }, undefined)
       }, {
         title: '',
-        render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
-          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])("div", {
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_3__["Button"], {
             style: {
               display: 'flex',
               flexDirection: 'column',
@@ -1545,21 +1565,22 @@ const AirCraftList = ({
             onClick: () => {
               onEditRow(record, record.id);
             },
+            disabled: record.status === 'ACTIVATED',
             children: "Edit"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 64,
+            lineNumber: 65,
             columnNumber: 17
           }, undefined)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 63,
+          lineNumber: 64,
           columnNumber: 15
         }, undefined)
       }, {
         title: '',
-        render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
-          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])("div", {
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_3__["Button"], {
             style: {
               display: 'flex',
               flexDirection: 'column'
@@ -1572,21 +1593,21 @@ const AirCraftList = ({
             children: "Delete"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 86,
+            lineNumber: 88,
             columnNumber: 17
           }, undefined)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 85,
+          lineNumber: 87,
           columnNumber: 15
         }, undefined)
       }],
       locale: {
-        emptyText: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(_table_no_data__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        emptyText: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(_table_no_data__WEBPACK_IMPORTED_MODULE_6__["default"], {
           text: "Empty"
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 101,
+          lineNumber: 103,
           columnNumber: 22
         }, undefined)
       },
@@ -1598,19 +1619,46 @@ const AirCraftList = ({
       loading: loading,
       pagination: pagination,
       onChange: onTableChange
-    }, Object(uuid__WEBPACK_IMPORTED_MODULE_3__["v4"])(), false, {
+    }, Object(uuid__WEBPACK_IMPORTED_MODULE_4__["v4"])(), false, {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 21,
       columnNumber: 7
     }, undefined)
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 19,
+    lineNumber: 20,
     columnNumber: 5
   }, undefined);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AirCraftList);
+
+/***/ }),
+
+/***/ "./app/components/aircraft/list/style.scss":
+/*!*************************************************!*\
+  !*** ./app/components/aircraft/list/style.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !../../../../../../../node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!../../../../../../../node_modules/postcss-loader/dist/cjs.js??ref--5-oneOf-5-2!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-5-3!./style.scss */ "../../../node_modules/@nrwl/web/src/utils/third-party/cli-files/plugins/raw-css-loader.js!../../../node_modules/postcss-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js?!./app/components/aircraft/list/style.scss");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(/*! ../../../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
 
 /***/ }),
 
@@ -1631,7 +1679,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _table_no_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../table-no-data */ "./app/components/table-no-data/index.tsx");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/airport/list/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/airport/list/index.tsx";
 
 
 
@@ -1725,7 +1773,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(uuid__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/airway/list/AirwayTable.jsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/airway/list/AirwayTable.jsx";
 
 
 
@@ -1844,7 +1892,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd */ "../../../node_modules/antd/es/index.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/craft-type/form/create-craft-type/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/craft-type/form/create-craft-type/index.tsx";
 
 
 
@@ -2029,7 +2077,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _FormItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormItem */ "./app/components/craft-type/form/create-seat-by-class/FormItem.tsx");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/craft-type/form/create-seat-by-class/BusinessForm.jsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/craft-type/form/create-seat-by-class/BusinessForm.jsx";
 
 
 
@@ -2073,7 +2121,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _FormItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormItem */ "./app/components/craft-type/form/create-seat-by-class/FormItem.tsx");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/craft-type/form/create-seat-by-class/EconomyFlexForm.jsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/craft-type/form/create-seat-by-class/EconomyFlexForm.jsx";
 
 
 
@@ -2117,7 +2165,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _FormItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormItem */ "./app/components/craft-type/form/create-seat-by-class/FormItem.tsx");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/craft-type/form/create-seat-by-class/EconomyForm.jsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/craft-type/form/create-seat-by-class/EconomyForm.jsx";
 
 
 
@@ -2161,7 +2209,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd */ "../../../node_modules/antd/es/index.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/craft-type/form/create-seat-by-class/FormItem.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/craft-type/form/create-seat-by-class/FormItem.tsx";
 
 
 
@@ -2339,7 +2387,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _table_no_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../table-no-data */ "./app/components/table-no-data/index.tsx");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/craft-type/list/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/craft-type/list/index.tsx";
 
 
 
@@ -2428,20 +2476,23 @@ const CraftTypeTable = ({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd */ "../../../node_modules/antd/es/index.js");
 /* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! uuid */ "../../../node_modules/uuid/index.js");
 /* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(uuid__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! moment */ "../../../node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__);
 
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/flight/form/CreateForm.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/flight/form/CreateForm.tsx";
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
 
 
 
@@ -2449,6 +2500,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 const CreateFlightForm = ({
+  discounts,
   aircrafts,
   filteredAirways,
   visible,
@@ -2521,8 +2573,8 @@ const CreateFlightForm = ({
     });
   }
 
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("div", {
-    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Modal"], {
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Modal"], {
       visible: visible,
       title: "Create Flight",
       okText: "Save",
@@ -2532,7 +2584,7 @@ const CreateFlightForm = ({
         form.validateFields().then(values => {
           form.resetFields();
           onCreate(_objectSpread(_objectSpread({}, values), {}, {
-            discount_id: null,
+            // discount_id: null,
             departure_time: startDate,
             arrival_time: endDate
           }));
@@ -2540,198 +2592,183 @@ const CreateFlightForm = ({
           console.log('Validate Failed:', info);
         });
       },
-      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"], {
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"], {
         form: form,
         layout: "vertical",
         name: "create_aircraft_form",
-        initialValues: {},
-        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Row"], {
+        initialValues: {
+          discount_id: null
+        },
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Row"], {
           gutter: 4,
-          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
             span: 12,
-            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
               name: "aircraft_id",
               label: "Aircraft",
               rules: [{
                 required: true,
                 message: 'Select one'
               }],
-              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"], {
+              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"], {
                 placeholder: "Select aircraft",
-                children: aircrafts.map(ele => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"].Option, {
+                children: aircrafts.map(ele => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"].Option, {
                   value: ele.id,
                   children: ele.name
                 }, ele.id, false, {
                   fileName: _jsxFileName,
-                  lineNumber: 130,
+                  lineNumber: 133,
                   columnNumber: 21
                 }, undefined))
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 128,
+                lineNumber: 131,
                 columnNumber: 17
               }, undefined)
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 118,
+              lineNumber: 121,
               columnNumber: 15
             }, undefined)
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 117,
+            lineNumber: 120,
             columnNumber: 13
-          }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+          }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
             span: 12,
-            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
               name: "status",
               label: "Status",
-              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"], {
-                children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"].Option, {
+              rules: [{
+                required: true,
+                message: 'Select one'
+              }],
+              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"], {
+                children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"].Option, {
                   value: "OK",
                   children: "OK"
                 }, void 0, false, {
                   fileName: _jsxFileName,
-                  lineNumber: 140,
+                  lineNumber: 147,
                   columnNumber: 19
-                }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"].Option, {
+                }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"].Option, {
                   value: "NOT OK",
                   children: "NOT OK"
                 }, void 0, false, {
                   fileName: _jsxFileName,
-                  lineNumber: 141,
+                  lineNumber: 148,
                   columnNumber: 19
                 }, undefined)]
               }, void 0, true, {
                 fileName: _jsxFileName,
-                lineNumber: 139,
+                lineNumber: 146,
                 columnNumber: 17
               }, undefined)
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 138,
+              lineNumber: 141,
               columnNumber: 15
             }, undefined)
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 137,
+            lineNumber: 140,
             columnNumber: 13
           }, undefined)]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 116,
+          lineNumber: 119,
           columnNumber: 11
-        }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Row"], {
+        }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Row"], {
           gutter: 4,
-          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
             span: 12,
-            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
               name: "airway_id",
               label: "Airway",
               rules: [{
                 required: true,
                 message: 'Select one'
               }],
-              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"], {
+              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"], {
                 placeholder: "Select airway",
                 onChange: onSelectAirwayChange,
-                children: filteredAirways.map(ele => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"].Option, {
+                children: filteredAirways.map(ele => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"].Option, {
                   value: ele.id,
                   children: [ele.departureAirport.city, " - ", ele.arrivalAirport.city]
                 }, Object(uuid__WEBPACK_IMPORTED_MODULE_3__["v4"])(), true, {
                   fileName: _jsxFileName,
-                  lineNumber: 164,
+                  lineNumber: 171,
                   columnNumber: 21
                 }, undefined))
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 159,
+                lineNumber: 166,
                 columnNumber: 17
               }, undefined)
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 149,
+              lineNumber: 156,
               columnNumber: 15
             }, undefined)
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 148,
+            lineNumber: 155,
             columnNumber: 13
-          }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+          }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
             span: 12,
-            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
               name: "discount_id",
               label: "Discount",
-              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Input"], {
-                value: "0",
-                placeholder: "Not available",
-                disabled: true
+              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"], {
+                placeholder: "Select available discount",
+                children: discounts.map(ele => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"].Option, {
+                  value: ele.id,
+                  children: [ele.discountRate, " %"]
+                }, Object(uuid__WEBPACK_IMPORTED_MODULE_3__["v4"])(), true, {
+                  fileName: _jsxFileName,
+                  lineNumber: 182,
+                  columnNumber: 21
+                }, undefined))
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 173,
+                lineNumber: 180,
                 columnNumber: 17
               }, undefined)
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 172,
+              lineNumber: 179,
               columnNumber: 15
             }, undefined)
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 171,
+            lineNumber: 178,
             columnNumber: 13
           }, undefined)]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 147,
+          lineNumber: 154,
           columnNumber: 11
-        }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Row"], {
+        }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Row"], {
           gutter: 4,
-          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
             span: 12,
-            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
               name: "departure_time",
               label: "Departure Time",
-              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["DatePicker"], {
+              rules: [{
+                required: true,
+                message: 'Departure time is compulsory'
+              }],
+              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["DatePicker"], {
                 disabledDate: disabledStartDate,
-                showTime: true,
+                showTime: {
+                  defaultValue: moment__WEBPACK_IMPORTED_MODULE_4___default()('00:00:00', 'HH:mm:ss')
+                },
                 format: "YYYY-MM-DD HH:mm:ss",
                 value: customDate.startValue,
                 placeholder: "Departure Time",
                 onChange: onStartChange,
                 onOpenChange: handleStartOpenChange
-              }, void 0, false, {
-                fileName: _jsxFileName,
-                lineNumber: 181,
-                columnNumber: 17
-              }, undefined)
-            }, void 0, false, {
-              fileName: _jsxFileName,
-              lineNumber: 180,
-              columnNumber: 15
-            }, undefined)
-          }, void 0, false, {
-            fileName: _jsxFileName,
-            lineNumber: 179,
-            columnNumber: 13
-          }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
-            span: 12,
-            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
-              name: "departure_gate_id",
-              label: "Depature Gate",
-              rules: [{
-                required: true,
-                message: 'Select one'
-              }],
-              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"], {
-                placeholder: "Select gate",
-                children: depatureGate.map(ele => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"].Option, {
-                  value: ele.id,
-                  children: ele.name
-                }, ele.id, false, {
-                  fileName: _jsxFileName,
-                  lineNumber: 205,
-                  columnNumber: 21
-                }, undefined))
               }, void 0, false, {
                 fileName: _jsxFileName,
                 lineNumber: 203,
@@ -2746,21 +2783,60 @@ const CreateFlightForm = ({
             fileName: _jsxFileName,
             lineNumber: 192,
             columnNumber: 13
+          }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+            span: 12,
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
+              name: "departure_gate_id",
+              label: "Depature Gate",
+              rules: [{
+                required: true,
+                message: 'Select one'
+              }],
+              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"], {
+                placeholder: "Select gate",
+                children: depatureGate.map(ele => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"].Option, {
+                  value: ele.id,
+                  children: ele.name
+                }, ele.id, false, {
+                  fileName: _jsxFileName,
+                  lineNumber: 227,
+                  columnNumber: 21
+                }, undefined))
+              }, void 0, false, {
+                fileName: _jsxFileName,
+                lineNumber: 225,
+                columnNumber: 17
+              }, undefined)
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 215,
+              columnNumber: 15
+            }, undefined)
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 214,
+            columnNumber: 13
           }, undefined)]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 178,
+          lineNumber: 191,
           columnNumber: 11
-        }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Row"], {
+        }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Row"], {
           gutter: 4,
-          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
             span: 12,
-            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
               name: "arrival_time",
               label: "Arrival Time",
-              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["DatePicker"], {
+              rules: [{
+                required: true,
+                message: 'Arrival time is compulsory'
+              }],
+              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["DatePicker"], {
                 disabledDate: disabledEndDate,
-                showTime: true,
+                showTime: {
+                  defaultValue: moment__WEBPACK_IMPORTED_MODULE_4___default()('00:00:00', 'HH:mm:ss')
+                },
                 format: "YYYY-MM-DD HH:mm:ss",
                 value: customDate.endValue,
                 placeholder: "Arrival Time",
@@ -2769,70 +2845,70 @@ const CreateFlightForm = ({
                 onOpenChange: handleEndOpenChange
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 217,
+                lineNumber: 248,
                 columnNumber: 17
               }, undefined)
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 216,
+              lineNumber: 238,
               columnNumber: 15
             }, undefined)
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 215,
+            lineNumber: 237,
             columnNumber: 13
-          }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+          }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
             span: 12,
-            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
               name: "arrival_gate_id",
               label: "Arrival Gate",
               rules: [{
                 required: true,
                 message: 'Select one'
               }],
-              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"], {
+              children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"], {
                 placeholder: "Select gate",
-                children: arrivalGate.map(ele => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"].Option, {
+                children: arrivalGate.map(ele => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"].Option, {
                   value: ele.id,
                   children: ele.name
                 }, ele.id, false, {
                   fileName: _jsxFileName,
-                  lineNumber: 242,
+                  lineNumber: 273,
                   columnNumber: 21
                 }, undefined))
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 240,
+                lineNumber: 271,
                 columnNumber: 17
               }, undefined)
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 230,
+              lineNumber: 261,
               columnNumber: 15
             }, undefined)
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 229,
+            lineNumber: 260,
             columnNumber: 13
           }, undefined)]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 214,
+          lineNumber: 236,
           columnNumber: 11
         }, undefined)]
       }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 110,
+        lineNumber: 111,
         columnNumber: 9
       }, undefined)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 87,
+      lineNumber: 88,
       columnNumber: 7
     }, undefined)
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 86,
+    lineNumber: 87,
     columnNumber: 5
   }, undefined);
 };
@@ -2850,7 +2926,7 @@ const CreateFlightForm = ({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd */ "../../../node_modules/antd/es/index.js");
@@ -2860,11 +2936,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__);
 
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/flight/form/EditForm.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/flight/form/EditForm.tsx";
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 
@@ -2878,6 +2954,8 @@ const EditFlight = ({
   onEdit,
   onCancel
 }) => {
+  const depatureGates = record.airway.departureAirport.gates;
+  const arrivalGates = record.airway.arrivalAirport.gates;
   const [form] = antd__WEBPACK_IMPORTED_MODULE_2__["Form"].useForm();
   const [customDate, setCustomDate] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState({
     startValue: null,
@@ -2944,7 +3022,6 @@ const EditFlight = ({
         form.validateFields().then(values => {
           form.resetFields();
           onEdit(_objectSpread(_objectSpread({}, values), {}, {
-            discount_id: null,
             departure_time: startDate,
             arrival_time: endDate
           }), record.id);
@@ -2983,22 +3060,22 @@ const EditFlight = ({
                   children: record.aircraft.name
                 }, record.aircraft.id, false, {
                   fileName: _jsxFileName,
-                  lineNumber: 123,
+                  lineNumber: 124,
                   columnNumber: 19
                 }, undefined)
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 122,
+                lineNumber: 123,
                 columnNumber: 17
               }, undefined)
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 112,
+              lineNumber: 113,
               columnNumber: 15
             }, undefined)
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 111,
+            lineNumber: 112,
             columnNumber: 13
           }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
             span: 12,
@@ -3006,39 +3083,40 @@ const EditFlight = ({
               name: "status",
               label: "Status",
               children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"], {
+                disabled: true,
                 children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"].Option, {
                   value: "OK",
                   children: "OK"
                 }, void 0, false, {
                   fileName: _jsxFileName,
-                  lineNumber: 135,
+                  lineNumber: 136,
                   columnNumber: 19
                 }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"].Option, {
                   value: "NOT OK",
                   children: "NOT OK"
                 }, void 0, false, {
                   fileName: _jsxFileName,
-                  lineNumber: 136,
+                  lineNumber: 137,
                   columnNumber: 19
                 }, undefined)]
               }, void 0, true, {
                 fileName: _jsxFileName,
-                lineNumber: 134,
+                lineNumber: 135,
                 columnNumber: 17
               }, undefined)
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 133,
+              lineNumber: 134,
               columnNumber: 15
             }, undefined)
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 132,
+            lineNumber: 133,
             columnNumber: 13
           }, undefined)]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 110,
+          lineNumber: 111,
           columnNumber: 11
         }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Row"], {
           gutter: 4,
@@ -3046,7 +3124,7 @@ const EditFlight = ({
             span: 12
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 143,
+            lineNumber: 144,
             columnNumber: 13
           }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
             span: 12,
@@ -3059,22 +3137,22 @@ const EditFlight = ({
                 disabled: true
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 146,
+                lineNumber: 147,
                 columnNumber: 17
               }, undefined)
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 145,
+              lineNumber: 146,
               columnNumber: 15
             }, undefined)
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 144,
+            lineNumber: 145,
             columnNumber: 13
           }, undefined)]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 142,
+          lineNumber: 143,
           columnNumber: 11
         }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Row"], {
           gutter: 4,
@@ -3085,11 +3163,13 @@ const EditFlight = ({
               label: "Departure Time",
               rules: [{
                 required: true,
-                message: 'msg'
+                message: 'Departure time is compulsory'
               }],
               children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["DatePicker"], {
                 disabledDate: disabledStartDate,
-                showTime: true,
+                showTime: {
+                  defaultValue: moment__WEBPACK_IMPORTED_MODULE_3___default()('00:00:00', 'HH:mm:ss')
+                },
                 format: "YYYY-MM-DD HH:mm:ss",
                 value: customDate.startValue,
                 placeholder: "Departure Time",
@@ -3097,17 +3177,17 @@ const EditFlight = ({
                 onOpenChange: handleStartOpenChange
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 158,
+                lineNumber: 161,
                 columnNumber: 17
               }, undefined)
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 153,
+              lineNumber: 154,
               columnNumber: 15
             }, undefined)
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 152,
+            lineNumber: 153,
             columnNumber: 13
           }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
             span: 12,
@@ -3119,34 +3199,33 @@ const EditFlight = ({
                 message: 'Select one'
               }],
               children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"], {
-                placeholder: "Select gate",
-                disabled: true,
-                children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"].Option, {
-                  value: record.departureGate.id,
-                  children: record.departureGate.name
-                }, void 0, false, {
+                placeholder: "Select depature gate",
+                children: depatureGates.map(gate => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"].Option, {
+                  value: gate.id,
+                  children: gate.name
+                }, gate.id, false, {
                   fileName: _jsxFileName,
-                  lineNumber: 181,
-                  columnNumber: 19
-                }, undefined)
+                  lineNumber: 185,
+                  columnNumber: 21
+                }, undefined))
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 180,
+                lineNumber: 183,
                 columnNumber: 17
               }, undefined)
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 170,
+              lineNumber: 173,
               columnNumber: 15
             }, undefined)
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 169,
+            lineNumber: 172,
             columnNumber: 13
           }, undefined)]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 151,
+          lineNumber: 152,
           columnNumber: 11
         }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Row"], {
           gutter: 4,
@@ -3156,11 +3235,14 @@ const EditFlight = ({
               name: "arrival_time",
               label: "Arrival Time",
               rules: [{
-                required: true
+                required: true,
+                message: 'Arrival time is compulsory'
               }],
               children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["DatePicker"], {
                 disabledDate: disabledEndDate,
-                showTime: true,
+                showTime: {
+                  defaultValue: moment__WEBPACK_IMPORTED_MODULE_3___default()('00:00:00', 'HH:mm:ss')
+                },
                 format: "YYYY-MM-DD HH:mm:ss",
                 value: customDate.endValue,
                 placeholder: "Arrival Time",
@@ -3169,17 +3251,17 @@ const EditFlight = ({
                 onOpenChange: handleEndOpenChange
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 196,
+                lineNumber: 203,
                 columnNumber: 17
               }, undefined)
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 191,
+              lineNumber: 196,
               columnNumber: 15
             }, undefined)
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 190,
+            lineNumber: 195,
             columnNumber: 13
           }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Col"], {
             span: 12,
@@ -3191,49 +3273,48 @@ const EditFlight = ({
                 message: 'Select one'
               }],
               children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"], {
-                placeholder: "Select gate",
-                disabled: true,
-                children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"].Option, {
-                  value: record.arrivalGate.id,
-                  children: record.arrivalGate.name
-                }, void 0, false, {
+                placeholder: "Select arrival gate",
+                children: arrivalGates.map(gate => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Select"].Option, {
+                  value: gate.id,
+                  children: gate.name
+                }, gate.id, false, {
                   fileName: _jsxFileName,
-                  lineNumber: 220,
-                  columnNumber: 19
-                }, undefined)
+                  lineNumber: 228,
+                  columnNumber: 21
+                }, undefined))
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 219,
+                lineNumber: 226,
                 columnNumber: 17
               }, undefined)
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 209,
+              lineNumber: 216,
               columnNumber: 15
             }, undefined)
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 208,
+            lineNumber: 215,
             columnNumber: 13
           }, undefined)]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 189,
+          lineNumber: 194,
           columnNumber: 11
         }, undefined)]
       }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 91,
+        lineNumber: 92,
         columnNumber: 9
       }, undefined)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 65,
+      lineNumber: 67,
       columnNumber: 7
     }, undefined)
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 64,
+    lineNumber: 66,
     columnNumber: 5
   }, undefined);
 };
@@ -3257,12 +3338,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(uuid__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd */ "../../../node_modules/antd/es/index.js");
 /* harmony import */ var _table_no_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../table-no-data */ "./app/components/table-no-data/index.tsx");
-/* harmony import */ var react_moment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-moment */ "../../../node_modules/react-moment/dist/index.js");
-/* harmony import */ var react_moment__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_moment__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/flight/list/index.tsx";
-
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__);
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/flight/list/index.tsx";
 
 
 
@@ -3278,69 +3356,102 @@ const FlightTable = ({
   onEditRow,
   onDeleteRow
 }) => {
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
-    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("h2", {
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("h2", {
+      style: {
+        marginTop: '1rem'
+      },
       children: "Flight History"
     }, void 0, false, {
       fileName: _jsxFileName,
       lineNumber: 18,
       columnNumber: 7
-    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Table"], {
+    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Table"], {
       columns: [{
         title: 'ID',
         dataIndex: 'id'
       }, {
         title: 'Airway',
         dataIndex: 'airway',
-        render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
+        render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("div", {
           children: `${record.airway.departureAirport.city} - ${record.airway.arrivalAirport.city}`
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 24,
-          columnNumber: 13
+          lineNumber: 27,
+          columnNumber: 15
+        }, undefined)
+      }, {
+        title: 'Aircraft ID',
+        dataIndex: 'aircraft',
+        render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("div", {
+          children: record.aircraft.name
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 33,
+          columnNumber: 36
         }, undefined)
       }, {
         title: 'Departure Time',
         dataIndex: 'departureTime',
-        render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(react_moment__WEBPACK_IMPORTED_MODULE_4___default.a, {
-          format: "DD/MM/YYYY hh:mm:ss",
-          children: record.departureTime
+        render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("div", {
+          children: record.departureTime.slice(0, -1).split('T').join(' ')
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 30,
+          lineNumber: 39,
           columnNumber: 15
         }, undefined)
       }, {
         title: 'Arrival Time',
         dataIndex: 'arrivalTime',
-        render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(react_moment__WEBPACK_IMPORTED_MODULE_4___default.a, {
-          format: "DD/MM/YYYY hh:mm:ss",
-          children: record.arrivalTime
+        render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("div", {
+          children: record.arrivalTime.slice(0, -1).split('T').join(' ')
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 37,
+          lineNumber: 48,
           columnNumber: 15
         }, undefined)
+      }, {
+        title: 'Discount',
+        render: (_, record) => {
+          let hasDiscount = record.discount.length > 0 ? true : false;
+          let color = hasDiscount ? 'green' : 'volcano';
+          return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["Fragment"], {
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Tag"], {
+              color: color,
+              children: hasDiscount ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("span", {
+                children: [record.discount[0].discountRate, " %"]
+              }, void 0, true, {
+                fileName: _jsxFileName,
+                lineNumber: 60,
+                columnNumber: 23
+              }, undefined) : '0 %'
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 58,
+              columnNumber: 19
+            }, undefined)
+          }, void 0, false);
+        }
       }, {
         title: 'Status',
         render: (_, record) => {
           let isOke = record.status === 'OK' ? 'OK' : 'NOT OK';
           let color = isOke === 'OK' ? 'green' : 'volcano';
-          return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["Fragment"], {
-            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Tag"], {
+          return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["Fragment"], {
+            children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Tag"], {
               color: color,
               children: isOke
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 48,
-              columnNumber: 23
+              lineNumber: 76,
+              columnNumber: 19
             }, undefined)
           }, void 0, false);
         }
       }, {
         title: '',
-        render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
-          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("div", {
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Button"], {
             style: {
               display: 'flex',
               flexDirection: 'column'
@@ -3352,18 +3463,18 @@ const FlightTable = ({
             children: "Edit"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 59,
+            lineNumber: 85,
             columnNumber: 17
           }, undefined)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 58,
+          lineNumber: 84,
           columnNumber: 15
         }, undefined)
       }, {
         title: '',
-        render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("div", {
-          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("div", {
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Button"], {
             style: {
               display: 'flex',
               flexDirection: 'column'
@@ -3376,21 +3487,21 @@ const FlightTable = ({
             children: "Delete"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 75,
+            lineNumber: 101,
             columnNumber: 17
           }, undefined)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 74,
+          lineNumber: 100,
           columnNumber: 15
         }, undefined)
       }],
       locale: {
-        emptyText: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])(_table_no_data__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        emptyText: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_table_no_data__WEBPACK_IMPORTED_MODULE_3__["default"], {
           text: "Empty"
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 90,
+          lineNumber: 116,
           columnNumber: 22
         }, undefined)
       },
@@ -3424,18 +3535,18 @@ const FlightTable = ({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ant-design/icons */ "../../../node_modules/@ant-design/icons/es/index.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__);
 
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/footer/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/footer/index.tsx";
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 
@@ -3512,7 +3623,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ant-design/icons */ "../../../node_modules/@ant-design/icons/es/index.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/header/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/header/index.tsx";
 
 
 
@@ -3694,8 +3805,8 @@ if (content.locals) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PrivateRouteComponent", function() { return PrivateRouteComponent; });
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config */ "./app/config/index.tsx");
@@ -3708,11 +3819,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__);
 
 
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/private-route/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/private-route/index.tsx";
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 
@@ -3730,7 +3841,7 @@ const PrivateRoute = function PrivateRoute(_ref) {
     isLogin,
     location
   } = _ref,
-      rest = Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["component", "childrenRoutes", "isLogin", "location"]);
+      rest = Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["component", "childrenRoutes", "isLogin", "location"]);
 
   const {
     meta
@@ -3833,7 +3944,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd */ "../../../node_modules/antd/es/index.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/search-bar/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/search-bar/index.tsx";
 
 
 
@@ -3885,7 +3996,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_images_hanu_logo_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../assets/images/hanu-logo.png */ "./assets/images/hanu-logo.png");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/sidebar/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/sidebar/index.tsx";
 
 
 
@@ -4034,7 +4145,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ant-design/icons */ "../../../node_modules/@ant-design/icons/es/index.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/table-no-data/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/table-no-data/index.tsx";
 
 
 
@@ -4087,7 +4198,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_moment__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_moment__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/components/ticket/TicketTable.jsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/ticket/TicketTable.jsx";
 
 
 
@@ -4135,7 +4246,7 @@ const TicketTable = ({
         title: 'Flight',
         dataIndex: 'flight',
         render: (_, record) => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("span", {
-          children: [record.flight.airway.departureAirport.name, "=", record.flight.airway.arrivalAirport.name]
+          children: [record.flight.airway.departureAirport.name, "-", record.flight.airway.arrivalAirport.name]
         }, void 0, true, {
           fileName: _jsxFileName,
           lineNumber: 29,
@@ -4230,7 +4341,7 @@ const CONFIG = {
   baseURL: '/',
   title: 'Hanu Airline',
   http: {
-    baseURL: 'https://hanuairline.azurewebsites.net'
+    baseURL: 'https://hanuairline4c.azurewebsites.net'
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (CONFIG);
@@ -4269,7 +4380,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ant-design/icons */ "../../../node_modules/@ant-design/icons/es/index.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/constants/menu.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/constants/menu.tsx";
 
 
 
@@ -4372,7 +4483,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_scss__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/pages/exception/404/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/pages/exception/404/index.tsx";
 
 
 
@@ -4441,7 +4552,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apps_aircraft_admin_src_app_utils_getNameLetter__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! apps/aircraft-admin/src/app/utils/getNameLetter */ "./app/utils/getNameLetter.ts");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/pages/home/account/account-detail/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/pages/home/account/account-detail/index.tsx";
 
 
 
@@ -4481,19 +4592,19 @@ const AccountDetailContainer = function AccountDetailContainer() {
         children: title
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 50,
+        lineNumber: 51,
         columnNumber: 9
       }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_5__["Col"], {
         span: 16,
         children: value
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 53,
+        lineNumber: 54,
         columnNumber: 9
       }, this)]
     }, void 0, true, {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 43,
       columnNumber: 7
     }, this);
   }
@@ -4528,7 +4639,7 @@ const AccountDetailContainer = function AccountDetailContainer() {
     children: "loading...."
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 90,
+    lineNumber: 91,
     columnNumber: 5
   }, this) : /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])("div", {
     children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_5__["Row"], {
@@ -4542,12 +4653,12 @@ const AccountDetailContainer = function AccountDetailContainer() {
             children: "Account"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 96,
+            lineNumber: 97,
             columnNumber: 13
           }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 95,
+          lineNumber: 96,
           columnNumber: 11
         }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_5__["Breadcrumb"].Item, {
           children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
@@ -4555,22 +4666,22 @@ const AccountDetailContainer = function AccountDetailContainer() {
             children: "Detail"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 99,
+            lineNumber: 100,
             columnNumber: 13
           }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 98,
+          lineNumber: 99,
           columnNumber: 11
         }, this)]
       }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 94,
+        lineNumber: 95,
         columnNumber: 9
       }, this)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 93,
+      lineNumber: 94,
       columnNumber: 7
     }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_5__["Row"], {
       gutter: 8,
@@ -4602,13 +4713,13 @@ const AccountDetailContainer = function AccountDetailContainer() {
                 children: Object(apps_aircraft_admin_src_app_utils_getNameLetter__WEBPACK_IMPORTED_MODULE_8__["getNameLetter"])(profile.userInfo.name.split(' ').slice(-1).toString().slice(0, 1))
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 123,
+                lineNumber: 124,
                 columnNumber: 21
               }, this), ' ']
             }, void 0, true) : 'A'
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 107,
+            lineNumber: 108,
             columnNumber: 15
           }, this),
           children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_5__["Card"].Meta, {
@@ -4618,17 +4729,17 @@ const AccountDetailContainer = function AccountDetailContainer() {
             }
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 139,
+            lineNumber: 140,
             columnNumber: 13
           }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 105,
+          lineNumber: 106,
           columnNumber: 11
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 104,
+        lineNumber: 105,
         columnNumber: 9
       }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_5__["Col"], {
         xs: 24,
@@ -4638,17 +4749,25 @@ const AccountDetailContainer = function AccountDetailContainer() {
         xl: 16,
         children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_5__["Card"], {
           title: `Detail information of account`,
+          style: {
+            position: 'relative'
+          },
           children: [ true && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["Fragment"], {
             children: [buildInfoRow('Username:', profile && profile.userInfo.username), buildInfoRow('Name:', profile && profile.userInfo.name), buildInfoRow('Email:', profile && profile.userInfo.email), buildInfoRow('Image Link:', profile && profile.userInfo.imageUrl), buildInfoRow('Role:', profile && profile.userInfo.roles.map(x => x.name).toString()), buildInfoRow('Phone Number:', profile && profile.phone_number ? profile.phone_number : 'Empty'), buildInfoRow('Credit Card No:', profile && profile.credit_card_number ? profile.credit_card_number : 'Empty'), buildInfoRow('ID Card No:', profile && profile.id_card_number ? profile.id_card_number : 'Empty')]
           }, void 0, true), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+            style: {
+              position: 'absolute',
+              bottom: '1rem',
+              left: '50%'
+            },
             type: "primary",
             onClick: () => setVisible(true),
             children: "Edit"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 173,
+            lineNumber: 188,
             columnNumber: 13
-          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(apps_aircraft_admin_src_app_components_account_account_form_EditAccount__WEBPACK_IMPORTED_MODULE_7__["default"], {
+          }, this), profile && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(apps_aircraft_admin_src_app_components_account_account_form_EditAccount__WEBPACK_IMPORTED_MODULE_7__["default"], {
             profileDTO: profile,
             visible: visible,
             onEdit: handleEdit,
@@ -4657,27 +4776,27 @@ const AccountDetailContainer = function AccountDetailContainer() {
             }
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 176,
-            columnNumber: 13
+            lineNumber: 200,
+            columnNumber: 15
           }, this)]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 146,
+          lineNumber: 147,
           columnNumber: 11
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 145,
+        lineNumber: 146,
         columnNumber: 9
       }, this)]
     }, void 0, true, {
       fileName: _jsxFileName,
-      lineNumber: 103,
+      lineNumber: 104,
       columnNumber: 7
     }, this)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 92,
+    lineNumber: 93,
     columnNumber: 5
   }, this);
 };
@@ -4732,9 +4851,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_account_account_list__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../components/account/account-list */ "./app/components/account/account-list/index.tsx");
 /* harmony import */ var apps_aircraft_admin_src_app_store_actions_account__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! apps/aircraft-admin/src/app/store/actions/account */ "./app/store/actions/account.ts");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd */ "../../../node_modules/antd/es/index.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/pages/home/account/index/index.tsx";
+/* harmony import */ var apps_aircraft_admin_src_app_services__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! apps/aircraft-admin/src/app/services */ "./app/services/index.ts");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__);
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/pages/home/account/index/index.tsx";
+
 
 
 
@@ -4748,43 +4869,56 @@ const Account = function Account({
   account
 }) {
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])();
+  const [profileUserID, setProfileUserID] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState([]);
   const [params, setParams] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState({
     page: 0,
     size: 10,
     email: '',
     sort: ['id', 'asc']
   });
+
+  async function getAllUserProfile() {
+    const userHasProfiles = await Object(apps_aircraft_admin_src_app_services__WEBPACK_IMPORTED_MODULE_7__["adminGetProfileUser"])();
+
+    if (userHasProfiles.data) {
+      const userID = userHasProfiles.data.map(ele => ele.user.id);
+      setProfileUserID(userID);
+    }
+  }
+
   react__WEBPACK_IMPORTED_MODULE_0___default.a.useEffect(() => {
     Object(apps_aircraft_admin_src_app_store_actions_account__WEBPACK_IMPORTED_MODULE_5__["getAllAccounts"])(query_string__WEBPACK_IMPORTED_MODULE_3___default.a.stringify(params)).then(res => dispatch(res), err => dispatch(err));
+    getAllUserProfile();
   }, [apps_aircraft_admin_src_app_store_actions_account__WEBPACK_IMPORTED_MODULE_5__["getAllAccounts"], params]);
-  return account.isLoading ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])("div", {
+  return account.isLoading ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])("div", {
     style: {
       display: 'flex',
       justifyContent: 'center'
     },
-    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_6__["Spin"], {
+    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_6__["Spin"], {
       tip: "loading..."
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 34,
+      lineNumber: 41,
       columnNumber: 7
     }, this)
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 33,
+    lineNumber: 40,
     columnNumber: 5
-  }, this) : /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])("div", {
-    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(_components_account_account_list__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, this) : /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])("div", {
+    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(_components_account_account_list__WEBPACK_IMPORTED_MODULE_4__["default"], {
       loading: account.isLoading,
+      profileUserID: profileUserID,
       accounts: account.accounts
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 38,
+      lineNumber: 45,
       columnNumber: 7
     }, this)
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 37,
+    lineNumber: 44,
     columnNumber: 5
   }, this);
 };
@@ -4852,7 +4986,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! apps/aircraft-admin/src/app/constants */ "./app/constants/index.ts");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/pages/home/aircraft-type/create/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/pages/home/aircraft-type/create/index.tsx";
 
 
 
@@ -5052,7 +5186,7 @@ if (content.locals) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd */ "../../../node_modules/antd/es/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "../../../node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var apps_aircraft_admin_src_app_store_actions_craft_type__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apps/aircraft-admin/src/app/store/actions/craft-type */ "./app/store/actions/craft-type.ts");
@@ -5060,16 +5194,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "../../../node_modules/react-redux/es/index.js");
 /* harmony import */ var _components_craft_type_list__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../components/craft-type/list */ "./app/components/craft-type/list/index.tsx");
-/* harmony import */ var apps_aircraft_admin_src_app_components_search_bar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! apps/aircraft-admin/src/app/components/search-bar */ "./app/components/search-bar/index.tsx");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__);
 
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/pages/home/aircraft-type/index/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/pages/home/aircraft-type/index/index.tsx";
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 
@@ -5099,101 +5231,89 @@ const CraftTypeList = ({
     }));
   }
 
-  function handleSearch(values) {
-    console.log(values);
-  }
-
-  return craftTypes.loading ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])("div", {
+  return craftTypes.loading ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])("div", {
     style: {
       display: 'flex',
       justifyContent: 'center'
     },
-    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Spin"], {
+    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Spin"], {
       tip: "loading..."
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 36,
       columnNumber: 7
     }, undefined)
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 39,
+    lineNumber: 35,
     columnNumber: 5
-  }, undefined) : /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])("div", {
-    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])("div", {
+  }, undefined) : /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])("div", {
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])("div", {
       style: {
         flex: 0
       },
-      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Breadcrumb"], {
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Breadcrumb"].Item, {
-          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Breadcrumb"], {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Breadcrumb"].Item, {
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
             to: "/home/aircraft-type",
             children: "Aircraft Type"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 48,
+            lineNumber: 44,
             columnNumber: 13
           }, undefined)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 47,
+          lineNumber: 43,
           columnNumber: 11
         }, undefined)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 46,
+        lineNumber: 42,
         columnNumber: 9
       }, undefined)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 41,
       columnNumber: 7
-    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])("div", {
+    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])("div", {
       style: {
         display: 'flex',
         justifyContent: 'space-between',
         marginTop: '1rem'
       },
-      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Button"], {
         type: "primary",
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
           to: "/home/aircraft-type/create",
           children: "Create"
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 54,
+          lineNumber: 50,
           columnNumber: 11
         }, undefined)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 53,
+        lineNumber: 49,
         columnNumber: 9
-      }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(apps_aircraft_admin_src_app_components_search_bar__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        allowClear: true,
-        placeholder: "Search by name",
-        handleSearch: handleSearch
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 56,
-        columnNumber: 9
-      }, undefined)]
-    }, void 0, true, {
+      }, undefined)
+    }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 48,
       columnNumber: 7
-    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(_components_craft_type_list__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(_components_craft_type_list__WEBPACK_IMPORTED_MODULE_6__["default"], {
       craftType: craftTypes.types,
       pagination: craftTypes.pagination,
       loading: craftTypes.loading,
       onTableChange: handleTableChange
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 53,
       columnNumber: 7
     }, undefined)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 44,
+    lineNumber: 40,
     columnNumber: 5
   }, undefined);
 };
@@ -5217,7 +5337,7 @@ const mapStateToProps = ({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "../../../node_modules/react-redux/es/index.js");
@@ -5233,11 +5353,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__);
 
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/pages/home/aircraft/aircraft-detail/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/pages/home/aircraft/aircraft-detail/index.tsx";
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 
@@ -5374,7 +5494,7 @@ const mapStateToProps = ({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "../../../node_modules/react-redux/es/index.js");
@@ -5391,11 +5511,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__);
 
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/pages/home/aircraft/index/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/pages/home/aircraft/index/index.tsx";
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 
@@ -5445,7 +5565,10 @@ const AirCraft = function AirCraft({
   function handleCreate(values) {
     Object(_store_actions_aircraft__WEBPACK_IMPORTED_MODULE_5__["createAircraft"])(values).then(res => {
       dispatch(res);
-      antd__WEBPACK_IMPORTED_MODULE_4__["message"].success('Successfully created!');
+      setTimeout(function () {
+        antd__WEBPACK_IMPORTED_MODULE_4__["message"].loading('Generating...', 2000);
+        antd__WEBPACK_IMPORTED_MODULE_4__["message"].success('Success!');
+      }, 4000);
     }, err => {
       dispatch(err);
       antd__WEBPACK_IMPORTED_MODULE_4__["message"].error('Fail to create! Try again...');
@@ -5473,7 +5596,7 @@ const AirCraft = function AirCraft({
       title: 'Are you sure delete?',
       icon: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(_ant_design_icons__WEBPACK_IMPORTED_MODULE_11__["ExclamationCircleOutlined"], {}, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 96,
+        lineNumber: 99,
         columnNumber: 13
       }, this),
       content: `Aircraft name: ${record.name}`,
@@ -5517,12 +5640,12 @@ const AirCraft = function AirCraft({
       tip: "loading..."
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 140,
+      lineNumber: 143,
       columnNumber: 7
     }, this)
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 139,
+    lineNumber: 142,
     columnNumber: 5
   }, this) : /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])("div", {
     children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])("div", {
@@ -5536,7 +5659,7 @@ const AirCraft = function AirCraft({
         children: "Create"
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 145,
+        lineNumber: 148,
         columnNumber: 9
       }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(_components_aircraft_form_create__WEBPACK_IMPORTED_MODULE_8__["default"], {
         types: craftTypes.types,
@@ -5547,7 +5670,7 @@ const AirCraft = function AirCraft({
         }
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 149,
+        lineNumber: 152,
         columnNumber: 9
       }, this), editData !== null && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(_components_aircraft_form_edit__WEBPACK_IMPORTED_MODULE_10__["default"], {
         types: craftTypes.types,
@@ -5560,7 +5683,7 @@ const AirCraft = function AirCraft({
         }
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 158,
+        lineNumber: 161,
         columnNumber: 11
       }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(apps_aircraft_admin_src_app_components_search_bar__WEBPACK_IMPORTED_MODULE_9__["default"], {
         allowClear: true,
@@ -5568,12 +5691,12 @@ const AirCraft = function AirCraft({
         handleSearch: handleSearch
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 170,
+        lineNumber: 173,
         columnNumber: 9
       }, this)]
     }, void 0, true, {
       fileName: _jsxFileName,
-      lineNumber: 144,
+      lineNumber: 147,
       columnNumber: 7
     }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(_components_aircraft_list__WEBPACK_IMPORTED_MODULE_7__["default"], {
       onTableChange: handleTableChange,
@@ -5588,12 +5711,12 @@ const AirCraft = function AirCraft({
       }
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 176,
+      lineNumber: 179,
       columnNumber: 7
     }, this)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 143,
+    lineNumber: 146,
     columnNumber: 5
   }, this);
 };
@@ -5621,7 +5744,7 @@ const mapStateToProps = ({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var apps_aircraft_admin_src_app_components_airport_list_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! apps/aircraft-admin/src/app/components/airport/list/index */ "./app/components/airport/list/index.tsx");
@@ -5633,11 +5756,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__);
 
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/pages/home/airport/index/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/pages/home/airport/index/index.tsx";
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 
@@ -5700,7 +5823,7 @@ const AircraftPage = () => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "../../../node_modules/react-redux/es/index.js");
@@ -5713,11 +5836,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__);
 
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/pages/home/airway/index/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/pages/home/airway/index/index.tsx";
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 
@@ -5801,7 +5924,7 @@ const Airway = () => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var query_string__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! query-string */ "../../../node_modules/query-string/index.js");
@@ -5811,21 +5934,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apps_aircraft_admin_src_app_store_actions_flight__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! apps/aircraft-admin/src/app/store/actions/flight */ "./app/store/actions/flight.ts");
 /* harmony import */ var apps_aircraft_admin_src_app_store_types_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! apps/aircraft-admin/src/app/store/types/index */ "./app/store/types/index.ts");
 /* harmony import */ var apps_aircraft_admin_src_app_components_flight_list_index__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! apps/aircraft-admin/src/app/components/flight/list/index */ "./app/components/flight/list/index.tsx");
-/* harmony import */ var apps_aircraft_admin_src_app_components_search_bar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! apps/aircraft-admin/src/app/components/search-bar */ "./app/components/search-bar/index.tsx");
-/* harmony import */ var apps_aircraft_admin_src_app_components_flight_form_CreateForm__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! apps/aircraft-admin/src/app/components/flight/form/CreateForm */ "./app/components/flight/form/CreateForm.tsx");
-/* harmony import */ var apps_aircraft_admin_src_app_components_flight_form_EditForm__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! apps/aircraft-admin/src/app/components/flight/form/EditForm */ "./app/components/flight/form/EditForm.tsx");
-/* harmony import */ var apps_aircraft_admin_src_app_store_actions_aircraft__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! apps/aircraft-admin/src/app/store/actions/aircraft */ "./app/store/actions/aircraft.ts");
-/* harmony import */ var apps_aircraft_admin_src_app_utils_momentToDate__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! apps/aircraft-admin/src/app/utils/momentToDate */ "./app/utils/momentToDate.ts");
-/* harmony import */ var apps_aircraft_admin_src_app_services_airway__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! apps/aircraft-admin/src/app/services/airway */ "./app/services/airway.ts");
-/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ant-design/icons */ "../../../node_modules/@ant-design/icons/es/index.js");
+/* harmony import */ var apps_aircraft_admin_src_app_components_flight_form_CreateForm__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! apps/aircraft-admin/src/app/components/flight/form/CreateForm */ "./app/components/flight/form/CreateForm.tsx");
+/* harmony import */ var apps_aircraft_admin_src_app_components_flight_form_EditForm__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! apps/aircraft-admin/src/app/components/flight/form/EditForm */ "./app/components/flight/form/EditForm.tsx");
+/* harmony import */ var apps_aircraft_admin_src_app_store_actions_aircraft__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! apps/aircraft-admin/src/app/store/actions/aircraft */ "./app/store/actions/aircraft.ts");
+/* harmony import */ var apps_aircraft_admin_src_app_utils_momentToDate__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! apps/aircraft-admin/src/app/utils/momentToDate */ "./app/utils/momentToDate.ts");
+/* harmony import */ var apps_aircraft_admin_src_app_services_airway__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! apps/aircraft-admin/src/app/services/airway */ "./app/services/airway.ts");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ant-design/icons */ "../../../node_modules/@ant-design/icons/es/index.js");
+/* harmony import */ var apps_aircraft_admin_src_app_services_discount__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! apps/aircraft-admin/src/app/services/discount */ "./app/services/discount.ts");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__);
 
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/pages/home/flight/index/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/pages/home/flight/index/index.tsx";
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 
@@ -5850,6 +5973,7 @@ const FlightPage = () => {
   const airway = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useSelector"])(state => state.airway);
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useDispatch"])();
   const [filteredAirways, setFilteredAirway] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState([]);
+  const [discounts, setDiscounts] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState([]);
   const [visible, setVisible] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(false);
   const [editVisible, setEditVisible] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(false);
   const [editRecord, setEditRecord] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(null);
@@ -5870,9 +5994,11 @@ const FlightPage = () => {
   }
 
   function handleCreateClick() {
-    setVisible(true);
-    Object(apps_aircraft_admin_src_app_store_actions_aircraft__WEBPACK_IMPORTED_MODULE_11__["getAllAirCrafts"])(query_string__WEBPACK_IMPORTED_MODULE_2___default.a.stringify(params)).then(res => dispatch(res), err => dispatch(err));
-    Object(apps_aircraft_admin_src_app_services_airway__WEBPACK_IMPORTED_MODULE_13__["adminGetAllAirway"])(query_string__WEBPACK_IMPORTED_MODULE_2___default.a.stringify({
+    setVisible(true); //TODO: gell all discount
+
+    Object(apps_aircraft_admin_src_app_services_discount__WEBPACK_IMPORTED_MODULE_14__["adminGetAllDiscounts"])().then(res => setDiscounts(res.data), _ => antd__WEBPACK_IMPORTED_MODULE_4__["message"].error('Some unexpected errors!'));
+    Object(apps_aircraft_admin_src_app_store_actions_aircraft__WEBPACK_IMPORTED_MODULE_10__["getAllAirCrafts"])(query_string__WEBPACK_IMPORTED_MODULE_2___default.a.stringify(params)).then(res => dispatch(res), err => dispatch(err));
+    Object(apps_aircraft_admin_src_app_services_airway__WEBPACK_IMPORTED_MODULE_12__["adminGetAllAirway"])(query_string__WEBPACK_IMPORTED_MODULE_2___default.a.stringify({
       page: 0,
       size: 20,
       checkSetPrice: true,
@@ -5883,21 +6009,21 @@ const FlightPage = () => {
   function handleSubmitForm(values) {
     //TODO: format moment to date here
     const createFlightDTO = _objectSpread(_objectSpread({}, values), {}, {
-      departure_time: Object(apps_aircraft_admin_src_app_utils_momentToDate__WEBPACK_IMPORTED_MODULE_12__["momentToDate"])(values.departure_time),
-      arrival_time: Object(apps_aircraft_admin_src_app_utils_momentToDate__WEBPACK_IMPORTED_MODULE_12__["momentToDate"])(values.arrival_time)
+      departure_time: Object(apps_aircraft_admin_src_app_utils_momentToDate__WEBPACK_IMPORTED_MODULE_11__["momentToDate"])(values.departure_time),
+      arrival_time: Object(apps_aircraft_admin_src_app_utils_momentToDate__WEBPACK_IMPORTED_MODULE_11__["momentToDate"])(values.arrival_time)
     });
 
     Object(apps_aircraft_admin_src_app_store_actions_flight__WEBPACK_IMPORTED_MODULE_5__["createFlight"])(createFlightDTO).then(res => {
       if (res.type === apps_aircraft_admin_src_app_store_types_index__WEBPACK_IMPORTED_MODULE_6__["FLIGHT"].FLIGHT_ERROR) {
         dispatch(res);
-        antd__WEBPACK_IMPORTED_MODULE_4__["message"].error('Fail to create! Try again...');
+        antd__WEBPACK_IMPORTED_MODULE_4__["message"].error('Selected aircraft is not available now.');
       } else {
         dispatch(res);
         antd__WEBPACK_IMPORTED_MODULE_4__["message"].success('Successfully created!');
       }
     }, err => {
       dispatch(err);
-      antd__WEBPACK_IMPORTED_MODULE_4__["message"].error('Fail to create! Try again...');
+      antd__WEBPACK_IMPORTED_MODULE_4__["message"].error('Selected aircraft is not available now.');
     }).finally(() => {
       setParams(_objectSpread({}, params));
     });
@@ -5907,9 +6033,9 @@ const FlightPage = () => {
   function handleDeleteRow(record, index) {
     antd__WEBPACK_IMPORTED_MODULE_4__["Modal"].confirm({
       title: 'Are you sure delete?',
-      icon: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])(_ant_design_icons__WEBPACK_IMPORTED_MODULE_14__["ExclamationCircleOutlined"], {}, void 0, false, {
+      icon: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])(_ant_design_icons__WEBPACK_IMPORTED_MODULE_13__["ExclamationCircleOutlined"], {}, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 105,
+        lineNumber: 116,
         columnNumber: 13
       }, this),
       content: `Aircraft name: ${record.name}`,
@@ -5938,44 +6064,33 @@ const FlightPage = () => {
 
   function onEdit(record, index) {
     setEditVisible(true);
-    setEditRecord(record); // getAllCraftTypes().then(
-    //   (res) => dispatch(res),
-    //   (err) => dispatch(err)
-    // );
-    // setOpenEditForm(true);
-    // setEditData(record);
-
-    console.log(record);
+    setEditRecord(record);
   }
 
   function handleEdit(values, index) {
-    const updateFlightDTO = _objectSpread(_objectSpread({}, values), {}, {
-      airway_id: 0,
-      departure_time: Object(apps_aircraft_admin_src_app_utils_momentToDate__WEBPACK_IMPORTED_MODULE_12__["momentToDate"])(values.departure_time),
-      arrival_time: Object(apps_aircraft_admin_src_app_utils_momentToDate__WEBPACK_IMPORTED_MODULE_12__["momentToDate"])(values.arrival_time)
-    });
-
+    const updateFlightDTO = {
+      departure_time: Object(apps_aircraft_admin_src_app_utils_momentToDate__WEBPACK_IMPORTED_MODULE_11__["momentToDate"])(values.departure_time),
+      arrival_time: Object(apps_aircraft_admin_src_app_utils_momentToDate__WEBPACK_IMPORTED_MODULE_11__["momentToDate"])(values.arrival_time),
+      departure_gate_id: values.departure_gate_id,
+      arrival_gate_id: values.arrival_gate_id
+    };
     Object(apps_aircraft_admin_src_app_store_actions_flight__WEBPACK_IMPORTED_MODULE_5__["updateFlight"])(index, updateFlightDTO).then(res => {
       if (res.type === apps_aircraft_admin_src_app_store_types_index__WEBPACK_IMPORTED_MODULE_6__["FLIGHT"].FLIGHT_ERROR) {
         dispatch(res);
-        antd__WEBPACK_IMPORTED_MODULE_4__["message"].error('Fail to edit! Try again...');
+        antd__WEBPACK_IMPORTED_MODULE_4__["message"].error('You must update both of the time', 10);
       } else {
         dispatch(res);
         antd__WEBPACK_IMPORTED_MODULE_4__["message"].success('Successfully edited!');
       }
     }, err => {
       dispatch(err);
-      antd__WEBPACK_IMPORTED_MODULE_4__["message"].error('Fail to create! Try again...');
+      antd__WEBPACK_IMPORTED_MODULE_4__["message"].error('Conflict time... Try again');
+    }).catch(_ => {
+      antd__WEBPACK_IMPORTED_MODULE_4__["message"].error('Server is busy now, try later!');
     }).finally(() => {
       setParams(_objectSpread({}, params));
-      setVisible(false);
+      setEditVisible(false);
     });
-  }
-
-  function handleSearch(values) {// setParams({
-    //   ...params,
-    //   name: values,
-    // });
   }
 
   return flight.loading ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_4__["Spin"], {
@@ -5984,11 +6099,12 @@ const FlightPage = () => {
     }
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 186,
+    lineNumber: 185,
     columnNumber: 5
   }, undefined) : /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])("div", {
-    children: [!aircraft.loading && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["Fragment"], {
-      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])(apps_aircraft_admin_src_app_components_flight_form_CreateForm__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    children: [!aircraft.loading && discounts && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["Fragment"], {
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])(apps_aircraft_admin_src_app_components_flight_form_CreateForm__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        discounts: discounts,
         aircrafts: aircraft.aircrafts,
         filteredAirways: filteredAirways,
         visible: visible,
@@ -5996,15 +6112,18 @@ const FlightPage = () => {
         onCancel: () => setVisible(false)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 191,
+        lineNumber: 190,
         columnNumber: 11
       }, undefined)
     }, void 0, false), editRecord !== null && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["Fragment"], {
-      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])(apps_aircraft_admin_src_app_components_flight_form_EditForm__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])(apps_aircraft_admin_src_app_components_flight_form_EditForm__WEBPACK_IMPORTED_MODULE_9__["default"], {
         record: editRecord,
         visible: editVisible,
         onEdit: handleEdit,
-        onCancel: () => setEditVisible(false)
+        onCancel: () => {
+          setEditVisible(false);
+          setEditRecord(null);
+        }
       }, void 0, false, {
         fileName: _jsxFileName,
         lineNumber: 203,
@@ -6015,26 +6134,18 @@ const FlightPage = () => {
         display: 'flex',
         justifyContent: 'space-between'
       },
-      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_4__["Button"], {
         type: "primary",
         onClick: handleCreateClick,
         children: "Create"
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 213,
+        lineNumber: 216,
         columnNumber: 9
-      }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])(apps_aircraft_admin_src_app_components_search_bar__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        allowClear: true,
-        placeholder: "Search by name",
-        handleSearch: handleSearch
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 217,
-        columnNumber: 9
-      }, undefined)]
-    }, void 0, true, {
+      }, undefined)
+    }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 212,
+      lineNumber: 215,
       columnNumber: 7
     }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])(apps_aircraft_admin_src_app_components_flight_list_index__WEBPACK_IMPORTED_MODULE_7__["default"], {
       flights: flight.flights,
@@ -6049,12 +6160,12 @@ const FlightPage = () => {
       }
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 224,
+      lineNumber: 222,
       columnNumber: 7
     }, undefined)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 188,
+    lineNumber: 187,
     columnNumber: 5
   }, undefined);
 };
@@ -6084,7 +6195,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../components/footer */ "./app/components/footer/index.tsx");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/pages/home/main/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/pages/home/main/index.tsx";
 
 
 
@@ -6224,7 +6335,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_actions_ticket__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../store/actions/ticket */ "./app/store/actions/ticket.ts");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/pages/home/ticket/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/pages/home/ticket/index.tsx";
 
 
 
@@ -6298,7 +6409,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ant-design/icons */ "../../../node_modules/@ant-design/icons/es/index.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/pages/login/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/pages/login/index.tsx";
+
 
 
 
@@ -6318,8 +6430,8 @@ const Login = function Login({
   history,
   location
 }) {
+  const auth = Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["useSelector"])(state => state.auth);
   const [form] = antd__WEBPACK_IMPORTED_MODULE_4__["Form"].useForm();
-  const [loading, setLoading] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
   const [redirectUrl] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(() => {
     const url = query_string__WEBPACK_IMPORTED_MODULE_2___default.a.parse(location.search).redirectUrl;
     return url || _router_constants__WEBPACK_IMPORTED_MODULE_6__["HOME"].ACCOUNT.path;
@@ -6328,7 +6440,6 @@ const Login = function Login({
   const handleSubmit = async () => {
     try {
       const values = await form.validateFields();
-      setLoading(true);
       dispatch(Object(_store_actions_auth__WEBPACK_IMPORTED_MODULE_8__["login"])({
         usernameOrEmail: values.usernameOrEmail.trim(),
         password: values.password.trim()
@@ -6345,7 +6456,7 @@ const Login = function Login({
           to: redirectUrl
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 53,
+          lineNumber: 49,
           columnNumber: 16
         }, this);
       }
@@ -6374,18 +6485,18 @@ const Login = function Login({
             alt: ""
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 73,
+            lineNumber: 69,
             columnNumber: 13
           }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])("em", {
             children: _config__WEBPACK_IMPORTED_MODULE_3__["default"].title
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 74,
+            lineNumber: 70,
             columnNumber: 13
           }, this)]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 72,
+          lineNumber: 68,
           columnNumber: 11
         }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_4__["Form"], {
           form: form,
@@ -6394,37 +6505,37 @@ const Login = function Login({
             initialValue: '',
             rules: [{
               required: true,
-              message: "Please your enter username"
+              message: 'Please your enter username'
             }],
             children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_4__["Input"], {
               placeholder: "Username",
               prefix: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(_ant_design_icons__WEBPACK_IMPORTED_MODULE_11__["UserOutlined"], {}, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 90,
+                lineNumber: 86,
                 columnNumber: 25
               }, this),
               maxLength: 32,
               autoComplete: "off"
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 88,
+              lineNumber: 84,
               columnNumber: 15
             }, this)
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 78,
+            lineNumber: 74,
             columnNumber: 13
           }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_4__["Form"].Item, {
             name: "password",
             rules: [{
               required: true,
-              message: "Please enter your password"
+              message: 'Please enter your password'
             }],
             children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_4__["Input"], {
               placeholder: "Password",
               prefix: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(_ant_design_icons__WEBPACK_IMPORTED_MODULE_11__["LockOutlined"], {}, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 107,
+                lineNumber: 103,
                 columnNumber: 25
               }, this),
               maxLength: 32,
@@ -6433,17 +6544,17 @@ const Login = function Login({
               onPressEnter: handleSubmit
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 105,
+              lineNumber: 101,
               columnNumber: 15
             }, this)
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 96,
+            lineNumber: 92,
             columnNumber: 13
           }, this)]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 77,
+          lineNumber: 73,
           columnNumber: 11
         }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_4__["Button"], {
           type: "primary",
@@ -6451,42 +6562,29 @@ const Login = function Login({
             marginTop: '20px'
           },
           size: "large",
-          loading: loading,
           block: true,
           onClick: handleSubmit,
-          children: loading ? 'Logging..' : 'Log in'
+          children: "Login"
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 116,
+          lineNumber: 112,
           columnNumber: 11
-        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])("div", {
-          className: "register",
-          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_9__["Link"], {
-            to: "/register",
-            children: "REGISTER NE`"
-          }, void 0, false, {
-            fileName: _jsxFileName,
-            lineNumber: 127,
-            columnNumber: 13
-          }, this)
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 126,
-          columnNumber: 11
-        }, this)]
+        }, this), !auth.userGuard.isAdmin && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["Fragment"], {
+          children: antd__WEBPACK_IMPORTED_MODULE_4__["message"].error('Login information is incorrect.')
+        }, void 0, false)]
       }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 71,
+        lineNumber: 67,
         columnNumber: 9
       }, this)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 70,
+      lineNumber: 66,
       columnNumber: 7
     }, this)
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 69,
+    lineNumber: 65,
     columnNumber: 5
   }, this);
 };
@@ -6598,7 +6696,7 @@ const HOME = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_private_route__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/private-route */ "./app/components/private-route/index.tsx");
@@ -6611,11 +6709,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__);
 
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/app/router/index.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/router/index.tsx";
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 
@@ -6819,7 +6917,7 @@ const routesMap = [{
 /*!*********************************!*\
   !*** ./app/services/account.ts ***!
   \*********************************/
-/*! exports provided: createAccount, getAllAccount, getProfile, adminUpdateAccount, adminUpdateProfile */
+/*! exports provided: createAccount, getAllAccount, getProfile, adminUpdateAccount, adminUpdateProfile, adminGetProfileUser */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6829,6 +6927,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProfile", function() { return getProfile; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "adminUpdateAccount", function() { return adminUpdateAccount; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "adminUpdateProfile", function() { return adminUpdateProfile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "adminGetProfileUser", function() { return adminGetProfileUser; });
 /* harmony import */ var _utils_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/http */ "./app/utils/http.ts");
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../api */ "./app/api/index.ts");
 
@@ -6847,6 +6946,9 @@ function adminUpdateAccount(id, data) {
 }
 function adminUpdateProfile(userId, data) {
   return _utils_http__WEBPACK_IMPORTED_MODULE_0__["default"].put(_api__WEBPACK_IMPORTED_MODULE_1__["default"].updateProfile + `/${userId}`, data);
+}
+function adminGetProfileUser() {
+  return _utils_http__WEBPACK_IMPORTED_MODULE_0__["default"].get(_api__WEBPACK_IMPORTED_MODULE_1__["default"].adminGetAllProfile);
 }
 
 /***/ }),
@@ -6979,6 +7081,26 @@ function adminCreateSeatByClass(body) {
 
 /***/ }),
 
+/***/ "./app/services/discount.ts":
+/*!**********************************!*\
+  !*** ./app/services/discount.ts ***!
+  \**********************************/
+/*! exports provided: adminGetAllDiscounts */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "adminGetAllDiscounts", function() { return adminGetAllDiscounts; });
+/* harmony import */ var _utils_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/http */ "./app/utils/http.ts");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../api */ "./app/api/index.ts");
+
+
+function adminGetAllDiscounts() {
+  return _utils_http__WEBPACK_IMPORTED_MODULE_0__["default"].get(_api__WEBPACK_IMPORTED_MODULE_1__["default"].adminGetAllDiscounts);
+}
+
+/***/ }),
+
 /***/ "./app/services/flight.ts":
 /*!********************************!*\
   !*** ./app/services/flight.ts ***!
@@ -7015,7 +7137,7 @@ function adminDeleteFlight(id) {
 /*!*******************************!*\
   !*** ./app/services/index.ts ***!
   \*******************************/
-/*! exports provided: createAccount, getAllAccount, getProfile, adminUpdateAccount, adminUpdateProfile, loginService, getAuthService, getAirCraftList, adminCreateAircraft, adminGetDetailAircraft, adminDeleteAircraft, adminUpdateAircraft, adminGetAllCraftTypes, adminCreateCraftType, adminCreateSeatByClass, adminGetAllFlight, adminUpdateFlight, adminCreateFlight, adminDeleteFlight */
+/*! exports provided: createAccount, getAllAccount, getProfile, adminUpdateAccount, adminUpdateProfile, adminGetProfileUser, loginService, getAuthService, getAirCraftList, adminCreateAircraft, adminGetDetailAircraft, adminDeleteAircraft, adminUpdateAircraft, adminGetAllCraftTypes, adminCreateCraftType, adminCreateSeatByClass, adminGetAllFlight, adminUpdateFlight, adminCreateFlight, adminDeleteFlight */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7030,6 +7152,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "adminUpdateAccount", function() { return _account__WEBPACK_IMPORTED_MODULE_0__["adminUpdateAccount"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "adminUpdateProfile", function() { return _account__WEBPACK_IMPORTED_MODULE_0__["adminUpdateProfile"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "adminGetProfileUser", function() { return _account__WEBPACK_IMPORTED_MODULE_0__["adminGetProfileUser"]; });
 
 /* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth */ "./app/services/auth.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "loginService", function() { return _auth__WEBPACK_IMPORTED_MODULE_1__["loginService"]; });
@@ -7323,7 +7447,8 @@ const {
   LOGIN_SUCCESS,
   LOGOUT,
   AUTH_ERROR,
-  GET_AUTH
+  GET_AUTH,
+  USER_GUARD
 } = _types__WEBPACK_IMPORTED_MODULE_0__["AUTH"];
 const login = ({
   usernameOrEmail,
@@ -7336,7 +7461,15 @@ const login = ({
     if (res.data.accessToken) {
       const userInfo = res.data;
 
-      if (userInfo.user.roles.some(ele => ele.name === 'ROLE_ADMIN')) {
+      if (userInfo.user.roles.some(ele => ele.name === 'ROLE_USER')) {
+        dispatch({
+          type: USER_GUARD,
+          payload: {
+            isAdmin: false
+          }
+        });
+        return;
+      } else {
         dispatch({
           type: LOGIN_SUCCESS,
           userInfo
@@ -7571,13 +7704,13 @@ const store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducer
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../types */ "./app/store/types/index.ts");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 const {
@@ -7661,13 +7794,13 @@ function account(state = initialState, action) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var _types_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../types/index */ "./app/store/types/index.ts");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 const initialState = {
@@ -7747,13 +7880,13 @@ function aircraft(state = initialState, action) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return airport; });
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var _types_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../types/index */ "./app/store/types/index.ts");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 const initialState = {
@@ -7805,13 +7938,13 @@ function airport(state = initialState, action) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return airway; });
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var _types_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../types/index */ "./app/store/types/index.ts");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 const initialState = {
@@ -7862,8 +7995,8 @@ function airway(state = initialState, action) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../types */ "./app/store/types/index.ts");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../constants */ "./app/constants/index.ts");
 
@@ -7871,7 +8004,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 
@@ -7879,13 +8012,17 @@ const {
   LOGIN_SUCCESS,
   LOGOUT,
   AUTH_ERROR,
-  GET_AUTH
+  GET_AUTH,
+  USER_GUARD
 } = _types__WEBPACK_IMPORTED_MODULE_2__["AUTH"];
 const initialState = {
   isLogin: false,
   isLoading: true,
   error: null,
   token: localStorage.getItem(_constants__WEBPACK_IMPORTED_MODULE_3__["LOCAL_STORAGE"].TOKEN),
+  userGuard: {
+    isAdmin: true
+  },
   userInfo: {
     createdAt: '',
     updatedAt: '',
@@ -7910,6 +8047,14 @@ function auth(state = initialState, action) {
         userInfo: action.userInfo
       });
 
+    case USER_GUARD:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        userGuard: {
+          isAdmin: action.payload.isAdmin
+        },
+        isLoading: false
+      });
+
     case LOGIN_SUCCESS:
       const {
         accessToken,
@@ -7919,7 +8064,7 @@ function auth(state = initialState, action) {
       const {
         password
       } = user,
-            _ = Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(user, ["password"]);
+            _ = Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(user, ["password"]);
 
       if (accessToken) {
         state.isLogin = true;
@@ -7962,13 +8107,13 @@ function auth(state = initialState, action) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var _types_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../types/index */ "./app/store/types/index.ts");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 const initialState = {
@@ -8039,13 +8184,13 @@ function craftType(state = initialState, action) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var _types_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../types/index */ "./app/store/types/index.ts");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 const initialState = {
@@ -8077,10 +8222,11 @@ function flight(state = initialState, action) {
 
     case _types_index__WEBPACK_IMPORTED_MODULE_1__["FLIGHT"].CREATE_FLIGHT:
       console.log('payload', payload);
-      return _objectSpread({}, state);
+      return _objectSpread(_objectSpread({}, state), {}, {
+        loading: false
+      });
 
     case _types_index__WEBPACK_IMPORTED_MODULE_1__["FLIGHT"].UPDATE_FLIGHT:
-      console.log(payload);
       return _objectSpread(_objectSpread({}, state), {}, {
         loading: false
       });
@@ -8154,13 +8300,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var _types_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../types/index */ "./app/store/types/index.ts");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_nguyenvanhuyen_hanu_projects_aircraft_admin_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 const initialState = {
@@ -8221,7 +8367,8 @@ const AUTH = {
   LOGIN_SUCCESS: 'LOGIN_SUCCESS',
   LOGOUT: 'LOGOUT',
   AUTH_ERROR: 'AUTH_ERROR',
-  GET_AUTH: 'GET_AUTH'
+  GET_AUTH: 'GET_AUTH',
+  USER_GUARD: 'ADMIN_GURAD'
 };
 const SYSTEM = {
   INFO: 'INFO'
@@ -8281,7 +8428,7 @@ const TICKET = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dateToMoment", function() { return dateToMoment; });
 const dateToMoment = date => {
-  return date.slice(0, -5).split("T").join(" ");
+  return date.split("T").join(" ");
 };
 
 /***/ }),
@@ -8326,16 +8473,39 @@ let exiting = false;
 const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken;
 
 function handleError(error) {
+  var _response$statusText, _response$statusText2, _response$status, _response$statusText3;
+
   if (axios__WEBPACK_IMPORTED_MODULE_0___default.a.isCancel(error)) {
     console.log('axios cancel');
   } else {
-    var _response$status, _response$statusText;
-
     const response = error.response;
-    antd__WEBPACK_IMPORTED_MODULE_3__["notification"].error({
-      message: `Error Code: ${(_response$status = response === null || response === void 0 ? void 0 : response.status) !== null && _response$status !== void 0 ? _response$status : response.status}`,
-      description: (_response$statusText = response === null || response === void 0 ? void 0 : response.statusText) !== null && _response$statusText !== void 0 ? _response$statusText : 'Unexpected error'
-    });
+
+    switch (response === null || response === void 0 ? void 0 : response.status) {
+      case 400:
+        return antd__WEBPACK_IMPORTED_MODULE_3__["notification"].error({
+          message: `${response.status}: Bad request`,
+          description: (_response$statusText = response === null || response === void 0 ? void 0 : response.statusText) !== null && _response$statusText !== void 0 ? _response$statusText : 'Unexpected error'
+        });
+
+      case 500:
+        return antd__WEBPACK_IMPORTED_MODULE_3__["notification"].error({
+          message: `${response.status}: Internal server busy`,
+          description: (_response$statusText2 = response === null || response === void 0 ? void 0 : response.statusText) !== null && _response$statusText2 !== void 0 ? _response$statusText2 : 'Unexpected error'
+        });
+
+      default:
+        return antd__WEBPACK_IMPORTED_MODULE_3__["notification"].error({
+          message: `Error Code: ${(_response$status = response === null || response === void 0 ? void 0 : response.status) !== null && _response$status !== void 0 ? _response$status : response.status}`,
+          description: (_response$statusText3 = response === null || response === void 0 ? void 0 : response.statusText) !== null && _response$statusText3 !== void 0 ? _response$statusText3 : 'Unexpected error'
+        });
+    } // response?.status === 400 ? notification.error({
+    //   message: `Bad request`,
+    //   description: response?.statusText ?? 'Unexpected error',
+    // }) : notification.error({
+    //   message: `Error Code: ${response?.status ?? response.status}`,
+    //   description: response?.statusText ?? 'Unexpected error',
+    // })
+
   }
 }
 
@@ -8393,7 +8563,7 @@ httpInstance.interceptors.response.use(function (res) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "momentToDate", function() { return momentToDate; });
 function momentToDate(moment) {
-  return `${moment.split(' ').join('T')}.278Z`;
+  return `${moment.split(' ').join('T')}Z`;
 }
 
 /***/ }),
@@ -8436,7 +8606,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment_locale_es_us__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(moment_locale_es_us__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__);
-var _jsxFileName = "/Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/main.tsx";
+var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/main.tsx";
 
 
 
@@ -8476,7 +8646,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/Object(rea
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/nguyenvanhuyen/hanu-projects/aircraft-admin/apps/aircraft-admin/src/main.tsx */"./main.tsx");
+module.exports = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/main.tsx */"./main.tsx");
 
 
 /***/ })

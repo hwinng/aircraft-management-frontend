@@ -1,10 +1,17 @@
 {
   "hosting": {
-    "public": "dist/apps/aircraft-admin/",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
+    "public": "dist/apps/aircraft-admin",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "appAssociation": "AUTO",
+    "rewrites": [
+      {
+        "source": "/home/**",
+        "dynamicLinks": true
+      },
+      {
+        "source": "/login",
+        "dynamicLinks": true
+      }
     ]
   }
 }
