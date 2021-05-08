@@ -96,7 +96,6 @@ const EditFlight = ({ record, visible, onEdit, onCancel }) => {
           initialValues={{
             aircraft_id: record.aircraft.id,
             status: record.status,
-
             departure_time: moment(
               dateToMoment(record.departureTime),
               'YYYY-MM-DD HH:mm:ss'

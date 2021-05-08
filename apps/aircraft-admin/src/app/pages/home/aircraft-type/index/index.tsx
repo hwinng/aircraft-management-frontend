@@ -31,10 +31,6 @@ const CraftTypeList: React.FC<Props> = ({ craftTypes }) => {
     });
   }
 
-  function handleSearch(values) {
-    console.log(values);
-  }
-
   return craftTypes.loading ? (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
       <Spin tip="loading..."></Spin>
@@ -53,11 +49,6 @@ const CraftTypeList: React.FC<Props> = ({ craftTypes }) => {
         <Button type="primary">
           <Link to="/home/aircraft-type/create">Create</Link>
         </Button>
-        <Search
-          allowClear={true}
-          placeholder="Search by name"
-          handleSearch={handleSearch}
-        />
       </div>
       <CraftTypeTable
         craftType={craftTypes.types}

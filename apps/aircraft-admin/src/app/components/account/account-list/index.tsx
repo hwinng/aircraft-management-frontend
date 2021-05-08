@@ -6,13 +6,13 @@ import NoData from '../../table-no-data';
 import { Link } from 'react-router-dom'
 
 const AccountList = ({
+  profileUserID,
   accounts,
   loading
 }) => {
-
   const location = useLocation();
 
-  return (
+  return profileUserID.length && (
     <Table
       key={uuidv4()}
       columns={[
@@ -25,6 +25,7 @@ const AccountList = ({
             <Button
               style={{ display: 'flex', flexDirection: 'column'}}
               type='primary'
+              disabled={!profileUserID.includes(record.id)}
             >
               <Link to={`${location.pathname}/detail/${record.id}`}>View</Link>
             </Button>

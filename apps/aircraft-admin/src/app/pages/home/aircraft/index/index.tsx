@@ -58,7 +58,10 @@ const AirCraft: React.FC<Props> = function ({ aircraft, craftTypes }) {
     createAircraft(values).then(
       (res) => {
         dispatch(res);
-        message.success('Successfully created!');
+        setTimeout(function(){
+          message.loading('Generating...', 2000)
+          message.success('Success!')
+        }, 4000);
       },
       (err) => {
         dispatch(err);
