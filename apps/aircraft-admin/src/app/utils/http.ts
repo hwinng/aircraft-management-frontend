@@ -20,10 +20,30 @@ function handleError(error: AxiosError) {
     console.log('axios cancel');
   } else {
     const response = error.response;
-    notification.error({
-      message: `Error Code: ${response?.status ?? response.status}`,
-      description: response?.statusText ?? 'Unexpected error',
-    });
+    switch (response?.status) {
+      case 400:
+        return notification.error({
+          message: `${response.status}: Bad request`,
+          description: response?.statusText ?? 'Unexpected error',
+        });
+      case 500:
+        return notification.error({
+          message: `${response.status}: Internal server busy`,
+          description: response?.statusText ?? 'Unexpected error',
+        });
+      default:
+        return notification.error({
+          message: `Error Code: ${response?.status ?? response.status}`,
+          description: response?.statusText ?? 'Unexpected error',
+        });
+    }
+    // response?.status === 400 ? notification.error({
+    //   message: `Bad request`,
+    //   description: response?.statusText ?? 'Unexpected error',
+    // }) : notification.error({
+    //   message: `Error Code: ${response?.status ?? response.status}`,
+    //   description: response?.statusText ?? 'Unexpected error',
+    // })
   }
 }
 

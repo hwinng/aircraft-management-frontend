@@ -143,7 +143,6 @@ const FlightPage = () => {
   }
 
   function onEdit(record, index) {
-    console.log(record);
     setEditVisible(true);
     setEditRecord(record);
   }
@@ -160,7 +159,7 @@ const FlightPage = () => {
         (res) => {
           if (res.type === FLIGHT.FLIGHT_ERROR) {
             dispatch(res);
-            message.error('Conflict time... Try again');
+            message.error('You must update both of the time', 10);
           } else {
             dispatch(res);
             message.success('Successfully edited!');
