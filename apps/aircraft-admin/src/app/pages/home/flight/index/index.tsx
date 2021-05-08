@@ -143,6 +143,7 @@ const FlightPage = () => {
   }
 
   function onEdit(record, index) {
+    console.log(record);
     setEditVisible(true);
     setEditRecord(record);
   }
@@ -154,13 +155,12 @@ const FlightPage = () => {
       departure_gate_id: values.departure_gate_id,
       arrival_gate_id: values.arrival_gate_id,
     };
-    console.log(updateFlightDTO);
     updateFlight(index, updateFlightDTO)
       .then(
         (res) => {
           if (res.type === FLIGHT.FLIGHT_ERROR) {
             dispatch(res);
-            message.error('Fail to edit! Try again...');
+            message.error('Conflict time... Try again');
           } else {
             dispatch(res);
             message.success('Successfully edited!');
@@ -168,22 +168,18 @@ const FlightPage = () => {
         },
         (err) => {
           dispatch(err);
-          message.error('Fail to create! Try again...');
+          message.error('Conflict time... Try again');
         }
       )
+      .catch((_) => {
+        message.error('Server is busy now, try later!')
+      })
       .finally(() => {
         setParams({
           ...params,
         });
         setEditVisible(false);
       });
-  }
-
-  function handleSearch(values) {
-    // setParams({
-    //   ...params,
-    //   name: values,
-    // });
   }
 
   return flight.loading ? (
@@ -209,7 +205,10 @@ const FlightPage = () => {
             record={editRecord}
             visible={editVisible}
             onEdit={handleEdit}
-            onCancel={() => setEditVisible(false)}
+            onCancel={() => {
+              setEditVisible(false);
+              setEditRecord(null);
+            }}
           />
         </>
       )}
@@ -219,11 +218,6 @@ const FlightPage = () => {
           Create
         </Button>
 
-        <Search
-          allowClear={true}
-          placeholder="Search by name"
-          handleSearch={handleSearch}
-        />
       </div>
 
       <FlightTable
