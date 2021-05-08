@@ -26,7 +26,7 @@ const TicketTable = ({
             title: 'Flight',
             dataIndex: 'flight',
             render: (_, record) => (
-              <span>{record.flight.airway.departureAirport.name}={record.flight.airway.arrivalAirport.name}</span>
+              <span>{record.flight.airway.departureAirport.name}-{record.flight.airway.arrivalAirport.name}</span>
             )
           },
           {

@@ -144,7 +144,10 @@ const AccountDetailContainer = function () {
           </Card>
         </Col>
         <Col xs={24} sm={24} md={24} lg={16} xl={16}>
-          <Card title={`Detail information of account`}>
+          <Card
+            title={`Detail information of account`}
+            style={{ position: 'relative' }}
+          >
             {true && (
               <>
                 {buildInfoRow(
@@ -182,7 +185,15 @@ const AccountDetailContainer = function () {
                 )}
               </>
             )}
-            <Button type="primary" onClick={() => setVisible(true)}>
+            <Button
+              style={{
+                position: 'absolute',
+                bottom: '1rem',
+                left: '50%',
+              }}
+              type="primary"
+              onClick={() => setVisible(true)}
+            >
               Edit
             </Button>
             {profile && (
