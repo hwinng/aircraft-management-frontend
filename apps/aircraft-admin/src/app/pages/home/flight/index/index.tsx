@@ -10,15 +10,20 @@ import {
   getAllFlights,
   updateFlight,
 } from 'apps/aircraft-admin/src/app/store/actions/flight';
+import { IUpdateFlight } from 'apps/aircraft-admin/src/app/services/flight';
 import { FLIGHT } from 'apps/aircraft-admin/src/app/store/types/index';
 import FlightTable from 'apps/aircraft-admin/src/app/components/flight/list/index';
 import Search from 'apps/aircraft-admin/src/app/components/search-bar';
 import CreateFlightForm from 'apps/aircraft-admin/src/app/components/flight/form/CreateForm';
 import EditFlight from 'apps/aircraft-admin/src/app/components/flight/form/EditForm';
-import { deleteAircraftById, getAllAirCrafts } from 'apps/aircraft-admin/src/app/store/actions/aircraft';
+import {
+  deleteAircraftById,
+  getAllAirCrafts,
+} from 'apps/aircraft-admin/src/app/store/actions/aircraft';
 import { momentToDate } from 'apps/aircraft-admin/src/app/utils/momentToDate';
 import { adminGetAllAirway } from 'apps/aircraft-admin/src/app/services/airway';
 import { ExclamationCircleOutlined } from '@ant-design/icons';
+import { adminGetAllDiscounts } from 'apps/aircraft-admin/src/app/services/discount';
 
 const FlightPage = () => {
   const flight = useSelector((state: StoreState) => state.flight);
@@ -27,6 +32,7 @@ const FlightPage = () => {
   const dispatch = useDispatch();
 
   const [filteredAirways, setFilteredAirway] = React.useState([]);
+  const [discounts, setDiscounts] = React.useState([]);
   const [visible, setVisible] = React.useState(false);
   const [editVisible, setEditVisible] = React.useState(false);
   const [editRecord, setEditRecord] = React.useState(null);
@@ -54,6 +60,11 @@ const FlightPage = () => {
 
   function handleCreateClick() {
     setVisible(true);
+    //TODO: gell all discount
+    adminGetAllDiscounts().then(
+      (res) => setDiscounts(res.data),
+      (_) => message.error('Some unexpected errors!')
+    );
     getAllAirCrafts(queryString.stringify(params)).then(
       (res) => dispatch(res),
       (err) => dispatch(err)
@@ -80,7 +91,7 @@ const FlightPage = () => {
         (res) => {
           if (res.type === FLIGHT.FLIGHT_ERROR) {
             dispatch(res);
-            message.error('Fail to create! Try again...');
+            message.error('Selected aircraft is not available now.');
           } else {
             dispatch(res);
             message.success('Successfully created!');
@@ -88,7 +99,7 @@ const FlightPage = () => {
         },
         (err) => {
           dispatch(err);
-          message.error('Fail to create! Try again...');
+          message.error('Selected aircraft is not available now.');
         }
       )
       .finally(() => {
@@ -116,7 +127,7 @@ const FlightPage = () => {
               }
             },
             (err) => {
-              console.log(err)
+              console.log(err);
             }
           )
           .finally(() => {
@@ -134,23 +145,16 @@ const FlightPage = () => {
   function onEdit(record, index) {
     setEditVisible(true);
     setEditRecord(record);
-    // getAllCraftTypes().then(
-    //   (res) => dispatch(res),
-    //   (err) => dispatch(err)
-    // );
-    // setOpenEditForm(true);
-    // setEditData(record);
-
-    console.log(record);
   }
 
   function handleEdit(values, index) {
-    const updateFlightDTO = {
-      ...values,
-      airway_id: 0,
+    const updateFlightDTO: IUpdateFlight = {
       departure_time: momentToDate(values.departure_time),
       arrival_time: momentToDate(values.arrival_time),
+      departure_gate_id: values.departure_gate_id,
+      arrival_gate_id: values.arrival_gate_id,
     };
+    console.log(updateFlightDTO);
     updateFlight(index, updateFlightDTO)
       .then(
         (res) => {
@@ -171,7 +175,7 @@ const FlightPage = () => {
         setParams({
           ...params,
         });
-        setVisible(false);
+        setEditVisible(false);
       });
   }
 
@@ -183,12 +187,13 @@ const FlightPage = () => {
   }
 
   return flight.loading ? (
-    <Spin style={{margin: 'auto'}}></Spin>
+    <Spin style={{ margin: 'auto' }}></Spin>
   ) : (
     <div>
-      {!aircraft.loading && (
+      {!aircraft.loading && discounts && (
         <>
           <CreateFlightForm
+            discounts={discounts}
             aircrafts={aircraft.aircrafts}
             filteredAirways={filteredAirways}
             visible={visible}

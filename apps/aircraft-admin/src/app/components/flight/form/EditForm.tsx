@@ -4,6 +4,8 @@ import moment from 'moment';
 import { dateToMoment } from '../../../utils/date2Moment';
 
 const EditFlight = ({ record, visible, onEdit, onCancel }) => {
+  const depatureGates = record.airway.departureAirport.gates;
+  const arrivalGates = record.airway.arrivalAirport.gates;
   const [form] = Form.useForm();
   const [customDate, setCustomDate] = React.useState({
     startValue: null,
@@ -73,15 +75,14 @@ const EditFlight = ({ record, visible, onEdit, onCancel }) => {
             .validateFields()
             .then((values) => {
               form.resetFields();
-                onEdit(
-                  {
-                    ...values,
-                    discount_id: null,
-                    departure_time: startDate,
-                    arrival_time: endDate,
-                  },
-                  record.id
-                );
+              onEdit(
+                {
+                  ...values,
+                  departure_time: startDate,
+                  arrival_time: endDate,
+                },
+                record.id
+              );
             })
             .catch((info) => {
               console.log('Validate Failed:', info);
@@ -95,6 +96,7 @@ const EditFlight = ({ record, visible, onEdit, onCancel }) => {
           initialValues={{
             aircraft_id: record.aircraft.id,
             status: record.status,
+
             departure_time: moment(
               dateToMoment(record.departureTime),
               'YYYY-MM-DD HH:mm:ss'
@@ -131,7 +133,7 @@ const EditFlight = ({ record, visible, onEdit, onCancel }) => {
             </Col>
             <Col span={12}>
               <Form.Item name="status" label="Status">
-                <Select>
+                <Select disabled>
                   <Select.Option value="OK">OK</Select.Option>
                   <Select.Option value="NOT OK">NOT OK</Select.Option>
                 </Select>
@@ -153,11 +155,13 @@ const EditFlight = ({ record, visible, onEdit, onCancel }) => {
               <Form.Item
                 name="departure_time"
                 label="Departure Time"
-                rules={[{ required: true, message: 'msg'}]}
+                rules={[
+                  { required: true, message: 'Departure time is compulsory' },
+                ]}
               >
                 <DatePicker
                   disabledDate={disabledStartDate}
-                  showTime
+                  showTime={{ defaultValue: moment('00:00:00', 'HH:mm:ss') }}
                   format="YYYY-MM-DD HH:mm:ss"
                   value={customDate.startValue}
                   placeholder="Departure Time"
@@ -177,10 +181,12 @@ const EditFlight = ({ record, visible, onEdit, onCancel }) => {
                   },
                 ]}
               >
-                <Select placeholder="Select gate" disabled>
-                  <Select.Option value={record.departureGate.id}>
-                    {record.departureGate.name}
-                  </Select.Option>
+                <Select placeholder="Select depature gate">
+                  {depatureGates.map((gate) => (
+                    <Select.Option key={gate.id} value={gate.id}>
+                      {gate.name}
+                    </Select.Option>
+                  ))}
                 </Select>
               </Form.Item>
             </Col>
@@ -191,11 +197,13 @@ const EditFlight = ({ record, visible, onEdit, onCancel }) => {
               <Form.Item
                 name="arrival_time"
                 label="Arrival Time"
-                rules={[{ required: true }]}
+                rules={[
+                  { required: true, message: 'Arrival time is compulsory' },
+                ]}
               >
                 <DatePicker
                   disabledDate={disabledEndDate}
-                  showTime
+                  showTime={{ defaultValue: moment('00:00:00', 'HH:mm:ss') }}
                   format="YYYY-MM-DD HH:mm:ss"
                   value={customDate.endValue}
                   placeholder="Arrival Time"
@@ -216,10 +224,12 @@ const EditFlight = ({ record, visible, onEdit, onCancel }) => {
                   },
                 ]}
               >
-                <Select placeholder="Select gate" disabled>
-                  <Select.Option value={record.arrivalGate.id}>
-                    {record.arrivalGate.name}
-                  </Select.Option>
+                <Select placeholder="Select arrival gate">
+                  {arrivalGates.map((gate) => (
+                    <Select.Option key={gate.id} value={gate.id}>
+                      {gate.name}
+                    </Select.Option>
+                  ))}
                 </Select>
               </Form.Item>
             </Col>

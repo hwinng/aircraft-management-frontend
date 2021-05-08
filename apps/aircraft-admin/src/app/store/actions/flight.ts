@@ -1,3 +1,4 @@
+import { IUpdateFlight } from './../../services/flight';
 import { adminCreateFlight, adminDeleteFlight, adminGetAllFlight, adminUpdateFlight } from '../../services';
 import { FLIGHT } from '../types/index';
 
@@ -27,7 +28,7 @@ export const createFlight = (body: any) => {
   )
 }
 
-export const updateFlight = (id: number, body: any) => {
+export const updateFlight = (id: number, body: IUpdateFlight) => {
   return adminUpdateFlight(id, body).then(
     (res: any) => ({
       type: FLIGHT.UPDATE_FLIGHT,

@@ -2,7 +2,8 @@ export const AUTH = {
   LOGIN_SUCCESS: 'LOGIN_SUCCESS',
   LOGOUT: 'LOGOUT',
   AUTH_ERROR: 'AUTH_ERROR',
-  GET_AUTH: 'GET_AUTH'
+  GET_AUTH: 'GET_AUTH',
+  USER_GUARD: 'ADMIN_GURAD'
 }
 
 export const SYSTEM = {

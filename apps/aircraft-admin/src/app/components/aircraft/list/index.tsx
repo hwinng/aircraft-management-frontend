@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.scss';
 import { useLocation } from 'react-router';
 import { Table, Button, Tag } from 'antd';
 import { v4 as uuidv4 } from 'uuid';
@@ -72,6 +73,7 @@ const AirCraftList = ({
                   onClick={() => {
                     onEditRow(record, record.id)
                   }}
+                  disabled={record.status === 'ACTIVATED'}
                 >
                   Edit
                 </Button>
