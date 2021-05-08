@@ -6,11 +6,13 @@ import AccountList from '../../../../components/account/account-list';
 import { getAllAccounts } from 'apps/aircraft-admin/src/app/store/actions/account';
 import { StoreState } from 'apps/aircraft-admin/src/app/store';
 import { Spin } from 'antd';
+import { adminGetProfileUser } from 'apps/aircraft-admin/src/app/services';
 
 type Props = ReturnType<typeof mapStateToProps>;
 
 const Account: React.FC<Props> = function ({ account }) {
   const dispatch = useDispatch();
+  const [profileUserID, setProfileUserID] = React.useState([]);
   const [params, setParams] = React.useState({
     page: 0,
     size: 10,
@@ -18,11 +20,20 @@ const Account: React.FC<Props> = function ({ account }) {
     sort: ['id', 'asc'],
   });
 
+  async function getAllUserProfile() {
+    const userHasProfiles = await adminGetProfileUser();
+    if (userHasProfiles.data) {
+      const userID = userHasProfiles.data.map((ele) => ele.user.id);
+      setProfileUserID(userID);
+    }
+  }
+
   React.useEffect(() => {
     getAllAccounts(queryString.stringify(params)).then(
       (res) => dispatch(res),
       (err) => dispatch(err)
     );
+    getAllUserProfile();
   }, [getAllAccounts, params]);
 
   return account.isLoading ? (
@@ -31,7 +42,11 @@ const Account: React.FC<Props> = function ({ account }) {
     </div>
   ) : (
     <div>
-      <AccountList loading={account.isLoading} accounts={account.accounts} />
+      <AccountList
+        loading={account.isLoading}
+        profileUserID={profileUserID}
+        accounts={account.accounts}
+      />
     </div>
   );
 };

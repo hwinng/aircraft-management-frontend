@@ -30,7 +30,9 @@ const API = Object.freeze({
   //TICKET
   adminGetAllTickets: '/ticket/getAll',
   //DISCOUNT
-  adminGetAllDiscounts: '/discountEvent/getAll'
+  adminGetAllDiscounts: '/discountEvent/getAll',
+  //PROFILE
+  adminGetAllProfile: '/profile/admin/allRecords'
 })
 
 export default API
