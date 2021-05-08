@@ -1,23 +1,19 @@
-import http from '../utils/http'
-import api from '../api'
+import http from '../utils/http';
+import api from '../api';
 
 export interface IUpdateFlight {
-  aircraft_id: number,
-  airway_id: number,
-  departure_time: string,
-  departure_gate_id: number,
-  arrival_time: string,
-  arrival_gate_id: number,
-  status: string,
-  discount_id: number,
+  departure_time: string;
+  departure_gate_id: number;
+  arrival_time: string;
+  arrival_gate_id: number;
 }
 
 export function adminGetAllFlight(params: string) {
-  return http.get(api.adminGetAllFlight + `?${params}`)
+  return http.get(api.adminGetAllFlight + `?${params}`);
 }
 
-export function adminUpdateFlight(id: number, body: IUpdateFlight ) {
-  return http.put(`${api.adminUpdateFlight}/${id}`, body)
+export function adminUpdateFlight(id: number, body: IUpdateFlight) {
+  return http.put(`${api.adminUpdateFlight}/${id}`, body);
 }
 
 export function adminCreateFlight(body: any) {

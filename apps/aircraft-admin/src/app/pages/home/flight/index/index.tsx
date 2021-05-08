@@ -10,6 +10,7 @@ import {
   getAllFlights,
   updateFlight,
 } from 'apps/aircraft-admin/src/app/store/actions/flight';
+import { IUpdateFlight } from 'apps/aircraft-admin/src/app/services/flight';
 import { FLIGHT } from 'apps/aircraft-admin/src/app/store/types/index';
 import FlightTable from 'apps/aircraft-admin/src/app/components/flight/list/index';
 import Search from 'apps/aircraft-admin/src/app/components/search-bar';
@@ -144,23 +145,16 @@ const FlightPage = () => {
   function onEdit(record, index) {
     setEditVisible(true);
     setEditRecord(record);
-    // getAllCraftTypes().then(
-    //   (res) => dispatch(res),
-    //   (err) => dispatch(err)
-    // );
-    // setOpenEditForm(true);
-    // setEditData(record);
-
-    console.log(record);
   }
 
   function handleEdit(values, index) {
-    const updateFlightDTO = {
-      ...values,
-      airway_id: 0,
+    const updateFlightDTO: IUpdateFlight = {
       departure_time: momentToDate(values.departure_time),
       arrival_time: momentToDate(values.arrival_time),
+      departure_gate_id: values.departure_gate_id,
+      arrival_gate_id: values.arrival_gate_id,
     };
+    console.log(updateFlightDTO);
     updateFlight(index, updateFlightDTO)
       .then(
         (res) => {
@@ -181,7 +175,7 @@ const FlightPage = () => {
         setParams({
           ...params,
         });
-        setVisible(false);
+        setEditVisible(false);
       });
   }
 
