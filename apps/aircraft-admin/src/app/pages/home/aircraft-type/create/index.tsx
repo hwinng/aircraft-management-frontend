@@ -1,23 +1,20 @@
 import React, { useState } from 'react';
 import './style.scss';
-import { message, Steps } from 'antd';
+import { Breadcrumb, message, Row, Steps } from 'antd';
 import {
   adminCreateCraftType,
   ICreateCraftTypeDTO,
 } from 'apps/aircraft-admin/src/app/services';
-import {
-  createCraftType,
-  createSeatByClass,
-  getAllCraftTypes,
-} from 'apps/aircraft-admin/src/app/store/actions/craft-type';
+import { createSeatByClass } from 'apps/aircraft-admin/src/app/store/actions/craft-type';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import CreateCraftTypeForm from '../../../../components/craft-type/form/create-craft-type';
 import BusinessForm from '../../../../components/craft-type/form/create-seat-by-class/BusinessForm';
 import EconomyForm from 'apps/aircraft-admin/src/app/components/craft-type/form/create-seat-by-class/EconomyForm';
 import EconomyFlexForm from 'apps/aircraft-admin/src/app/components/craft-type/form/create-seat-by-class/EconomyFlexForm';
 
 import { LOCAL_STORAGE } from 'apps/aircraft-admin/src/app/constants';
+import { Link } from 'react-router-dom';
 
 const { Step } = Steps;
 
@@ -40,7 +37,7 @@ const steps = [
   },
 ];
 
-const CreateCraftType = () => {
+const CreateCraftType = ({ history }) => {
   const [currentStep, setCurrentStep] = React.useState(0);
   const craftTypes = useSelector((state: any) => state.craftTypes);
   const dispatch = useDispatch();
@@ -89,23 +86,43 @@ const CreateCraftType = () => {
         localStorage.removeItem(LOCAL_STORAGE.STEP_2);
         localStorage.removeItem(LOCAL_STORAGE.STEP_3);
         localStorage.removeItem(LOCAL_STORAGE.STEP_4);
-        // getAllCraftTypes().then((res) => dispatch(res));
       });
-    //TODO: redirect routing
   }
+
+  // React.useEffect(() => {
+  //   function redirectAfterCreating() {
+  //     if (window.localStorage.getItem(LOCAL_STORAGE.CREATE_DONE) === 'true') {
+  //       return <Redirect to="/home/aircraft-type" />;
+  //     }
+  //   }
+  //   redirectAfterCreating();
+  // }, [window.localStorage.getItem(LOCAL_STORAGE.CREATE_DONE)]);
 
   return (
     <div className="create-container">
-      <Steps
-        type="navigation"
-        size="small"
-        current={currentStep}
-        className="step-wrapper"
-      >
-        {steps.map((item) => (
-          <Step className="custom-step" key={item.title} title={item.title} />
-        ))}
-      </Steps>
+      <Row style={{ marginBottom: '1rem' }}>
+        <Breadcrumb>
+          <Breadcrumb.Item>
+            <Link to="/home/aircraft-type">Account</Link>
+          </Breadcrumb.Item>
+          <Breadcrumb.Item>
+            <Link to="">Create</Link>
+          </Breadcrumb.Item>
+        </Breadcrumb>
+      </Row>
+
+      <Row>
+        <Steps
+          type="navigation"
+          size="small"
+          current={currentStep}
+          className="step-wrapper"
+        >
+          {steps.map((item) => (
+            <Step className="custom-step" key={item.title} title={item.title} />
+          ))}
+        </Steps>
+      </Row>
 
       <div className="steps-content">
         {currentStep === 0 && (
@@ -156,6 +173,7 @@ const CreateCraftType = () => {
               );
               setCurrentStep((prev) => prev + 1);
               handleSubmitAllForm();
+              return <Redirect to="/home/aircraft-type" />;
             }}
             onPrev={() => {
               setCurrentStep((prev) => prev - 1);

@@ -39,7 +39,7 @@ const AirCraft: React.FC<Props> = function ({ aircraft, craftTypes }) {
   }
 
   function onCreateClick() {
-    getAllCraftTypes().then(
+    getAllCraftTypes(queryString.stringify(params)).then(
       (res) => dispatch(res),
       (err) => dispatch(err)
     );
@@ -47,7 +47,7 @@ const AirCraft: React.FC<Props> = function ({ aircraft, craftTypes }) {
   }
 
   function onEditClicked(record, index) {
-    getAllCraftTypes().then(
+    getAllCraftTypes(queryString.stringify(params)).then(
       (res) => dispatch(res),
       (err) => dispatch(err)
     );

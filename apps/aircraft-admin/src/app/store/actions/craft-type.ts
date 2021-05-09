@@ -1,8 +1,8 @@
 import { adminCreateCraftType, adminCreateSeatByClass, adminGetAllCraftTypes, ICreateCraftTypeDTO, ICreateSeatDTO } from '../../services/craft-type';
 import { CRAFT_TYPE } from '../types';
 
-export const getAllCraftTypes = () => {
-  return adminGetAllCraftTypes().then(
+export const getAllCraftTypes = (params: string) => {
+  return adminGetAllCraftTypes(params).then(
     (res: any) => {
       if (res.status === 200) {
         return {

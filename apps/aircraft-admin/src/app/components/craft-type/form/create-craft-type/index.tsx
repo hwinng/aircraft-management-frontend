@@ -1,8 +1,6 @@
 import React from 'react';
 import './style.scss';
 import { Button, Form, Input, InputNumber } from 'antd';
-import { ICreateCraftTypeDTO } from 'apps/aircraft-admin/src/app/services';
-import { Link } from 'react-router-dom';
 
 const CreateCraftTypeForm = ({ formData, handleCreateCraftTypeForm }) => {
   const formItemValues = JSON.parse(formData);
@@ -19,6 +17,17 @@ const CreateCraftTypeForm = ({ formData, handleCreateCraftTypeForm }) => {
         console.log('validate err', info);
       });
   }
+
+  const validateMsg = {
+    required: 'Required!',
+    types: {
+      email: 'Invalid format!',
+      number: 'Invalid format!',
+    },
+    number: {
+      range: 'Must be between ${min} and ${max}',
+    },
+  };
 
   return (
     <Form
@@ -43,6 +52,7 @@ const CreateCraftTypeForm = ({ formData, handleCreateCraftTypeForm }) => {
           : {}
       }
       onFinish={handleSubmitForm}
+      validateMessages={validateMsg}
     >
       <Form.Item
         name="name"
@@ -50,10 +60,6 @@ const CreateCraftTypeForm = ({ formData, handleCreateCraftTypeForm }) => {
         rules={[
           {
             required: true,
-            type: 'string',
-            message: 'This field is required.',
-            max: 120,
-            whitespace: false,
           },
         ]}
       >
@@ -64,27 +70,20 @@ const CreateCraftTypeForm = ({ formData, handleCreateCraftTypeForm }) => {
         <Form.Item
           name="seat_capacity"
           label="Seat Capacity"
-          rules={[
-            {
-              required: true,
-              message: 'Wrong format, at least 100',
-            },
-          ]}
+          rules={[{ required: true }, { type: 'number', min: 100, max: 250 }]}
         >
-          <Input min={100} max={99999} />
+          <InputNumber />
         </Form.Item>
 
         <Form.Item
           name="lugage_capacity_kg"
           label="Cargo"
           rules={[
-            {
-              required: true,
-              message: 'Wrong format, at least 100',
-            },
+            { required: true },
+            { type: 'number', min: 2000, max: 10000 },
           ]}
         >
-          <Input min={100} max={99999} />
+          <InputNumber />
         </Form.Item>
 
         <Form.Item
@@ -93,16 +92,18 @@ const CreateCraftTypeForm = ({ formData, handleCreateCraftTypeForm }) => {
           rules={[
             {
               required: true,
-              message: 'Wrong format, at least 100',
             },
+            { type: 'number', min: 500, max: 950 },
           ]}
         >
-          <Input min={100} max={99999} />
+          <InputNumber />
         </Form.Item>
       </div>
 
       <Form.Item>
-        <Button className="btn-next --step_1" type='primary' htmlType="submit">Next</Button>
+        <Button className="btn-next --step_1" type="primary" htmlType="submit">
+          Next
+        </Button>
       </Form.Item>
     </Form>
   );

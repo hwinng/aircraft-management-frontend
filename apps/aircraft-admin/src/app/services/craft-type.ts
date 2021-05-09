@@ -14,8 +14,8 @@ export interface ICreateSeatDTO {
   quantity: number,
   rows_quantity: number
 }
-export function adminGetAllCraftTypes(): Promise<unknown> {
-  return http.get(api.adminGetAllCraftType);
+export function adminGetAllCraftTypes(params: string): Promise<unknown> {
+  return http.get(`${api.adminGetAllCraftType}?${params}`);
 }
 
 export function adminCreateCraftType(body: ICreateCraftTypeDTO): Promise<unknown> {
