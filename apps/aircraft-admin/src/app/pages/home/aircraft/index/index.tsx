@@ -27,6 +27,7 @@ const AirCraft: React.FC<Props> = function ({ aircraft, craftTypes }) {
     sort: ['id', 'asc'],
   });
   const [editData, setEditData] = React.useState(null);
+  const [promiseLoading, setPromiseLoading] = React.useState(false);
 
   const dispatch = useDispatch();
 
@@ -38,7 +39,7 @@ const AirCraft: React.FC<Props> = function ({ aircraft, craftTypes }) {
   }
 
   function onCreateClick() {
-    getAllCraftTypes().then(
+    getAllCraftTypes(queryString.stringify(params)).then(
       (res) => dispatch(res),
       (err) => dispatch(err)
     );
@@ -46,7 +47,7 @@ const AirCraft: React.FC<Props> = function ({ aircraft, craftTypes }) {
   }
 
   function onEditClicked(record, index) {
-    getAllCraftTypes().then(
+    getAllCraftTypes(queryString.stringify(params)).then(
       (res) => dispatch(res),
       (err) => dispatch(err)
     );
@@ -55,23 +56,28 @@ const AirCraft: React.FC<Props> = function ({ aircraft, craftTypes }) {
   }
 
   function handleCreate(values: any) {
-    createAircraft(values).then(
-      (res) => {
-        dispatch(res);
-        setTimeout(function(){
-          message.loading('Generating...', 2000)
-          message.success('Success!')
-        }, 4000);
-      },
-      (err) => {
-        dispatch(err);
-        message.error('Fail to create! Try again...');
-      }
-    );
-    setParams({
-      ...params,
-    });
-    setVisible(false);
+    setPromiseLoading(true);
+    createAircraft(values)
+      .then(
+        (res) => {
+          dispatch(res);
+          message.success('Success!');
+        },
+        (err) => {
+          dispatch(err);
+          message.error('Fail to create! Try again...');
+        }
+      )
+      .catch((err) => {
+        message.error(err.status);
+      })
+      .finally(() => {
+        setPromiseLoading(false);
+        setParams({
+          ...params,
+        });
+        setVisible(false);
+      });
   }
 
   function handleEdit(values, index) {
@@ -156,6 +162,7 @@ const AirCraft: React.FC<Props> = function ({ aircraft, craftTypes }) {
           onCancel={() => {
             setVisible(false);
           }}
+          loading={promiseLoading}
         />
         {editData !== null && (
           <EditAircraftForm
@@ -176,18 +183,20 @@ const AirCraft: React.FC<Props> = function ({ aircraft, craftTypes }) {
           handleSearch={handleSearch}
         />
       </div>
-      <AirCraftList
-        onTableChange={handleTableChange}
-        pagination={aircraft.pagination}
-        craft={aircraft}
-        loading={aircraft.loading}
-        onDeleteRow={(record, index) => {
-          handleDeleteRow(record, index);
-        }}
-        onEditRow={(record, index) => {
-          onEditClicked(record, index);
-        }}
-      />
+      {!promiseLoading && (
+        <AirCraftList
+          onTableChange={handleTableChange}
+          pagination={aircraft.pagination}
+          craft={aircraft}
+          loading={aircraft.loading}
+          onDeleteRow={(record, index) => {
+            handleDeleteRow(record, index);
+          }}
+          onEditRow={(record, index) => {
+            onEditClicked(record, index);
+          }}
+        />
+      )}
     </div>
   );
 };

@@ -1,11 +1,12 @@
 import { Breadcrumb, Button, Spin } from 'antd';
+import queryString from 'query-string';
+
 import { StoreState } from 'apps/aircraft-admin/src/app/store';
 import { Link } from 'react-router-dom';
 import { getAllCraftTypes } from 'apps/aircraft-admin/src/app/store/actions/craft-type';
 import React from 'react';
 import { connect, useDispatch } from 'react-redux';
 import CraftTypeTable from '../../../../components/craft-type/list';
-import Search from 'apps/aircraft-admin/src/app/components/search-bar';
 
 type Props = ReturnType<typeof mapStateToProps>;
 
@@ -17,7 +18,7 @@ const CraftTypeList: React.FC<Props> = ({ craftTypes }) => {
     sort: ['id', 'asc'],
   });
   React.useEffect(() => {
-    getAllCraftTypes().then(
+    getAllCraftTypes(queryString.stringify(params)).then(
       (res: any) => dispatch(res),
       (err: any) => dispatch(err)
     );
@@ -36,7 +37,6 @@ const CraftTypeList: React.FC<Props> = ({ craftTypes }) => {
       <Spin tip="loading..."></Spin>
     </div>
   ) : (
-
     <div>
       <div style={{ flex: 0 }}>
         <Breadcrumb>
@@ -45,7 +45,13 @@ const CraftTypeList: React.FC<Props> = ({ craftTypes }) => {
           </Breadcrumb.Item>
         </Breadcrumb>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '1rem'}}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          marginTop: '1rem',
+        }}
+      >
         <Button type="primary">
           <Link to="/home/aircraft-type/create">Create</Link>
         </Button>

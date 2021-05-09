@@ -1,9 +1,11 @@
 import React from 'react';
-import { Form, Select, Button, Input } from 'antd';
+import { Form, Select, Button, Input, InputNumber } from 'antd';
+import { LOCAL_STORAGE } from 'apps/aircraft-admin/src/app/constants';
 
 interface ISeatByClassForm {
   formType: { id: number; name: string };
   formItems;
+  totalSeat: number;
   onSubmitForm: (
     values
   ) => {
@@ -17,9 +19,39 @@ interface ISeatByClassForm {
 const FormItem: React.FC<ISeatByClassForm> = ({
   formType,
   formItems,
+  totalSeat,
   onSubmitForm,
   onPrev,
 }) => {
+  const [totalSeatByClass, setTotalSetByClass] = React.useState(0);
+  console.log('total Seat by class', totalSeatByClass);
+
+  //TODO: custom validate seat here
+  function validateSeatByClass() {
+    let seatOfBusiness = 0;
+    if (localStorage.getItem(LOCAL_STORAGE.STEP_2)) {
+      seatOfBusiness = JSON.parse(localStorage.getItem(LOCAL_STORAGE.STEP_2))
+        .quantity;
+    }
+    switch (formType.name) {
+      case 'BUSINESS':
+        return setTotalSetByClass(Math.ceil(totalSeat / 10));
+      case 'ECONOMY':
+        return setTotalSetByClass(
+          Math.ceil(Number(totalSeat - seatOfBusiness) / 2)
+        );
+      case 'ECONOMY FLEX':
+        return setTotalSetByClass(
+          Math.ceil(Number(totalSeat - seatOfBusiness) / 2)
+        );
+      default:
+        return setTotalSetByClass(0);
+    }
+  }
+  React.useEffect(() => {
+    validateSeatByClass();
+  }, []);
+
   const [form] = Form.useForm();
 
   function handleSubmitForm() {
@@ -33,6 +65,17 @@ const FormItem: React.FC<ISeatByClassForm> = ({
         console.log('validate err', info);
       });
   }
+
+  const validateMsg = {
+    required: 'Required!',
+    types: {
+      email: 'Invalid format!',
+      number: 'Invalid format!',
+    },
+    number: {
+      range: 'Must be between ${min} and ${max}',
+    },
+  };
 
   return (
     <Form
@@ -52,65 +95,68 @@ const FormItem: React.FC<ISeatByClassForm> = ({
             }
       }
       onFinish={handleSubmitForm}
+      validateMessages={validateMsg}
     >
-      <Form.Item
-        name="travelClass_id"
-        label="Status"
-        rules={[
-          {
-            required: true,
-            message: 'Please select status',
-          },
-        ]}
-      >
+      <Form.Item name="travelClass_id" label="Status">
         <Select placeholder="Travel class" disabled>
           <Select.Option value={formType.id}>{formType.name}</Select.Option>
         </Select>
       </Form.Item>
 
-      <div style={{
-        display: 'flex',
-        justifyContent: 'flex-start',
-        gap: '10px'
-      }}>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'flex-start',
+          gap: '10px',
+        }}
+      >
         <Form.Item
           name="quantity"
           label="Total Quantity"
           rules={[
-            {
-              required: true,
-              message: 'Wrong format, at least 100',
-            },
+            { required: true },
+            { type: 'number', min: 0, max: Number(totalSeatByClass) },
           ]}
         >
-          <Input type='number' />
+          <InputNumber />
         </Form.Item>
 
         <Form.Item
           name="rows_quantity"
-          label="Quantity Per Rows"
+          label="Quantity Per Row"
           rules={[
             {
               required: true,
-              message: 'Wrong format, at least 100',
+            },
+            {
+              type: 'number',
+              min: 0,
+              max: Math.ceil(Number(totalSeatByClass / 10)),
             },
           ]}
         >
-          <Input type='number' />
+          <InputNumber />
         </Form.Item>
       </div>
 
-      <div style={{
-        display: 'flex',
-        justifyContent: 'flex-end',
-        gap:'10px',
-      }}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'flex-end',
+          gap: '10px',
+        }}
+      >
         <Form.Item>
-          <Button danger onClick={onPrev}>Back</Button>
+          <Button danger onClick={onPrev}>
+            Back
+          </Button>
         </Form.Item>
 
         <Form.Item>
-          <Button type='primary' htmlType="submit">Next</Button>
+          <Button type="primary" htmlType="submit">
+            Next
+          </Button>
         </Form.Item>
       </div>
     </Form>
