@@ -171,7 +171,7 @@ const FlightPage = () => {
         }
       )
       .catch((_) => {
-        message.error('Server is busy now, try later!')
+        message.error('Server is busy now, try later!');
       })
       .finally(() => {
         setParams({
@@ -182,7 +182,9 @@ const FlightPage = () => {
   }
 
   return flight.loading ? (
-    <Spin style={{ margin: 'auto' }}></Spin>
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <Spin tip="loading..."></Spin>
+    </div>
   ) : (
     <div>
       {!aircraft.loading && discounts && (
@@ -216,7 +218,6 @@ const FlightPage = () => {
         <Button type="primary" onClick={handleCreateClick}>
           Create
         </Button>
-
       </div>
 
       <FlightTable

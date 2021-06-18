@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import { connect, useDispatch } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import queryString from 'query-string';
 import AccountList from '../../../../components/account/account-list';
 import { getAllAccounts } from 'apps/aircraft-admin/src/app/store/actions/account';
@@ -8,9 +8,9 @@ import { StoreState } from 'apps/aircraft-admin/src/app/store';
 import { Spin } from 'antd';
 import { adminGetProfileUser } from 'apps/aircraft-admin/src/app/services';
 
-type Props = ReturnType<typeof mapStateToProps>;
 
-const Account: React.FC<Props> = function ({ account }) {
+const Account = function () {
+  const account = useSelector((state: StoreState) => state.account);
   const dispatch = useDispatch();
   const [profileUserID, setProfileUserID] = React.useState([]);
   const [params, setParams] = React.useState({
@@ -54,4 +54,4 @@ const Account: React.FC<Props> = function ({ account }) {
 const mapStateToProps = ({ account }: StoreState) => {
   return { account };
 };
-export default connect(mapStateToProps)(Account);
+export default (Account);

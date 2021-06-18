@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect, useDispatch } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import { Breadcrumb, Spin } from 'antd';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router';
@@ -10,9 +10,11 @@ import queryString from 'query-string';
 import FlightTable from '../../../../components/flight/list';
 import Info from '../../../../components/aircraft/detail/info';
 
-type Props = ReturnType<typeof mapStateToProps>;
+const AircarftDetail = () => {
+  const aircraft = useSelector((state: StoreState) => state.aircraft);
+  const flight = useSelector((state: StoreState) => state.flight);
+  const dispatch = useDispatch();
 
-const AircarftDetail: React.FC<Props> = ({ aircraft, flight }) => {
   const { air_craft_detail } = aircraft;
   const location = useLocation();
   const paramID = Number(
@@ -23,7 +25,6 @@ const AircarftDetail: React.FC<Props> = ({ aircraft, flight }) => {
     size: 5,
     sort: ['id', 'asc'],
   });
-  const dispatch = useDispatch();
 
   React.useEffect(() => {
     getDetailAirCraft(paramID).then(
@@ -31,8 +32,8 @@ const AircarftDetail: React.FC<Props> = ({ aircraft, flight }) => {
       (err) => dispatch(err)
     );
     getAllFlights(queryString.stringify(params)).then(
-      res => dispatch(res),
-      err => dispatch(err)
+      (res) => dispatch(res),
+      (err) => dispatch(err)
     );
   }, [getAllFlights, params]);
 
@@ -56,7 +57,9 @@ const AircarftDetail: React.FC<Props> = ({ aircraft, flight }) => {
       </div>
       <div>
         {aircraft.loading ? (
-          <Spin tip="Loading..."></Spin>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <Spin tip="loading..."></Spin>
+          </div>
         ) : (
           <Info detailInfo={air_craft_detail} />
         )}
@@ -75,10 +78,4 @@ const AircarftDetail: React.FC<Props> = ({ aircraft, flight }) => {
   );
 };
 
-const mapStateToProps = ({ aircraft, flight }: StoreState) => {
-  return {
-    aircraft,
-    flight,
-  };
-};
-export default connect(mapStateToProps)(AircarftDetail);
+export default AircarftDetail;

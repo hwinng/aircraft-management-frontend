@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect, useDispatch } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import queryString from 'query-string';
 import { Button, Spin, Modal, message } from 'antd';
 import {
@@ -16,8 +16,8 @@ import Search from 'apps/aircraft-admin/src/app/components/search-bar';
 import EditAircraftForm from '../../../../components/aircraft/form/edit';
 import { ExclamationCircleOutlined } from '@ant-design/icons';
 
-type Props = ReturnType<typeof mapStateToProps>;
-const AirCraft: React.FC<Props> = function ({ aircraft, craftTypes }) {
+const AirCraft = function () {
+
   const [visible, setVisible] = React.useState(false);
   const [openEditForm, setOpenEditForm] = React.useState(false);
   const [params, setParams] = React.useState({
@@ -29,6 +29,8 @@ const AirCraft: React.FC<Props> = function ({ aircraft, craftTypes }) {
   const [editData, setEditData] = React.useState(null);
   const [promiseLoading, setPromiseLoading] = React.useState(false);
 
+  const aircraft = useSelector((state: StoreState) => state.aircraft);
+  const craftTypes = useSelector((state: StoreState) => state.craftTypes);
   const dispatch = useDispatch();
 
   function handleSearch(values) {
@@ -201,8 +203,4 @@ const AirCraft: React.FC<Props> = function ({ aircraft, craftTypes }) {
   );
 };
 
-const mapStateToProps = ({ aircraft, craftTypes }: StoreState) => {
-  return { aircraft, craftTypes };
-};
-
-export default connect(mapStateToProps)(AirCraft);
+export default AirCraft;

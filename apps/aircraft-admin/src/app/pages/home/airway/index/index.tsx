@@ -41,12 +41,14 @@ const Airway = () => {
   }
 
   return airway.loading ? (
-    <Spin style={{margin: 'auto'}}></Spin>
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <Spin tip="loading..."></Spin>
+    </div>
   ) : (
     <div>
       <Search
         allowClear={true}
-        placeholder="Search by name"
+        placeholder="Search by departure airport"
         handleSearch={handleSearch}
       />
       <AirwayTable

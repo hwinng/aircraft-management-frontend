@@ -5,12 +5,11 @@ import { StoreState } from 'apps/aircraft-admin/src/app/store';
 import { Link } from 'react-router-dom';
 import { getAllCraftTypes } from 'apps/aircraft-admin/src/app/store/actions/craft-type';
 import React from 'react';
-import { connect, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import CraftTypeTable from '../../../../components/craft-type/list';
 
-type Props = ReturnType<typeof mapStateToProps>;
-
-const CraftTypeList: React.FC<Props> = ({ craftTypes }) => {
+const CraftTypeList = () => {
+  const craftTypes = useSelector((state: StoreState) => state.craftTypes);
   const dispatch = useDispatch();
   const [params, setParams] = React.useState({
     page: 0,
@@ -66,5 +65,4 @@ const CraftTypeList: React.FC<Props> = ({ craftTypes }) => {
   );
 };
 
-const mapStateToProps = ({ craftTypes }: StoreState) => ({ craftTypes });
-export default connect(mapStateToProps)(CraftTypeList);
+export default CraftTypeList;

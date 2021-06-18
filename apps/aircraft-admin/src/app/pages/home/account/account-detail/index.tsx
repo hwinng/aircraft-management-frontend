@@ -9,7 +9,7 @@ import {
   updateAccount,
   updateProfile,
 } from 'apps/aircraft-admin/src/app/store/actions/account';
-import { Row, Breadcrumb, Col, Card, Avatar, Button } from 'antd';
+import { Row, Breadcrumb, Col, Card, Avatar, Button, Spin } from 'antd';
 import { Link } from 'react-router-dom';
 import EditAccount from 'apps/aircraft-admin/src/app/components/account/account-form/EditAccount';
 import { getNameLetter } from 'apps/aircraft-admin/src/app/utils/getNameLetter';
@@ -88,7 +88,9 @@ const AccountDetailContainer = function () {
   }
 
   return account.isLoading && !profile ? (
-    <div>loading....</div>
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <Spin tip="loading..."></Spin>
+    </div>
   ) : (
     <div>
       <Row style={{ marginBottom: '1rem' }}>
