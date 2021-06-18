@@ -18,7 +18,7 @@ module.exports = [[module.i, ".edit-btn .hidden {\n  display: none;\n}", '', {"v
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, ".form-antd {\n  position: relative;\n  width: 50%;\n  margin: auto;\n  margin-top: 5rem;\n  border: 1px solid #ddd;\n  padding: 3rem;\n  border-radius: 1rem;\n  background: #fff;\n  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);\n}\n.form-antd .input-number-wrapper {\n  display: flex;\n  justify-content: space-between;\n  gap: 10px;\n}\n.form-antd .--step_1 {\n  position: absolute;\n  right: 0;\n}", '', {"version":3,"sources":["/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/craft-type/form/create-craft-type/style.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,UAAA;EACA,YAAA;EACA,gBAAA;EACA,sBAAA;EACA,aAAA;EACA,mBAAA;EACA,gBAAA;EACA,8CAAA;AACF;AAAE;EACE,aAAA;EACA,8BAAA;EACA,SAAA;AAEJ;AAAE;EACE,kBAAA;EACA,QAAA;AAEJ","sourcesContent":[".form-antd {\n  position: relative;\n  width: 50%;\n  margin: auto;\n  margin-top: 5rem;\n  border: 1px solid #ddd;\n  padding: 3rem;\n  border-radius: 1rem;\n  background: #fff;\n  box-shadow: 5px 5px 5px 5px rgb(0 0 0 / 10%);\n  .input-number-wrapper {\n    display: flex;\n    justify-content: space-between;\n    gap: 10px;\n  }\n  .--step_1 {\n    position: absolute;\n    right: 0;\n  }\n}\n"],"sourceRoot":""}]]
+module.exports = [[module.i, ".form-antd {\n  position: relative;\n  width: 50%;\n  margin: auto;\n  margin-top: 5rem;\n  border: 1px solid #ddd;\n  padding: 3rem;\n  border-radius: 1rem;\n  background: #fff;\n  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);\n}\n.form-antd .input-number-wrapper {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  gap: 10px;\n}\n.form-antd .input-number-wrapper .ant-input-number {\n  width: 50%;\n}\n.form-antd .--step_1 {\n  position: absolute;\n  right: 0;\n}", '', {"version":3,"sources":["/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/craft-type/form/create-craft-type/style.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,UAAA;EACA,YAAA;EACA,gBAAA;EACA,sBAAA;EACA,aAAA;EACA,mBAAA;EACA,gBAAA;EACA,8CAAA;AACF;AAAE;EACE,aAAA;EACA,sBAAA;EACA,8BAAA;EACA,SAAA;AAEJ;AADI;EACE,UAAA;AAGN;AAAE;EACE,kBAAA;EACA,QAAA;AAEJ","sourcesContent":[".form-antd {\n  position: relative;\n  width: 50%;\n  margin: auto;\n  margin-top: 5rem;\n  border: 1px solid #ddd;\n  padding: 3rem;\n  border-radius: 1rem;\n  background: #fff;\n  box-shadow: 5px 5px 5px 5px rgb(0 0 0 / 10%);\n  .input-number-wrapper {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    gap: 10px;\n    .ant-input-number {\n      width: 50%;\n    }\n  }\n  .--step_1 {\n    position: absolute;\n    right: 0;\n  }\n}\n"],"sourceRoot":""}]]
 
 /***/ }),
 
@@ -1164,7 +1164,8 @@ const CreateAirCraftForm = ({
   types,
   visible,
   onCreate,
-  onCancel
+  onCancel,
+  loading
 }) => {
   //transform types
   types = types.map((ele, _) => {
@@ -1180,7 +1181,13 @@ const CreateAirCraftForm = ({
     status: 'ACTIVATED'
   };
   return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
-    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Modal"], {
+    children: loading ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Spin"], {
+      tip: "Generating..."
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 38,
+      columnNumber: 9
+    }, undefined) : /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Modal"], {
       visible: visible,
       title: "Create Aircraft",
       okText: "Save",
@@ -1208,13 +1215,13 @@ const CreateAirCraftForm = ({
           }],
           children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Input"], {}, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 64,
-            columnNumber: 13
+            lineNumber: 71,
+            columnNumber: 15
           }, undefined)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 59,
-          columnNumber: 11
+          lineNumber: 64,
+          columnNumber: 13
         }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Form"].Item, {
           name: "aircraft_type_id",
           label: "Aircraft Type ID",
@@ -1229,18 +1236,18 @@ const CreateAirCraftForm = ({
               children: type.name
             }, index, false, {
               fileName: _jsxFileName,
-              lineNumber: 74,
-              columnNumber: 17
+              lineNumber: 83,
+              columnNumber: 19
             }, undefined))
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 72,
-            columnNumber: 13
+            lineNumber: 81,
+            columnNumber: 15
           }, undefined)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 67,
-          columnNumber: 11
+          lineNumber: 74,
+          columnNumber: 13
         }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Form"].Item, {
           name: "status",
           label: "Status",
@@ -1255,39 +1262,39 @@ const CreateAirCraftForm = ({
               children: "ACTIVATED"
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 92,
-              columnNumber: 15
+              lineNumber: 101,
+              columnNumber: 17
             }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Select"].Option, {
               value: "DEACTIVATED",
               children: "DEACTIVATED"
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 93,
-              columnNumber: 15
+              lineNumber: 102,
+              columnNumber: 17
             }, undefined)]
           }, void 0, true, {
             fileName: _jsxFileName,
-            lineNumber: 91,
-            columnNumber: 13
+            lineNumber: 100,
+            columnNumber: 15
           }, undefined)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 81,
-          columnNumber: 11
+          lineNumber: 90,
+          columnNumber: 13
         }, undefined)]
       }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 53,
-        columnNumber: 9
+        lineNumber: 58,
+        columnNumber: 11
       }, undefined)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 35,
-      columnNumber: 7
+      lineNumber: 40,
+      columnNumber: 9
     }, undefined)
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 34,
+    lineNumber: 36,
     columnNumber: 5
   }, undefined);
 };
@@ -1914,6 +1921,16 @@ const CreateCraftTypeForm = ({
     });
   }
 
+  const validateMsg = {
+    required: 'Required!',
+    types: {
+      email: 'Invalid format!',
+      number: 'Invalid format!'
+    },
+    number: {
+      range: 'Must be between ${min} and ${max}'
+    }
+  };
   return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"], {
     className: "form-antd",
     form: form,
@@ -1926,24 +1943,21 @@ const CreateCraftTypeForm = ({
       average_velocity: formItemValues.average_velocity ? formItemValues.average_velocity : 100
     } : {},
     onFinish: handleSubmitForm,
+    validateMessages: validateMsg,
     children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
       name: "name",
       label: "Aircraft Type Name",
       rules: [{
-        required: true,
-        type: 'string',
-        message: 'This field is required.',
-        max: 120,
-        whitespace: false
+        required: true
       }],
       children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Input"], {}, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 60,
+        lineNumber: 66,
         columnNumber: 9
       }, undefined)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 57,
       columnNumber: 7
     }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])("div", {
       className: "input-number-wrapper",
@@ -1951,63 +1965,63 @@ const CreateCraftTypeForm = ({
         name: "seat_capacity",
         label: "Seat Capacity",
         rules: [{
-          required: true,
-          message: 'Wrong format, at least 100'
-        }],
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Input"], {
+          required: true
+        }, {
+          type: 'number',
           min: 100,
-          max: 99999
-        }, void 0, false, {
+          max: 250
+        }],
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["InputNumber"], {}, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 74,
+          lineNumber: 75,
           columnNumber: 11
         }, undefined)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 64,
+        lineNumber: 70,
         columnNumber: 9
       }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
         name: "lugage_capacity_kg",
         label: "Cargo",
         rules: [{
-          required: true,
-          message: 'Wrong format, at least 100'
+          required: true
+        }, {
+          type: 'number',
+          min: 2000,
+          max: 10000
         }],
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Input"], {
-          min: 100,
-          max: 99999
-        }, void 0, false, {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["InputNumber"], {}, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 87,
+          lineNumber: 86,
           columnNumber: 11
         }, undefined)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 77,
+        lineNumber: 78,
         columnNumber: 9
       }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
         name: "average_velocity",
         label: "Velocity",
         rules: [{
-          required: true,
-          message: 'Wrong format, at least 100'
+          required: true
+        }, {
+          type: 'number',
+          min: 500,
+          max: 950
         }],
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Input"], {
-          min: 100,
-          max: 99999
-        }, void 0, false, {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["InputNumber"], {}, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 100,
+          lineNumber: 99,
           columnNumber: 11
         }, undefined)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 90,
+        lineNumber: 89,
         columnNumber: 9
       }, undefined)]
     }, void 0, true, {
       fileName: _jsxFileName,
-      lineNumber: 63,
+      lineNumber: 69,
       columnNumber: 7
     }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Form"].Item, {
       children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Button"], {
@@ -2017,17 +2031,17 @@ const CreateCraftTypeForm = ({
         children: "Next"
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 105,
+        lineNumber: 104,
         columnNumber: 9
       }, undefined)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 104,
+      lineNumber: 103,
       columnNumber: 7
     }, undefined)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 24,
+    lineNumber: 33,
     columnNumber: 5
   }, undefined);
 };
@@ -2072,12 +2086,14 @@ if (content.locals) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _FormItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormItem */ "./app/components/craft-type/form/create-seat-by-class/FormItem.tsx");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! apps/aircraft-admin/src/app/constants */ "./app/constants/index.ts");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _FormItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FormItem */ "./app/components/craft-type/form/create-seat-by-class/FormItem.tsx");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/craft-type/form/create-seat-by-class/BusinessForm.jsx";
+
 
 
 
@@ -2091,14 +2107,17 @@ const BusinessForm = ({
   onNext,
   onPrev
 }) => {
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(_FormItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  const _step_1_values = JSON.parse(localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_0__["LOCAL_STORAGE"].STEP_1));
+
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(_FormItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
     formType: formType,
     formItems: JSON.parse(formData),
+    totalSeat: _step_1_values.seat_capacity,
     onSubmitForm: onNext,
     onPrev: onPrev
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 11,
+    lineNumber: 13,
     columnNumber: 5
   }, undefined);
 };
@@ -2119,9 +2138,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _FormItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormItem */ "./app/components/craft-type/form/create-seat-by-class/FormItem.tsx");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! apps/aircraft-admin/src/app/constants */ "./app/constants/index.ts");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/craft-type/form/create-seat-by-class/EconomyFlexForm.jsx";
+
 
 
 
@@ -2135,14 +2156,17 @@ const EconomyFlexForm = ({
   onNext,
   onPrev
 }) => {
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(_FormItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  const _step_1_values = JSON.parse(localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_2__["LOCAL_STORAGE"].STEP_1));
+
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(_FormItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
     formType: formType,
     formItems: JSON.parse(formData),
+    totalSeat: _step_1_values.seat_capacity,
     onSubmitForm: onNext,
     onPrev: onPrev
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 11,
+    lineNumber: 14,
     columnNumber: 5
   }, undefined);
 };
@@ -2160,12 +2184,14 @@ const EconomyFlexForm = ({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _FormItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormItem */ "./app/components/craft-type/form/create-seat-by-class/FormItem.tsx");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! apps/aircraft-admin/src/app/constants */ "./app/constants/index.ts");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _FormItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FormItem */ "./app/components/craft-type/form/create-seat-by-class/FormItem.tsx");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/craft-type/form/create-seat-by-class/EconomyForm.jsx";
+
 
 
 
@@ -2179,14 +2205,17 @@ const EconomyForm = ({
   onNext,
   onPrev
 }) => {
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(_FormItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  const _step_1_values = JSON.parse(localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_0__["LOCAL_STORAGE"].STEP_1));
+
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(_FormItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
     formType: formType,
     formItems: JSON.parse(formData),
+    totalSeat: _step_1_values.seat_capacity,
     onSubmitForm: onNext,
     onPrev: onPrev
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 11,
+    lineNumber: 13,
     columnNumber: 5
   }, undefined);
 };
@@ -2207,9 +2236,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd */ "../../../node_modules/antd/es/index.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! apps/aircraft-admin/src/app/constants */ "./app/constants/index.ts");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/components/craft-type/form/create-seat-by-class/FormItem.tsx";
+
 
 
 
@@ -2217,9 +2248,38 @@ var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-mana
 const FormItem = ({
   formType,
   formItems,
+  totalSeat,
   onSubmitForm,
   onPrev
 }) => {
+  const [totalSeatByClass, setTotalSetByClass] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(0);
+  console.log('total Seat by class', totalSeatByClass); //TODO: custom validate seat here
+
+  function validateSeatByClass() {
+    let seatOfBusiness = 0;
+
+    if (localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_2__["LOCAL_STORAGE"].STEP_2)) {
+      seatOfBusiness = JSON.parse(localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_2__["LOCAL_STORAGE"].STEP_2)).quantity;
+    }
+
+    switch (formType.name) {
+      case 'BUSINESS':
+        return setTotalSetByClass(Math.ceil(totalSeat / 10));
+
+      case 'ECONOMY':
+        return setTotalSetByClass(Math.ceil(Number(totalSeat - seatOfBusiness) / 2));
+
+      case 'ECONOMY FLEX':
+        return setTotalSetByClass(Math.ceil(Number(totalSeat - seatOfBusiness) / 2));
+
+      default:
+        return setTotalSetByClass(0);
+    }
+  }
+
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.useEffect(() => {
+    validateSeatByClass();
+  }, []);
   const [form] = antd__WEBPACK_IMPORTED_MODULE_1__["Form"].useForm();
 
   function handleSubmitForm() {
@@ -2231,7 +2291,17 @@ const FormItem = ({
     });
   }
 
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Form"], {
+  const validateMsg = {
+    required: 'Required!',
+    types: {
+      email: 'Invalid format!',
+      number: 'Invalid format!'
+    },
+    number: {
+      range: 'Must be between ${min} and ${max}'
+    }
+  };
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Form"], {
     className: "form-antd",
     form: form,
     layout: "vertical",
@@ -2244,123 +2314,123 @@ const FormItem = ({
       travelClass_id: formType.id
     },
     onFinish: handleSubmitForm,
-    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Form"].Item, {
+    validateMessages: validateMsg,
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Form"].Item, {
       name: "travelClass_id",
       label: "Status",
-      rules: [{
-        required: true,
-        message: 'Please select status'
-      }],
-      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Select"], {
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Select"], {
         placeholder: "Travel class",
         disabled: true,
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Select"].Option, {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Select"].Option, {
           value: formType.id,
           children: formType.name
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 67,
+          lineNumber: 102,
           columnNumber: 11
         }, undefined)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 66,
+        lineNumber: 101,
         columnNumber: 9
       }, undefined)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 56,
+      lineNumber: 100,
       columnNumber: 7
-    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])("div", {
       style: {
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'flex-start',
         gap: '10px'
       },
-      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Form"].Item, {
+      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Form"].Item, {
         name: "quantity",
         label: "Total Quantity",
         rules: [{
-          required: true,
-          message: 'Wrong format, at least 100'
+          required: true
+        }, {
+          type: 'number',
+          min: 0,
+          max: Number(totalSeatByClass)
         }],
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Input"], {
-          type: "number"
-        }, void 0, false, {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["InputNumber"], {}, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 86,
+          lineNumber: 122,
           columnNumber: 11
         }, undefined)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 76,
+        lineNumber: 114,
         columnNumber: 9
-      }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Form"].Item, {
+      }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Form"].Item, {
         name: "rows_quantity",
-        label: "Quantity Per Rows",
+        label: "Quantity Per Row",
         rules: [{
-          required: true,
-          message: 'Wrong format, at least 100'
+          required: true
+        }, {
+          type: 'number',
+          min: 0,
+          max: Math.ceil(Number(totalSeatByClass / 10))
         }],
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Input"], {
-          type: "number"
-        }, void 0, false, {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["InputNumber"], {}, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 99,
+          lineNumber: 139,
           columnNumber: 11
         }, undefined)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 89,
+        lineNumber: 125,
         columnNumber: 9
       }, undefined)]
     }, void 0, true, {
       fileName: _jsxFileName,
-      lineNumber: 71,
+      lineNumber: 106,
       columnNumber: 7
-    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("div", {
+    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])("div", {
       style: {
         display: 'flex',
         justifyContent: 'flex-end',
         gap: '10px'
       },
-      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Form"].Item, {
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Form"].Item, {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Button"], {
           danger: true,
           onClick: onPrev,
           children: "Back"
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 109,
+          lineNumber: 151,
           columnNumber: 11
         }, undefined)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 108,
+        lineNumber: 150,
         columnNumber: 9
-      }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Form"].Item, {
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+      }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Form"].Item, {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Button"], {
           type: "primary",
           htmlType: "submit",
           children: "Next"
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 113,
+          lineNumber: 157,
           columnNumber: 11
         }, undefined)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 112,
+        lineNumber: 156,
         columnNumber: 9
       }, undefined)]
     }, void 0, true, {
       fileName: _jsxFileName,
-      lineNumber: 103,
+      lineNumber: 143,
       columnNumber: 7
     }, undefined)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 38,
+    lineNumber: 81,
     columnNumber: 5
   }, undefined);
 };
@@ -4387,17 +4457,17 @@ var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-mana
 
 const HOME_SIDER_MENU_LIST = [{
   path: _router_constants__WEBPACK_IMPORTED_MODULE_1__["HOME"].ACCOUNT.path,
-  icon: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__["HomeOutlined"], {}, void 0, false, {
+  icon: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__["UserOutlined"], {}, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 13,
+    lineNumber: 16,
     columnNumber: 11
   }, undefined),
   name: _router_constants__WEBPACK_IMPORTED_MODULE_1__["HOME"].ACCOUNT.name
 }, {
   path: _router_constants__WEBPACK_IMPORTED_MODULE_1__["HOME"].AIRCRAFT.path,
-  icon: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__["ClockCircleOutlined"], {}, void 0, false, {
+  icon: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__["RocketOutlined"], {}, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 18,
+    lineNumber: 21,
     columnNumber: 11
   }, undefined),
   name: _router_constants__WEBPACK_IMPORTED_MODULE_1__["HOME"].AIRCRAFT.name
@@ -4405,39 +4475,39 @@ const HOME_SIDER_MENU_LIST = [{
   path: _router_constants__WEBPACK_IMPORTED_MODULE_1__["HOME"].AIRCRAFT_TYPE.path,
   icon: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__["FileDoneOutlined"], {}, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 23,
+    lineNumber: 26,
     columnNumber: 11
   }, undefined),
   name: _router_constants__WEBPACK_IMPORTED_MODULE_1__["HOME"].AIRCRAFT_TYPE.name
 }, {
   path: _router_constants__WEBPACK_IMPORTED_MODULE_1__["HOME"].AIRPORT.path,
-  icon: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__["ScheduleOutlined"], {}, void 0, false, {
+  icon: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__["CarOutlined"], {}, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 28,
+    lineNumber: 31,
     columnNumber: 11
   }, undefined),
   name: _router_constants__WEBPACK_IMPORTED_MODULE_1__["HOME"].AIRPORT.name
 }, {
   path: _router_constants__WEBPACK_IMPORTED_MODULE_1__["HOME"].AIRWAY.path,
-  icon: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__["ScheduleOutlined"], {}, void 0, false, {
+  icon: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__["VerifiedOutlined"], {}, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 33,
+    lineNumber: 36,
     columnNumber: 11
   }, undefined),
   name: _router_constants__WEBPACK_IMPORTED_MODULE_1__["HOME"].AIRWAY.name
 }, {
   path: _router_constants__WEBPACK_IMPORTED_MODULE_1__["HOME"].FLIGHT.path,
-  icon: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__["ScheduleOutlined"], {}, void 0, false, {
+  icon: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__["TranslationOutlined"], {}, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 38,
+    lineNumber: 41,
     columnNumber: 11
   }, undefined),
   name: _router_constants__WEBPACK_IMPORTED_MODULE_1__["HOME"].FLIGHT.name
 }, {
   path: _router_constants__WEBPACK_IMPORTED_MODULE_1__["HOME"].TICKET.path,
-  icon: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__["ScheduleOutlined"], {}, void 0, false, {
+  icon: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])(_ant_design_icons__WEBPACK_IMPORTED_MODULE_2__["MacCommandOutlined"], {}, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 43,
+    lineNumber: 46,
     columnNumber: 11
   }, undefined),
   name: _router_constants__WEBPACK_IMPORTED_MODULE_1__["HOME"].TICKET.name
@@ -4463,7 +4533,8 @@ const LOCAL_STORAGE = {
   STEP_1: 'STEP_1',
   STEP_2: 'STEP_2',
   STEP_3: 'STEP_3',
-  STEP_4: 'STEP_4'
+  STEP_4: 'STEP_4',
+  CREATE_DONE: 'CREATE_DONE'
 };
 
 /***/ }),
@@ -4636,7 +4707,17 @@ const AccountDetailContainer = function AccountDetailContainer() {
   }
 
   return account.isLoading && !profile ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])("div", {
-    children: "loading...."
+    style: {
+      display: 'flex',
+      justifyContent: 'center'
+    },
+    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_5__["Spin"], {
+      tip: "loading..."
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 92,
+      columnNumber: 7
+    }, this)
   }, void 0, false, {
     fileName: _jsxFileName,
     lineNumber: 91,
@@ -4653,12 +4734,12 @@ const AccountDetailContainer = function AccountDetailContainer() {
             children: "Account"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 97,
+            lineNumber: 99,
             columnNumber: 13
           }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 96,
+          lineNumber: 98,
           columnNumber: 11
         }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_5__["Breadcrumb"].Item, {
           children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
@@ -4666,22 +4747,22 @@ const AccountDetailContainer = function AccountDetailContainer() {
             children: "Detail"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 100,
+            lineNumber: 102,
             columnNumber: 13
           }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 99,
+          lineNumber: 101,
           columnNumber: 11
         }, this)]
       }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 95,
+        lineNumber: 97,
         columnNumber: 9
       }, this)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 94,
+      lineNumber: 96,
       columnNumber: 7
     }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_5__["Row"], {
       gutter: 8,
@@ -4713,13 +4794,13 @@ const AccountDetailContainer = function AccountDetailContainer() {
                 children: Object(apps_aircraft_admin_src_app_utils_getNameLetter__WEBPACK_IMPORTED_MODULE_8__["getNameLetter"])(profile.userInfo.name.split(' ').slice(-1).toString().slice(0, 1))
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 124,
+                lineNumber: 126,
                 columnNumber: 21
               }, this), ' ']
             }, void 0, true) : 'A'
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 108,
+            lineNumber: 110,
             columnNumber: 15
           }, this),
           children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_5__["Card"].Meta, {
@@ -4729,17 +4810,17 @@ const AccountDetailContainer = function AccountDetailContainer() {
             }
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 140,
+            lineNumber: 142,
             columnNumber: 13
           }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 106,
+          lineNumber: 108,
           columnNumber: 11
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 105,
+        lineNumber: 107,
         columnNumber: 9
       }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_5__["Col"], {
         xs: 24,
@@ -4765,7 +4846,7 @@ const AccountDetailContainer = function AccountDetailContainer() {
             children: "Edit"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 188,
+            lineNumber: 190,
             columnNumber: 13
           }, this), profile && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_9__["jsxDEV"])(apps_aircraft_admin_src_app_components_account_account_form_EditAccount__WEBPACK_IMPORTED_MODULE_7__["default"], {
             profileDTO: profile,
@@ -4776,27 +4857,27 @@ const AccountDetailContainer = function AccountDetailContainer() {
             }
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 200,
+            lineNumber: 202,
             columnNumber: 15
           }, this)]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 147,
+          lineNumber: 149,
           columnNumber: 11
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 146,
+        lineNumber: 148,
         columnNumber: 9
       }, this)]
     }, void 0, true, {
       fileName: _jsxFileName,
-      lineNumber: 104,
+      lineNumber: 106,
       columnNumber: 7
     }, this)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 93,
+    lineNumber: 95,
     columnNumber: 5
   }, this);
 };
@@ -4865,9 +4946,8 @@ var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-mana
 
 
 
-const Account = function Account({
-  account
-}) {
+const Account = function Account() {
+  const account = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(state => state.account);
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])();
   const [profileUserID, setProfileUserID] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState([]);
   const [params, setParams] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState({
@@ -4931,7 +5011,7 @@ const mapStateToProps = ({
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps)(Account));
+/* harmony default export */ __webpack_exports__["default"] = (Account);
 
 /***/ }),
 
@@ -4979,14 +5059,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var apps_aircraft_admin_src_app_services__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apps/aircraft-admin/src/app/services */ "./app/services/index.ts");
 /* harmony import */ var apps_aircraft_admin_src_app_store_actions_craft_type__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! apps/aircraft-admin/src/app/store/actions/craft-type */ "./app/store/actions/craft-type.ts");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "../../../node_modules/react-redux/es/index.js");
-/* harmony import */ var _components_craft_type_form_create_craft_type__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../components/craft-type/form/create-craft-type */ "./app/components/craft-type/form/create-craft-type/index.tsx");
-/* harmony import */ var _components_craft_type_form_create_seat_by_class_BusinessForm__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../components/craft-type/form/create-seat-by-class/BusinessForm */ "./app/components/craft-type/form/create-seat-by-class/BusinessForm.jsx");
-/* harmony import */ var apps_aircraft_admin_src_app_components_craft_type_form_create_seat_by_class_EconomyForm__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! apps/aircraft-admin/src/app/components/craft-type/form/create-seat-by-class/EconomyForm */ "./app/components/craft-type/form/create-seat-by-class/EconomyForm.jsx");
-/* harmony import */ var apps_aircraft_admin_src_app_components_craft_type_form_create_seat_by_class_EconomyFlexForm__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! apps/aircraft-admin/src/app/components/craft-type/form/create-seat-by-class/EconomyFlexForm */ "./app/components/craft-type/form/create-seat-by-class/EconomyFlexForm.jsx");
-/* harmony import */ var apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! apps/aircraft-admin/src/app/constants */ "./app/constants/index.ts");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "../../../node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _components_craft_type_form_create_craft_type__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../components/craft-type/form/create-craft-type */ "./app/components/craft-type/form/create-craft-type/index.tsx");
+/* harmony import */ var _components_craft_type_form_create_seat_by_class_BusinessForm__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../components/craft-type/form/create-seat-by-class/BusinessForm */ "./app/components/craft-type/form/create-seat-by-class/BusinessForm.jsx");
+/* harmony import */ var apps_aircraft_admin_src_app_components_craft_type_form_create_seat_by_class_EconomyForm__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! apps/aircraft-admin/src/app/components/craft-type/form/create-seat-by-class/EconomyForm */ "./app/components/craft-type/form/create-seat-by-class/EconomyForm.jsx");
+/* harmony import */ var apps_aircraft_admin_src_app_components_craft_type_form_create_seat_by_class_EconomyFlexForm__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! apps/aircraft-admin/src/app/components/craft-type/form/create-seat-by-class/EconomyFlexForm */ "./app/components/craft-type/form/create-seat-by-class/EconomyFlexForm.jsx");
+/* harmony import */ var apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! apps/aircraft-admin/src/app/constants */ "./app/constants/index.ts");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__);
 var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/pages/home/aircraft-type/create/index.tsx";
+
+
 
 
 
@@ -5016,14 +5099,16 @@ const steps = [{
   content: ''
 }];
 
-const CreateCraftType = () => {
+const CreateCraftType = ({
+  history
+}) => {
   const [currentStep, setCurrentStep] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(0);
   const craftTypes = Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["useSelector"])(state => state.craftTypes);
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["useDispatch"])();
   const [_test, _setTest] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null);
 
   function onFirstStepSubmit(values) {
-    localStorage.setItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_10__["LOCAL_STORAGE"].STEP_1, JSON.stringify(values));
+    localStorage.setItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_11__["LOCAL_STORAGE"].STEP_1, JSON.stringify(values));
     setCurrentStep(prev => prev + 1);
   }
   /**
@@ -5035,10 +5120,10 @@ const CreateCraftType = () => {
 
 
   async function handleSubmitAllForm() {
-    const step_1_data = JSON.parse(localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_10__["LOCAL_STORAGE"].STEP_1));
-    const step_2_data = JSON.parse(localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_10__["LOCAL_STORAGE"].STEP_2));
-    const step_3_data = JSON.parse(localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_10__["LOCAL_STORAGE"].STEP_3));
-    const step_4_data = JSON.parse(localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_10__["LOCAL_STORAGE"].STEP_4)); //TODO: call action for step 1, then promise all for 3 last actions
+    const step_1_data = JSON.parse(localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_11__["LOCAL_STORAGE"].STEP_1));
+    const step_2_data = JSON.parse(localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_11__["LOCAL_STORAGE"].STEP_2));
+    const step_3_data = JSON.parse(localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_11__["LOCAL_STORAGE"].STEP_3));
+    const step_4_data = JSON.parse(localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_11__["LOCAL_STORAGE"].STEP_4)); //TODO: call action for step 1, then promise all for 3 last actions
 
     const payload = await Object(apps_aircraft_admin_src_app_services__WEBPACK_IMPORTED_MODULE_3__["adminCreateCraftType"])(step_1_data);
     [step_2_data, step_3_data, step_4_data].forEach(ele => {
@@ -5052,51 +5137,106 @@ const CreateCraftType = () => {
       });
       antd__WEBPACK_IMPORTED_MODULE_2__["message"].success('Success');
     }).catch(err => antd__WEBPACK_IMPORTED_MODULE_2__["message"].error('Failure for some reasons.')).finally(() => {
-      localStorage.removeItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_10__["LOCAL_STORAGE"].STEP_1);
-      localStorage.removeItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_10__["LOCAL_STORAGE"].STEP_2);
-      localStorage.removeItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_10__["LOCAL_STORAGE"].STEP_3);
-      localStorage.removeItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_10__["LOCAL_STORAGE"].STEP_4); // getAllCraftTypes().then((res) => dispatch(res));
-    }); //TODO: redirect routing
-  }
+      localStorage.removeItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_11__["LOCAL_STORAGE"].STEP_1);
+      localStorage.removeItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_11__["LOCAL_STORAGE"].STEP_2);
+      localStorage.removeItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_11__["LOCAL_STORAGE"].STEP_3);
+      localStorage.removeItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_11__["LOCAL_STORAGE"].STEP_4);
+    });
+  } // React.useEffect(() => {
+  //   function redirectAfterCreating() {
+  //     if (window.localStorage.getItem(LOCAL_STORAGE.CREATE_DONE) === 'true') {
+  //       return <Redirect to="/home/aircraft-type" />;
+  //     }
+  //   }
+  //   redirectAfterCreating();
+  // }, [window.localStorage.getItem(LOCAL_STORAGE.CREATE_DONE)]);
 
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])("div", {
+
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])("div", {
     className: "create-container",
-    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Steps"], {
-      type: "navigation",
-      size: "small",
-      current: currentStep,
-      className: "step-wrapper",
-      children: steps.map(item => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(Step, {
-        className: "custom-step",
-        title: item.title
-      }, item.title, false, {
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Row"], {
+      style: {
+        marginBottom: '1rem'
+      },
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Breadcrumb"], {
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Breadcrumb"].Item, {
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+            to: "/home/aircraft-type",
+            children: "Account"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 106,
+            columnNumber: 13
+          }, undefined)
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 105,
+          columnNumber: 11
+        }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Breadcrumb"].Item, {
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"], {
+            to: "",
+            children: "Create"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 109,
+            columnNumber: 13
+          }, undefined)
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 108,
+          columnNumber: 11
+        }, undefined)]
+      }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 106,
-        columnNumber: 11
-      }, undefined))
+        lineNumber: 104,
+        columnNumber: 9
+      }, undefined)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 99,
+      lineNumber: 103,
       columnNumber: 7
-    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])("div", {
+    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Row"], {
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Steps"], {
+        type: "navigation",
+        size: "small",
+        current: currentStep,
+        className: "step-wrapper",
+        children: steps.map(item => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(Step, {
+          className: "custom-step",
+          title: item.title
+        }, item.title, false, {
+          fileName: _jsxFileName,
+          lineNumber: 122,
+          columnNumber: 13
+        }, undefined))
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 115,
+        columnNumber: 9
+      }, undefined)
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 114,
+      columnNumber: 7
+    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])("div", {
       className: "steps-content",
-      children: [currentStep === 0 && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])("div", {
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(_components_craft_type_form_create_craft_type__WEBPACK_IMPORTED_MODULE_6__["default"], {
-          formData: localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_10__["LOCAL_STORAGE"].STEP_1),
+      children: [currentStep === 0 && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])("div", {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(_components_craft_type_form_create_craft_type__WEBPACK_IMPORTED_MODULE_7__["default"], {
+          formData: localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_11__["LOCAL_STORAGE"].STEP_1),
           handleCreateCraftTypeForm: onFirstStepSubmit
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 113,
+          lineNumber: 130,
           columnNumber: 13
         }, undefined)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 112,
+        lineNumber: 129,
         columnNumber: 11
-      }, undefined), currentStep === 1 && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(_components_craft_type_form_create_seat_by_class_BusinessForm__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        formData: localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_10__["LOCAL_STORAGE"].STEP_2),
+      }, undefined), currentStep === 1 && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(_components_craft_type_form_create_seat_by_class_BusinessForm__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        formData: localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_11__["LOCAL_STORAGE"].STEP_2),
         onNext: values => {
-          localStorage.setItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_10__["LOCAL_STORAGE"].STEP_2, JSON.stringify(values));
+          localStorage.setItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_11__["LOCAL_STORAGE"].STEP_2, JSON.stringify(values));
           setCurrentStep(prev => prev + 1);
         },
         onPrev: () => {
@@ -5104,12 +5244,12 @@ const CreateCraftType = () => {
         }
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 120,
+        lineNumber: 137,
         columnNumber: 11
-      }, undefined), currentStep === 2 && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(apps_aircraft_admin_src_app_components_craft_type_form_create_seat_by_class_EconomyForm__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        formData: localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_10__["LOCAL_STORAGE"].STEP_3),
+      }, undefined), currentStep === 2 && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(apps_aircraft_admin_src_app_components_craft_type_form_create_seat_by_class_EconomyForm__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        formData: localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_11__["LOCAL_STORAGE"].STEP_3),
         onNext: values => {
-          localStorage.setItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_10__["LOCAL_STORAGE"].STEP_3, JSON.stringify(values));
+          localStorage.setItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_11__["LOCAL_STORAGE"].STEP_3, JSON.stringify(values));
           setCurrentStep(prev => prev + 1);
         },
         onPrev: () => {
@@ -5117,31 +5257,38 @@ const CreateCraftType = () => {
         }
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 135,
+        lineNumber: 152,
         columnNumber: 11
-      }, undefined), currentStep === 3 && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(apps_aircraft_admin_src_app_components_craft_type_form_create_seat_by_class_EconomyFlexForm__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        formData: localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_10__["LOCAL_STORAGE"].STEP_4),
+      }, undefined), currentStep === 3 && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(apps_aircraft_admin_src_app_components_craft_type_form_create_seat_by_class_EconomyFlexForm__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        formData: localStorage.getItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_11__["LOCAL_STORAGE"].STEP_4),
         onNext: values => {
-          localStorage.setItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_10__["LOCAL_STORAGE"].STEP_4, JSON.stringify(values));
+          localStorage.setItem(apps_aircraft_admin_src_app_constants__WEBPACK_IMPORTED_MODULE_11__["LOCAL_STORAGE"].STEP_4, JSON.stringify(values));
           setCurrentStep(prev => prev + 1);
           handleSubmitAllForm();
+          return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Redirect"], {
+            to: "/home/aircraft-type"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 176,
+            columnNumber: 22
+          }, undefined);
         },
         onPrev: () => {
           setCurrentStep(prev => prev - 1);
         }
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 150,
+        lineNumber: 167,
         columnNumber: 11
       }, undefined)]
     }, void 0, true, {
       fileName: _jsxFileName,
-      lineNumber: 110,
+      lineNumber: 127,
       columnNumber: 7
     }, undefined)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 98,
+    lineNumber: 102,
     columnNumber: 5
   }, undefined);
 };
@@ -5188,14 +5335,16 @@ if (content.locals) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_runner_work_aircraft_management_frontend_aircraft_management_frontend_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /home/runner/work/aircraft-management-frontend/aircraft-management-frontend/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd */ "../../../node_modules/antd/es/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "../../../node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var apps_aircraft_admin_src_app_store_actions_craft_type__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! apps/aircraft-admin/src/app/store/actions/craft-type */ "./app/store/actions/craft-type.ts");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "../../../node_modules/react-redux/es/index.js");
-/* harmony import */ var _components_craft_type_list__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../components/craft-type/list */ "./app/components/craft-type/list/index.tsx");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var query_string__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! query-string */ "../../../node_modules/query-string/index.js");
+/* harmony import */ var query_string__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(query_string__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "../../../node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var apps_aircraft_admin_src_app_store_actions_craft_type__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! apps/aircraft-admin/src/app/store/actions/craft-type */ "./app/store/actions/craft-type.ts");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "../../../node_modules/react-redux/es/index.js");
+/* harmony import */ var _components_craft_type_list__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../components/craft-type/list */ "./app/components/craft-type/list/index.tsx");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__);
 
 var _jsxFileName = "/home/runner/work/aircraft-management-frontend/aircraft-management-frontend/apps/aircraft-admin/src/app/pages/home/aircraft-type/index/index.tsx";
 
@@ -5211,17 +5360,17 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 
-const CraftTypeList = ({
-  craftTypes
-}) => {
-  const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["useDispatch"])();
-  const [params, setParams] = react__WEBPACK_IMPORTED_MODULE_4___default.a.useState({
+
+const CraftTypeList = () => {
+  const craftTypes = Object(react_redux__WEBPACK_IMPORTED_MODULE_6__["useSelector"])(state => state.craftTypes);
+  const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_6__["useDispatch"])();
+  const [params, setParams] = react__WEBPACK_IMPORTED_MODULE_5___default.a.useState({
     page: 0,
     size: 10,
     sort: ['id', 'asc']
   });
-  react__WEBPACK_IMPORTED_MODULE_4___default.a.useEffect(() => {
-    Object(apps_aircraft_admin_src_app_store_actions_craft_type__WEBPACK_IMPORTED_MODULE_3__["getAllCraftTypes"])().then(res => dispatch(res), err => dispatch(err));
+  react__WEBPACK_IMPORTED_MODULE_5___default.a.useEffect(() => {
+    Object(apps_aircraft_admin_src_app_store_actions_craft_type__WEBPACK_IMPORTED_MODULE_4__["getAllCraftTypes"])(query_string__WEBPACK_IMPORTED_MODULE_2___default.a.stringify(params)).then(res => dispatch(res), err => dispatch(err));
   }, []);
 
   function handleTableChange(pagination) {
@@ -5231,12 +5380,12 @@ const CraftTypeList = ({
     }));
   }
 
-  return craftTypes.loading ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])("div", {
+  return craftTypes.loading ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])("div", {
     style: {
       display: 'flex',
       justifyContent: 'center'
     },
-    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Spin"], {
+    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Spin"], {
       tip: "loading..."
     }, void 0, false, {
       fileName: _jsxFileName,
@@ -5247,84 +5396,78 @@ const CraftTypeList = ({
     fileName: _jsxFileName,
     lineNumber: 35,
     columnNumber: 5
-  }, undefined) : /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])("div", {
-    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])("div", {
+  }, undefined) : /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])("div", {
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])("div", {
       style: {
         flex: 0
       },
-      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Breadcrumb"], {
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Breadcrumb"].Item, {
-          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Breadcrumb"], {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Breadcrumb"].Item, {
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
             to: "/home/aircraft-type",
             children: "Aircraft Type"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 44,
+            lineNumber: 43,
             columnNumber: 13
           }, undefined)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 43,
+          lineNumber: 42,
           columnNumber: 11
         }, undefined)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 42,
+        lineNumber: 41,
         columnNumber: 9
       }, undefined)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 40,
       columnNumber: 7
-    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])("div", {
+    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])("div", {
       style: {
         display: 'flex',
         justifyContent: 'space-between',
         marginTop: '1rem'
       },
-      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_1__["Button"], {
         type: "primary",
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
           to: "/home/aircraft-type/create",
           children: "Create"
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 50,
+          lineNumber: 55,
           columnNumber: 11
         }, undefined)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 49,
+        lineNumber: 54,
         columnNumber: 9
       }, undefined)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 47,
       columnNumber: 7
-    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(_components_craft_type_list__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(_components_craft_type_list__WEBPACK_IMPORTED_MODULE_7__["default"], {
       craftType: craftTypes.types,
       pagination: craftTypes.pagination,
       loading: craftTypes.loading,
       onTableChange: handleTableChange
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 58,
       columnNumber: 7
     }, undefined)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 40,
+    lineNumber: 39,
     columnNumber: 5
   }, undefined);
 };
 
-const mapStateToProps = ({
-  craftTypes
-}) => ({
-  craftTypes
-});
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["connect"])(mapStateToProps)(CraftTypeList));
+/* harmony default export */ __webpack_exports__["default"] = (CraftTypeList);
 
 /***/ }),
 
@@ -5371,10 +5514,10 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 
-const AircarftDetail = ({
-  aircraft,
-  flight
-}) => {
+const AircarftDetail = () => {
+  const aircraft = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(state => state.aircraft);
+  const flight = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(state => state.flight);
+  const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])();
   const {
     air_craft_detail
   } = aircraft;
@@ -5385,7 +5528,6 @@ const AircarftDetail = ({
     size: 5,
     sort: ['id', 'asc']
   });
-  const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])();
   react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(() => {
     Object(apps_aircraft_admin_src_app_store_actions_aircraft__WEBPACK_IMPORTED_MODULE_6__["getDetailAirCraft"])(paramID).then(res => dispatch(res), err => dispatch(err));
     Object(apps_aircraft_admin_src_app_store_actions_flight__WEBPACK_IMPORTED_MODULE_7__["getAllFlights"])(query_string__WEBPACK_IMPORTED_MODULE_8___default.a.stringify(params)).then(res => dispatch(res), err => dispatch(err));
@@ -5411,41 +5553,51 @@ const AircarftDetail = ({
             children: "Aircraft"
           }, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 52,
+            lineNumber: 53,
             columnNumber: 13
           }, undefined)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 51,
+          lineNumber: 52,
           columnNumber: 11
         }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_3__["Breadcrumb"].Item, {
           children: "Detail"
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 54,
+          lineNumber: 55,
           columnNumber: 11
         }, undefined)]
       }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 50,
+        lineNumber: 51,
         columnNumber: 9
       }, undefined)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 50,
       columnNumber: 7
     }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])("div", {
-      children: [aircraft.loading ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_3__["Spin"], {
-        tip: "Loading..."
+      children: [aircraft.loading ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])("div", {
+        style: {
+          display: 'flex',
+          justifyContent: 'center'
+        },
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_3__["Spin"], {
+          tip: "loading..."
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 61,
+          columnNumber: 13
+        }, undefined)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 59,
+        lineNumber: 60,
         columnNumber: 11
       }, undefined) : /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(_components_aircraft_detail_info__WEBPACK_IMPORTED_MODULE_10__["default"], {
         detailInfo: air_craft_detail
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 61,
+        lineNumber: 64,
         columnNumber: 11
       }, undefined), !flight.loading && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(_components_flight_list__WEBPACK_IMPORTED_MODULE_9__["default"], {
         onTableChange: handleTableChange,
@@ -5456,32 +5608,22 @@ const AircarftDetail = ({
         onDeleteRow: () => console.log('')
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 64,
+        lineNumber: 67,
         columnNumber: 11
       }, undefined)]
     }, void 0, true, {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 58,
       columnNumber: 7
     }, undefined)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 48,
+    lineNumber: 49,
     columnNumber: 5
   }, undefined);
 };
 
-const mapStateToProps = ({
-  aircraft,
-  flight
-}) => {
-  return {
-    aircraft,
-    flight
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps)(AircarftDetail));
+/* harmony default export */ __webpack_exports__["default"] = (AircarftDetail);
 
 /***/ }),
 
@@ -5530,10 +5672,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 
-const AirCraft = function AirCraft({
-  aircraft,
-  craftTypes
-}) {
+const AirCraft = function AirCraft() {
   const [visible, setVisible] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(false);
   const [openEditForm, setOpenEditForm] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(false);
   const [params, setParams] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState({
@@ -5543,6 +5682,9 @@ const AirCraft = function AirCraft({
     sort: ['id', 'asc']
   });
   const [editData, setEditData] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(null);
+  const [promiseLoading, setPromiseLoading] = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(false);
+  const aircraft = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(state => state.aircraft);
+  const craftTypes = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(state => state.craftTypes);
   const dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])();
 
   function handleSearch(values) {
@@ -5552,29 +5694,31 @@ const AirCraft = function AirCraft({
   }
 
   function onCreateClick() {
-    Object(apps_aircraft_admin_src_app_store_actions_craft_type__WEBPACK_IMPORTED_MODULE_6__["getAllCraftTypes"])().then(res => dispatch(res), err => dispatch(err));
+    Object(apps_aircraft_admin_src_app_store_actions_craft_type__WEBPACK_IMPORTED_MODULE_6__["getAllCraftTypes"])(query_string__WEBPACK_IMPORTED_MODULE_3___default.a.stringify(params)).then(res => dispatch(res), err => dispatch(err));
     setVisible(true);
   }
 
   function onEditClicked(record, index) {
-    Object(apps_aircraft_admin_src_app_store_actions_craft_type__WEBPACK_IMPORTED_MODULE_6__["getAllCraftTypes"])().then(res => dispatch(res), err => dispatch(err));
+    Object(apps_aircraft_admin_src_app_store_actions_craft_type__WEBPACK_IMPORTED_MODULE_6__["getAllCraftTypes"])(query_string__WEBPACK_IMPORTED_MODULE_3___default.a.stringify(params)).then(res => dispatch(res), err => dispatch(err));
     setOpenEditForm(true);
     setEditData(record);
   }
 
   function handleCreate(values) {
+    setPromiseLoading(true);
     Object(_store_actions_aircraft__WEBPACK_IMPORTED_MODULE_5__["createAircraft"])(values).then(res => {
       dispatch(res);
-      setTimeout(function () {
-        antd__WEBPACK_IMPORTED_MODULE_4__["message"].loading('Generating...', 2000);
-        antd__WEBPACK_IMPORTED_MODULE_4__["message"].success('Success!');
-      }, 4000);
+      antd__WEBPACK_IMPORTED_MODULE_4__["message"].success('Success!');
     }, err => {
       dispatch(err);
       antd__WEBPACK_IMPORTED_MODULE_4__["message"].error('Fail to create! Try again...');
+    }).catch(err => {
+      antd__WEBPACK_IMPORTED_MODULE_4__["message"].error(err.status);
+    }).finally(() => {
+      setPromiseLoading(false);
+      setParams(_objectSpread({}, params));
+      setVisible(false);
     });
-    setParams(_objectSpread({}, params));
-    setVisible(false);
   }
 
   function handleEdit(values, index) {
@@ -5596,7 +5740,7 @@ const AirCraft = function AirCraft({
       title: 'Are you sure delete?',
       icon: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(_ant_design_icons__WEBPACK_IMPORTED_MODULE_11__["ExclamationCircleOutlined"], {}, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 99,
+        lineNumber: 107,
         columnNumber: 13
       }, this),
       content: `Aircraft name: ${record.name}`,
@@ -5640,12 +5784,12 @@ const AirCraft = function AirCraft({
       tip: "loading..."
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 143,
+      lineNumber: 151,
       columnNumber: 7
     }, this)
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 142,
+    lineNumber: 150,
     columnNumber: 5
   }, this) : /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])("div", {
     children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])("div", {
@@ -5659,7 +5803,7 @@ const AirCraft = function AirCraft({
         children: "Create"
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 148,
+        lineNumber: 156,
         columnNumber: 9
       }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(_components_aircraft_form_create__WEBPACK_IMPORTED_MODULE_8__["default"], {
         types: craftTypes.types,
@@ -5667,10 +5811,11 @@ const AirCraft = function AirCraft({
         onCreate: handleCreate,
         onCancel: () => {
           setVisible(false);
-        }
+        },
+        loading: promiseLoading
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 152,
+        lineNumber: 160,
         columnNumber: 9
       }, this), editData !== null && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(_components_aircraft_form_edit__WEBPACK_IMPORTED_MODULE_10__["default"], {
         types: craftTypes.types,
@@ -5683,7 +5828,7 @@ const AirCraft = function AirCraft({
         }
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 161,
+        lineNumber: 170,
         columnNumber: 11
       }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(apps_aircraft_admin_src_app_components_search_bar__WEBPACK_IMPORTED_MODULE_9__["default"], {
         allowClear: true,
@@ -5691,14 +5836,14 @@ const AirCraft = function AirCraft({
         handleSearch: handleSearch
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 173,
+        lineNumber: 182,
         columnNumber: 9
       }, this)]
     }, void 0, true, {
       fileName: _jsxFileName,
-      lineNumber: 147,
+      lineNumber: 155,
       columnNumber: 7
-    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(_components_aircraft_list__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    }, this), !promiseLoading && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_12__["jsxDEV"])(_components_aircraft_list__WEBPACK_IMPORTED_MODULE_7__["default"], {
       onTableChange: handleTableChange,
       pagination: aircraft.pagination,
       craft: aircraft,
@@ -5711,27 +5856,17 @@ const AirCraft = function AirCraft({
       }
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 179,
-      columnNumber: 7
+      lineNumber: 189,
+      columnNumber: 9
     }, this)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 146,
+    lineNumber: 154,
     columnNumber: 5
   }, this);
 };
 
-const mapStateToProps = ({
-  aircraft,
-  craftTypes
-}) => {
-  return {
-    aircraft,
-    craftTypes
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps)(AirCraft));
+/* harmony default export */ __webpack_exports__["default"] = (AirCraft);
 
 /***/ }),
 
@@ -5790,10 +5925,18 @@ const AircraftPage = () => {
     }));
   }
 
-  return airport.loading ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_5__["Spin"], {
+  return airport.loading ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])("div", {
     style: {
-      margin: 'auto'
-    }
+      display: 'flex',
+      justifyContent: 'center'
+    },
+    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_5__["Spin"], {
+      tip: "loading..."
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 37,
+      columnNumber: 7
+    }, undefined)
   }, void 0, false, {
     fileName: _jsxFileName,
     lineNumber: 36,
@@ -5805,7 +5948,7 @@ const AircraftPage = () => {
     loading: airport.loading
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 38,
+    lineNumber: 40,
     columnNumber: 5
   }, undefined);
 };
@@ -5877,10 +6020,18 @@ const Airway = () => {
     }));
   }
 
-  return airway.loading ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_4__["Spin"], {
+  return airway.loading ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])("div", {
     style: {
-      margin: 'auto'
-    }
+      display: 'flex',
+      justifyContent: 'center'
+    },
+    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_4__["Spin"], {
+      tip: "loading..."
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 45,
+      columnNumber: 7
+    }, undefined)
   }, void 0, false, {
     fileName: _jsxFileName,
     lineNumber: 44,
@@ -5888,11 +6039,11 @@ const Airway = () => {
   }, undefined) : /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])("div", {
     children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(apps_aircraft_admin_src_app_components_search_bar__WEBPACK_IMPORTED_MODULE_7__["default"], {
       allowClear: true,
-      placeholder: "Search by name",
+      placeholder: "Search by departure airport",
       handleSearch: handleSearch
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 49,
       columnNumber: 7
     }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(apps_aircraft_admin_src_app_components_airway_list_AirwayTable__WEBPACK_IMPORTED_MODULE_6__["default"], {
       onTableChange: handleTableChange,
@@ -5901,12 +6052,12 @@ const Airway = () => {
       loading: airway.loading
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 54,
       columnNumber: 7
     }, undefined)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 46,
+    lineNumber: 48,
     columnNumber: 5
   }, undefined);
 };
@@ -6093,10 +6244,18 @@ const FlightPage = () => {
     });
   }
 
-  return flight.loading ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_4__["Spin"], {
+  return flight.loading ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])("div", {
     style: {
-      margin: 'auto'
-    }
+      display: 'flex',
+      justifyContent: 'center'
+    },
+    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_4__["Spin"], {
+      tip: "loading..."
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 186,
+      columnNumber: 7
+    }, undefined)
   }, void 0, false, {
     fileName: _jsxFileName,
     lineNumber: 185,
@@ -6112,7 +6271,7 @@ const FlightPage = () => {
         onCancel: () => setVisible(false)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 190,
+        lineNumber: 192,
         columnNumber: 11
       }, undefined)
     }, void 0, false), editRecord !== null && /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["Fragment"], {
@@ -6126,7 +6285,7 @@ const FlightPage = () => {
         }
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 203,
+        lineNumber: 205,
         columnNumber: 11
       }, undefined)
     }, void 0, false), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])("div", {
@@ -6140,12 +6299,12 @@ const FlightPage = () => {
         children: "Create"
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 216,
+        lineNumber: 218,
         columnNumber: 9
       }, undefined)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 215,
+      lineNumber: 217,
       columnNumber: 7
     }, undefined), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_15__["jsxDEV"])(apps_aircraft_admin_src_app_components_flight_list_index__WEBPACK_IMPORTED_MODULE_7__["default"], {
       flights: flight.flights,
@@ -6160,12 +6319,12 @@ const FlightPage = () => {
       }
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 222,
+      lineNumber: 223,
       columnNumber: 7
     }, undefined)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 187,
+    lineNumber: 189,
     columnNumber: 5
   }, undefined);
 };
@@ -6360,13 +6519,21 @@ const FlightPage = () => {
     console.log(pagination);
   }
 
-  return ticket.loading ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Spin"], {
+  return ticket.loading ? /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])("div", {
     style: {
-      margin: 'auto'
-    }
+      display: 'flex',
+      justifyContent: 'center'
+    },
+    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(antd__WEBPACK_IMPORTED_MODULE_2__["Spin"], {
+      tip: "loading..."
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 32,
+      columnNumber: 7
+    }, undefined)
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 34,
+    lineNumber: 31,
     columnNumber: 5
   }, undefined) : /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxDEV"])(_components_ticket_TicketTable__WEBPACK_IMPORTED_MODULE_4__["default"], {
     tickets: ticket.tickets,
@@ -6374,8 +6541,8 @@ const FlightPage = () => {
     onTableChange: handleTableChange
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 36,
-    columnNumber: 7
+    lineNumber: 35,
+    columnNumber: 5
   }, undefined);
 };
 
@@ -7069,8 +7236,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/http */ "./app/utils/http.ts");
 
 
-function adminGetAllCraftTypes() {
-  return _utils_http__WEBPACK_IMPORTED_MODULE_1__["default"].get(_api__WEBPACK_IMPORTED_MODULE_0__["default"].adminGetAllCraftType);
+function adminGetAllCraftTypes(params) {
+  return _utils_http__WEBPACK_IMPORTED_MODULE_1__["default"].get(`${_api__WEBPACK_IMPORTED_MODULE_0__["default"].adminGetAllCraftType}?${params}`);
 }
 function adminCreateCraftType(body) {
   return _utils_http__WEBPACK_IMPORTED_MODULE_1__["default"].post(_api__WEBPACK_IMPORTED_MODULE_0__["default"].adminCreateCraftType, body);
@@ -7551,8 +7718,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../types */ "./app/store/types/index.ts");
 
 
-const getAllCraftTypes = () => {
-  return Object(_services_craft_type__WEBPACK_IMPORTED_MODULE_0__["adminGetAllCraftTypes"])().then(res => {
+const getAllCraftTypes = params => {
+  return Object(_services_craft_type__WEBPACK_IMPORTED_MODULE_0__["adminGetAllCraftTypes"])(params).then(res => {
     if (res.status === 200) {
       return {
         type: _types__WEBPACK_IMPORTED_MODULE_1__["CRAFT_TYPE"].GET_ALL_CRAFT_TYPE,
